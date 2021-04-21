@@ -1,0 +1,17 @@
+.pattern_bar {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.589),
+      rgba(255, 255, 255, 0.603)
+    ),
+    url("/img/cp.svg");
+  padding: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .menu_img {
+    height: 14rem;
+  }
+
+  .menu_content {
+    padding: 0.5rem 0.8rem;
+  }
+}

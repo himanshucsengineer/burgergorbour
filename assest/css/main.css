@@ -16,6 +16,10 @@ body {
   background-color: white;
 }
 
+main {
+  min-height: 60vh;
+}
+
 .container {
   max-width: 115rem !important;
 }
@@ -61,6 +65,8 @@ body {
 .header {
   padding: 2rem;
   background-color: #b42821;
+  z-index: 5;
+  box-shadow: 0px 2px 3px #686868;
 }
 
 .h_nav li {
@@ -88,6 +94,10 @@ body {
   .h_burger {
     display: block;
   }
+}
+
+.main {
+  background-color: #fdfdfd;
 }
 
 .hero {
@@ -132,11 +142,7 @@ body {
 }
 
 .f_image {
-  background-image: linear-gradient(
-      rgba(99, 9, 9, 0.315),
-      rgba(99, 9, 9, 0.384)
-    ),
-    url("../img/bg3.jpg");
+  background-image: linear-gradient(rgba(99, 9, 9, 0.315), rgba(99, 9, 9, 0.384)), url("/img/bg3.jpg");
   background-size: cover;
   background-position: center;
   padding: 14rem;
@@ -196,7 +202,7 @@ body {
 }
 
 .home_about {
-  background-image: linear-gradient(#ffffffe0, #ffffffc7), url("../img/combo.svg");
+  background-image: linear-gradient(#ffffffe0, #ffffffc7), url("/img/combo.svg");
   background-size: 50rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -239,5 +245,24 @@ p {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   color: #b42821;
+}
+
+.title_para {
+  color: #5f5e5e;
+  font-size: 2rem;
+}
+
+.pattern_bar {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.589), rgba(255, 255, 255, 0.603)), url("../img/cp.svg");
+  padding: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu_img {
+    height: 14rem;
+  }
+  .menu_content {
+    padding: 0.5rem 0.8rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

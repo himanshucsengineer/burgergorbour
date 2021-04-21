@@ -9,6 +9,7 @@
 
 // components
 @import "components/header";
+@import "components/main";
 @import "components/hero";
 @import "components/fcard";
 @import "components/fimage";
@@ -18,4 +19,6 @@
 //typography
 @import "typography/typography";
 
+// Pages
+@import "pages/menu";
 // @import "components/"
