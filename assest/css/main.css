@@ -141,8 +141,32 @@ main {
   background-color: #991b14;
 }
 
+.member_btn {
+  border: none;
+  width: 100%;
+  background-color: #b42821;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1.2rem 0.8rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.member_btn:hover {
+  background-color: #991b14;
+}
+
+.b_input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 7px;
+  padding-left: 2rem;
+  outline: none;
+}
+
 .f_image {
-  background-image: linear-gradient(rgba(99, 9, 9, 0.315), rgba(99, 9, 9, 0.384)), url("/img/bg3.jpg");
+  background-image: linear-gradient(rgba(99, 9, 9, 0.315), rgba(99, 9, 9, 0.384)), url("../img/bg3.jpg");
   background-size: cover;
   background-position: center;
   padding: 14rem;
@@ -202,7 +226,7 @@ main {
 }
 
 .home_about {
-  background-image: linear-gradient(#ffffffe0, #ffffffc7), url("/img/combo.svg");
+  background-image: linear-gradient(#ffffffe0, #ffffffc7), url("../img/combo.svg");
   background-size: 50rem;
   background-repeat: no-repeat;
   background-position: center;

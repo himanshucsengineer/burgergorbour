@@ -1,0 +1,14 @@
+.member_btn {
+  border: none;
+  width: 100%;
+  background-color: $prime;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1.2rem 0.8rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.member_btn:hover {
+  background-color: $prime_hover;
+}
