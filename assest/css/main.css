@@ -62,6 +62,10 @@ main {
   padding: 10rem 0;
 }
 
+.hide {
+  display: none;
+}
+
 .header {
   padding: 2rem;
   background-color: #b42821;
@@ -288,5 +292,27 @@ p {
   .menu_content {
     padding: 0.5rem 0.8rem;
   }
+}
+
+.amt_sec-sup, .amt_sec-sub {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.amt_sec-num {
+  font-size: 7rem;
+  font-weight: 800;
+  color: #b42821;
+}
+
+.amt_sec-select {
+  border: none;
+  border-radius: 0 !important;
+  border-bottom: 2px solid #b42821;
+  color: #b42821;
+}
+
+.amt_sec-select option {
+  color: #444444;
 }
 /*# sourceMappingURL=main.css.map */
