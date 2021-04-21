@@ -1,0 +1,36 @@
+.footer {
+  padding: 4rem 0.5rem;
+  background-color: $footer;
+
+  &_head {
+    color: rgb(236, 236, 236);
+    font-size: 1.6rem;
+  }
+
+  .ul {
+    color: #fff;
+    height: 2px;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: rgb(255, 187, 187);
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .social_icon {
+    background-color: #eee;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}

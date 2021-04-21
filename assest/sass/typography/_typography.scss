@@ -1,0 +1,41 @@
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  //   color: rgb(51, 51, 51);
+  padding: 1rem 0 0.4rem 0;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  //   color: #774121;
+  padding: 1rem 0 0.4rem 0;
+}
+
+p {
+  font-size: 1.8rem;
+  word-spacing: 0.2rem;
+  padding: 0 !important;
+  color: rgb(83, 83, 83);
+}
+
+//  Headings
+
+.head_h2 {
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: $prime;
+}
+
+.head_h3 {
+  font-size: 2.5rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: $prime;
+}

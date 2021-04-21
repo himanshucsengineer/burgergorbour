@@ -1,0 +1,26 @@
+.f_image {
+  background-image: linear-gradient(
+      rgba(99, 9, 9, 0.315),
+      rgba(99, 9, 9, 0.384)
+    ),
+    url("/img/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 14rem;
+}
+
+.f_image_border {
+  border: 8px solid #fff;
+  padding: 1rem;
+}
+
+.f_image_title {
+  font-size: 4rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .f_image {
+    padding: 3rem;
+  }
+}

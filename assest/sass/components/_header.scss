@@ -1,0 +1,33 @@
+.header {
+  padding: 2rem;
+  background-color: $prime;
+}
+
+.h_nav {
+  li {
+    list-style-type: none;
+    padding: 0rem 1.5rem;
+    color: #eee;
+  }
+  a {
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    color: $second;
+  }
+}
+
+.h_burger {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .h_nav {
+    display: none;
+  }
+
+  .h_burger {
+    display: block;
+  }
+}

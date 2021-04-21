@@ -1,0 +1,21 @@
+// Import All Sass Files
+
+// Variables
+@import "variables/variables";
+
+// Base
+@import "base/base";
+@import "base/utilites";
+
+// components
+@import "components/header";
+@import "components/hero";
+@import "components/fcard";
+@import "components/fimage";
+@import "components/footer";
+@import "components/homeabout";
+
+//typography
+@import "typography/typography";
+
+// @import "components/"
