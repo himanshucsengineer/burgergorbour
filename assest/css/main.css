@@ -245,6 +245,94 @@ main {
   background-position: center;
 }
 
+.member_card {
+  width: 64%;
+  height: 24rem;
+  background-color: #b42821;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.member_card_img {
+  width: 9rem;
+  height: 10rem;
+  border: 1px dashed #eee;
+}
+
+.member_card_border {
+  border: 1px dashed #eee;
+  height: 22rem;
+  border-radius: 4px;
+}
+
+.member_card_name {
+  color: #eee;
+  font-size: 2rem;
+}
+
+.member_card_mn {
+  color: #c2c2c2;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+.member_card_num {
+  color: #eee;
+}
+
+.member_card_phone {
+  font-size: 1.2rem;
+  padding-right: 1rem;
+  color: #fff;
+}
+
+.mem_row1 {
+  padding: 1.8rem;
+}
+
+.mem_row1 p {
+  margin: 0rem;
+}
+
+.mem_row1_col-left {
+  padding-left: 1rem;
+}
+
+.mem_row2 {
+  background-color: #991b14;
+}
+
+.mem_text {
+  font-size: 1.2rem;
+  color: lightgray;
+}
+
+.bh_tag {
+  background-color: #eee;
+  padding: 1rem;
+  color: #b42821;
+}
+
+@media only screen and (max-width: 700px) {
+  .member_card {
+    width: 100%;
+  }
+  .member_card_img {
+    width: 8rem;
+    height: 10rem;
+  }
+  .member_card_name {
+    color: #eee;
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .member_card {
+    width: 100%;
+  }
+}
+
 h1 {
   font-size: 3rem;
 }
