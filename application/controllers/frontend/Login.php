@@ -108,27 +108,17 @@
                         
                       }
                       }
-                      $card = $code;
-                      $file = $imageurl;
-                $email = $this->input->post('email');
-                $name = $this->input->post('name');
-                $number = $this->input->post('mob');
-                $add = $this->input->post('add');
-                $password = $this->input->post('pass');
-                if($this->Signupmodel->signup($email,$name,$number,$add,$password,$file,$card) ){
-                    $_SESSION["email"]=$this->input->post('email');
+                    
+                $_SESSION["email"]=$this->input->post('email');
                     $_SESSION["name"]=$this->input->post('name');
                     $_SESSION["number"]=$this->input->post('mob');
+                    $_SESSION["add"]=$this->input->post('add');
+                    $_SESSION["pass"]=$this->input->post('pass');
                     $_SESSION["card"]= $code;
                     $_SESSION["image"]=$imageurl;
                 $this->session->set_flashdata('success','Signup Successful'); 
-                redirect(base_url().'frontend/dashboard'); 
-                
-            }
-            else{
-                $this->session->set_flashdata('error','Wrong Email Or Password'); 
-                redirect(base_url()); 
-            }
+                redirect(base_url().'frontend/plans');
+               
         }else{
             $this->session->set_flashdata('error','This  email already used by someone try with another email'); 
             redirect(base_url()); 

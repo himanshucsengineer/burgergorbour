@@ -4,9 +4,12 @@ require_once(APPPATH."libraries/razorpay/razorpay-php/Razorpay.php");
 use Razorpay\Api\Api;
 use Razorpay\Api\Errors\SignatureVerificationError;
 class Register extends CI_Controller {
-  /**
-   * This function loads the registration form
-   */
+  public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('frontend/Signupmodel');
+        
+    }
   public function index()
   {
     $this->load->view('registration-form');
@@ -21,7 +24,14 @@ class Register extends CI_Controller {
      * You can calculate payment amount as per your logic
      * Always set the amount from backend for security reasons
      */
-    $this->input->post('name');
+    $_SESSION['name']=$this->input->post('name');
+    $_SESSION['email']=$this->input->post('email');
+    $_SESSION['mob']=$this->input->post('mob');
+    $_SESSION['add']=$this->input->post('add');
+    $_SESSION['pass']=$this->input->post('pass');
+    $_SESSION['card']=$this->input->post('card');
+    $_SESSION['image']=$this->input->post('image');
+    $_SESSION['vali']=$this->input->post('vali');
     $_SESSION['payable_amount'] = $this->input->post('amount');
     $razorpayOrder = $api->order->create(array(
       'receipt'         => rand(),
@@ -57,31 +67,88 @@ class Register extends CI_Controller {
       }
     }
     if ($success === true) {
-      /**
-       * Call this function from where ever you want
-       * to save save data before of after the payment
-       */
-      $this->setRegistrationData();
-      redirect(base_url().'register/success');
+        $data = array(
+          'order_id' => $_SESSION['razorpay_order_id'],
+          'name' => $_SESSION['name'],
+          'email' => $_SESSION['email'],
+        'number' => $_SESSION['mob'],
+        'address' =>$_SESSION['add'],
+        'card' => $_SESSION['card'],
+          'file' => $_SESSION['image'],
+        'vali' => $_SESSION['vali'],
+        'pass' =>$_SESSION['pass'],
+        'amount' =>$_SESSION['payable_amount'],
+      );
+       if($this->Signupmodel->insert_data($data) ){
+        $phone="918905366876";
+        $user_message="this is test msg";
+              /*Your authentication key*/
+        $authKey = "359226AbtfGxXjL607f32d5P1";
+        /*Multiple mobiles numbers separated by comma*/
+        $mobileNumber = $phone;
+        /*Sender ID,While using route4 sender id should be 6 characters long.*/
+        $senderId = "Burger";
+        /*Your message to send, Add URL encoding here.*/
+        $message = $user_message;
+        /*Define route */
+        $route = "route=4";
+        /*Prepare you post parameters*/
+        $postData = array(
+        'authkey' => $authKey,
+        'mobiles' => $mobileNumber,
+        'message' => $message,
+        'sender' => $senderId,
+        'route' => $route
+        );
+        /*API URL*/
+        $url="https://control.msg91.com/api/sendhttp.php";
+        /* init the resource */
+        $ch = curl_init();
+        curl_setopt_array($ch, array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $postData
+        /*,CURLOPT_FOLLOWLOCATION => true*/
+        ));
+        /*Ignore SSL certificate verification*/
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        /*get response*/
+        $output = curl_exec($ch);
+        /*Print error if any*/
+        if(curl_errno($ch))
+        {
+        echo 'error:' . curl_error($ch);
+        }
+        curl_close($ch);
+            
+            
+              
+           
+        $this->session->set_flashdata('success','Welcome To india'); 
+        redirect(base_url().'frontend/dashboard');
+           
+       }
+       else{
+          $this->session->set_flashdata('error','Error In submisstion'); 
+          redirect(base_url().'frontend/membership');
+       }
+      
     }
     else {
-      redirect(base_url().'register/paymentFailed');
+      $this->session->set_flashdata('error','Error In payment Method'); 
+      redirect(base_url().'frontend/membership');
     }
   }
-  /**
-   * This function preprares payment parameters
-   * @param $amount
-   * @param $razorpayOrderId
-   * @return array
-   */
   public function prepareData($amount,$razorpayOrderId)
   {
     $data = array(
       "key" => "rzp_test_If4Pd1l3k6g25g",
       "amount" => $amount,
-      "name" => "Burger Hurbour",
+      "name" => "Dog Bazar",
       "description" => "Buying a Plan",
-      "image" => base_url()."admin/assets/images/admin_bg.jpg",
+      "image" => base_url()."admin/assets/images/admin_b.jpg",
       "prefill" => array(
         "name"  => $this->input->post('name'),
         "email"  => $this->input->post('email'),
@@ -98,39 +165,6 @@ class Register extends CI_Controller {
     );
     return $data;
   }
-  /**
-   * This function saves your form data to session,
-   * After successfull payment you can save it to database
-   */
-  public function setRegistrationData()
-  {
-    $name = $this->input->post('name');
-    $email = $this->input->post('email');
-    $contact = $this->input->post('contact');
-    $amount = $_SESSION['payable_amount'];
-    $registrationData = array(
-      'order_id' => $_SESSION['razorpay_order_id'],
-      'name' => $name,
-      'email' => $email,
-      'contact' => $contact,
-      'amount' => $amount,
-    );
-    // save this to database
-  }
-  /**
-   * This is a function called when payment successfull,
-   * and shows the success message
-   */
-  public function success()
-  {
-    $this->load->view('frontend/success');
-  }
-  /**
-   * This is a function called when payment failed,
-   * and shows the error message
-   */
-  public function paymentFailed()
-  {
-    $this->load->view('frontend/error');
-  }  
+ 
+   
 }

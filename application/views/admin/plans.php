@@ -130,7 +130,7 @@ img{
                     <th >Sr. No.</th>
                     <th>Course Name</th>
                     <th>Validity</th>
-                    <th>Amount</th>
+                    <th>Amount(Inr)</th>
                     <th>Action</th>
                 </tr>
                 </thead>

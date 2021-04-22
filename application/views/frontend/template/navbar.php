@@ -1,4 +1,92 @@
+
 <style>
+    .login-button{
+        width: 10rem;
+        height: auto;
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+        background-color: #f3cb38;
+        border: 2px solid #f3cb38;
+        color: black;
+        transition: .5s;
+    }
+    .login-button:hover{
+        background-color: transparent;
+        border: 2px solid #f3cb38;
+        color: #f3cb38;
+    }
+</style>    
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-2">Logo</div>
+            <div class="col-6 h_nav">
+                <ul class="d-flex">
+                    <li class="h_nav_links"><a href="<?php echo base_url()?>" class="nodecoration">Home</a></li>
+                    <li><a href="<?php echo base_url()?>menu" class="nodecoration">Menu</a></li>
+                    <li><a href="<?php echo base_url()?>plans" class="nodecoration">Plans</a></li>
+                    <li><a href="<?php echo base_url()?>membership" class="nodecoration">Membership</a></li>
+                    <li><a href="<?php echo base_url()?>contact-us" class="nodecoration">Contact</a></li>
+                   
+                    <li><button class="login-button">Login</button></li>
+                </ul>
+            </div>
+            <div class="col-2 h_burger">
+                <p>btn</p>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--style>
     .meu{
         width: 100%;
         height: auto;
@@ -75,11 +163,11 @@
                                     </li>
                                 </ul>
                             </div>
-                        </nav> <!-- navbar -->
+                        </nav> 
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navbar area -->
+                </div> 
+            </div>
+        </div> 
     </header>
 
     <div id="mobile_bar">
@@ -104,7 +192,7 @@
                 }else{
                     document.getElementById("mobile_bar").style.display = "block";
                 }
-    </script>
+    </script-->
 
   
     
