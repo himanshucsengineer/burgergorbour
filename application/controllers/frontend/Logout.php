@@ -8,9 +8,8 @@
 
         public function index(){
             session_destroy();
-            //unset($_SESSION["ref_count"]);
-            //unset($_SESSION["earn"]);
-            //unset($_SESSION["referid"]);
+            
+            unset($_SESSION["email"]);
            // $getsocials['brandslogo'] = $this->Homemodel->fetchaddinventory_api();
            // $getsocials['company'] = $this->Homemodel->fetchins();
             $this->load->view('frontend/template/header');

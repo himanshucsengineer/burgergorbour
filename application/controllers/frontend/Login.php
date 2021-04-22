@@ -22,46 +22,35 @@
         }
 
         public function login(){
-            
-            
-            $this->load->helper(array('cookie', 'url'));
             $url = $_SESSION['url']; 
             $this->load->model('frontend/Signupmodel');
             $model_data=$this->Signupmodel->fetchModeldata();
-            
-            
             $login_success=0;
             $user_data = array(
                 'email' => $this->input->post('email'),
                 'password' => $this->input->post('password'),
             );
-            
-            
-            set_cookie('email',$user_data[0]);
-            set_cookie('pass',$user_data[1]);
             foreach ($model_data as $value) {
-                    
-               
-                if((strtolower($value['email'])==strtolower($user_data['email']) or isset($_COOKIE['email'])) && ($value['pass']==$user_data['password'] or isset($_COOKIE['pass']) ))
+                if((strtolower($value['email'])==strtolower($user_data['email']) ) && ($value['pass']==$user_data['password']  ))
                 {
-                    
-                    if($value['account_status']=="Approved"){
+                   
                         $_SESSION["email"]=$value["email"];
                         $_SESSION["name"]=$value["name"];
                         $_SESSION["number"]=$value["number"];
+                        $_SESSION["add"]=$value["address"];
+                        $_SESSION["card"]=$value["card"];
+                        $_SESSION["image"]=$value["file"];
+                        $_SESSION["date"]=$value["date"];
                         $login_success=1;
                         break;
-                    }else{
-                        $login_success=0;
-                        break;
-                    }
+                    
                     
                     
                     
                 }
             }
             if($login_success==1){
-                    redirect(base_url().'user/campaign');
+                    redirect(base_url().'account');
                
                 
                 
@@ -140,7 +129,51 @@
 
     }
     
-    
+    public function update_pro(){
+        $this->load->model('frontend/Signupmodel');
+        
+        $this->input->post('formSubmit');
+        
+            
+            $this->form_validation->set_rules('name', 'Name', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('mob', 'Number', 'required');
+            $this->form_validation->set_rules('add', 'Address', 'required');
+            if ($this->form_validation->run()){ 
+               
+               $name = $this->input->post('name');
+                        $email = $this->input->post('email');
+                        $number = $this->input->post('mob');
+                        $addrs = $this->input->post('add');
+                        
+                
+                    if($this->Signupmodel->update_pro($name,$number,$email,$addrs)){
+                        
+                        
+                        $_SESSION["name"]=$this->input->post('name');
+                        $_SESSION["email"]=$this->input->post('email');
+                        $_SESSION["number"]=$this->input->post('number');
+                        $_SESSION["add"]=$this->input->post('add');
+                        
+                        $this->session->set_flashdata('error','Error In Submission'); 
+                redirect(base_url().'account');
+                        
+                    }
+                    else{
+                        
+                        $this->session->set_flashdata('success','Your data have been submitted'); 
+                redirect(base_url().'account');
+                         
+                    }
+                }
+                else{
+                    
+                    $this->session->set_flashdata('error','Please Fill All The Fields'); 
+                redirect(base_url().'account');
+                     
+                }
+       
+}
    
 
 

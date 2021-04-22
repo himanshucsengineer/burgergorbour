@@ -20,12 +20,12 @@ class Signupmodel extends CI_Model {
                        'name' =>$name,
                        'email' => $email,
                        'number' => $number,
-                       'upi' => $addrs,
+                       'address' => $addrs,
                    );
                    
        $this->db->set($data);
        $this->db->where('email',$email);
-        $this->db->update('referandearn',$data);
+        $this->db->update('user',$data);
    }
 
 
