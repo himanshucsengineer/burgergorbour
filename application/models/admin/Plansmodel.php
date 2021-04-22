@@ -22,7 +22,7 @@ class Plansmodel extends CI_Model {
    
       // Select record
       $this->db->select('id,month,amount');
-      $this->db->where('course', $postData['city']);
+      $this->db->where('course', $postData['course']);
       $q = $this->db->get('admin_course');
       $response = $q->result_array();
   

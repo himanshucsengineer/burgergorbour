@@ -80,7 +80,9 @@ img{
                     <th>Image</th>
                     <th>Address</th>
                     <th>Card Number</th>
-                   
+                    <th>Validity</th>
+                    <th>Payment Recived</th>
+                    <th>Order id</th>
                     
                     <th>Action</th>
 

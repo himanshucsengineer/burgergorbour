@@ -2,18 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Signupmodel extends CI_Model {
-    function signup($email,$name,$number,$add,$password,$file,$card){
-        $data = array(
-            'email' => $email,
-            'name' => $name,
-            'number' => $number,
-            'address' => $add,
-            'pass' => $password,
-            'file' => $file,
-            'card' => $card
-        );
-        
-        
+    function insert_data($data){
         return  $this->db->insert('user',$data);
     }
     

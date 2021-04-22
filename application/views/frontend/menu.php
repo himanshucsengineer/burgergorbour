@@ -1,4 +1,4 @@
-<style>
+<!--style>
     .main_menu{
         width: 100%;
         height: auto;
@@ -115,4 +115,77 @@
         </div>
     </div>
 
-</div>
+</div-->
+
+
+
+<main class="main">
+
+    <div class="spacer_s"></div>
+    <div class="pattern_bar"></div>
+    <!-- Menu Title -->
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col text-center">
+                <h2 class="head_h2">Our Menu</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <p class="title_para">*** Taste The delious One ***</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Menu Title -->
+
+    <div class="spacer_s"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h3 class="head_h3">*** Veg Layers Burgur Combo ***</h3>
+            </div>
+        </div>
+    </div>
+    <div class="spacer_s"></div>
+    <!-- -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <!-- F_card -->
+                    <?php foreach($menu as $value){?>
+                    <div class="col-md-4 px-4 py-2 mb-3 col-6">
+                        <a href="" class="nodecoration">
+                        
+                            <div class="fcard">
+                                <img src="<?php echo $value['file']?>" alt="" class="fcard_img menu_img">
+                                <div class="fcard_content menu_content">
+                                    <h3 class="head_h3 mb-1"><?php echo $value['name']?></h3>
+                                </div>
+                            </div>
+                       
+                        </a>
+                    </div>
+                    <?php }?>
+                    <!-- end Fcard -->
+
+                    <!-- F_card -->
+                   
+                    <!-- end Fcard -->
+                    <!-- F_card -->
+                    
+                    <!-- end Fcard -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End 3 container Section -->
+
+    <div class="spacer_s"></div>
+
+
+</main>
