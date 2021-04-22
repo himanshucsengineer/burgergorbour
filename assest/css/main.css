@@ -169,6 +169,15 @@ main {
   outline: none;
 }
 
+.b_input::placeholder {
+  font-size: 1.6rem;
+}
+
+.b_input_lable {
+  color: #525252;
+  margin-bottom: .7rem;
+}
+
 .f_image {
   background-image: linear-gradient(rgba(99, 9, 9, 0.315), rgba(99, 9, 9, 0.384)), url("../img/bg3.jpg");
   background-size: cover;
@@ -314,5 +323,26 @@ p {
 
 .amt_sec-select option {
   color: #444444;
+}
+
+.client_links {
+  list-style-type: none;
+  background-color: #f3f3f3;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.client_links a {
+  text-decoration: none;
+  color: #b42821;
+}
+
+.client_active {
+  background-color: #b42821;
+}
+
+.client_active a {
+  color: #eee;
 }
 /*# sourceMappingURL=main.css.map */
