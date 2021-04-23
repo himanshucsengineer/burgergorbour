@@ -438,4 +438,9 @@ p {
   background-color: #ffefef;
   padding: 5rem 0rem;
 }
+
+.contact_box {
+  border: 1px dashed #b42821;
+  padding: 3rem 2rem;
+}
 /*# sourceMappingURL=main.css.map */
