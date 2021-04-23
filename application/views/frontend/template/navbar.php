@@ -1,5 +1,44 @@
-
+<?php
+if(!isset($_SESSION["email"]))
+{
+    $button='<li><a href="'.base_url().'signin"><button class="login-button">Login</button></a></li> ';
+}
+else{
+  $button='<li class="nav-item dropdown">
+                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            '.$_SESSION["name"].'
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <a class="" href="'.base_url().'account"><button>Dashboard</button></a>
+                <a class="" href="'.base_url().'logout"><button>Logout</button></a>
+               
+            </div>
+        </li>
+  
+  
+  
+'; 
+}
+?>
 <style>
+
+.dropdown-menu{
+        width: 100%;
+        height: auto;
+        border: 1px solid #cdcdcd;
+        border-radius: 0px !important;
+        padding-top: 0px  !important;
+        padding-bottom: 0px !important;
+    }
+    .dropdown-menu button{
+        width: 100%;
+        height: auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        background-color: white;
+        border: none;
+        border-bottom: 1px solid #cdcdcd;
+    }
     .login-button{
         width: 10rem;
         height: auto;
@@ -28,8 +67,8 @@
                     <li><a href="<?php echo base_url()?>plans" class="nodecoration">Plans</a></li>
                     <li><a href="<?php echo base_url()?>membership" class="nodecoration">Membership</a></li>
                     <li><a href="<?php echo base_url()?>contact-us" class="nodecoration">Contact</a></li>
-                   
-                    <li><button class="login-button">Login</button></li>
+                    <?php echo $button?>
+                    
                 </ul>
             </div>
             <div class="col-2 h_burger">

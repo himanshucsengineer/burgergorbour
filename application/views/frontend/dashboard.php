@@ -1,180 +1,172 @@
-<!--style>
-    .member{
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-    .member .card{
-        width: 20rem;
-        height: auto;
-        padding: 1rem;
-        border-radius: 10px;
-        border: 1px solid #cdcdcd;
-        background-image: linear-gradient(to right bottom, #051937, #051539, #09113a, #100a39, #180138);
-    }
-    .member .card p{
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin-bottom: .5rem;
-    }
-    .member .card .flex{
-        width: 100%;
-        height: auto;
-        display: flex;
-        margin-bottom: .5rem;
-    }
-    .member .card .flex .left{
-        width: 25%;
-        height: auto;
-    }
-    .member .card .flex .left img{
-        width: 100%;
-        border: 1px solid #cdcdcd;
-    }
-    .member .card .flex .right{
-        width: 75%;
-        height: auto;
-    }
-    .member .card .flex .right h6{
-        text-align: right;
-        font-weight: 500;
-        color: white;
-    }
-    .member .card h5{
-        color: white;
-        text-align: center;
-    }
-</style>
+
 <?php 
 $name=$_SESSION["name"];
 $email=$_SESSION["email"];
 $number=$_SESSION["number"];
 $card=$_SESSION["card"];
+$add=$_SESSION["add"];
 $image=$_SESSION["image"];
 ?>
 
-<div class="member">
+
+
+
+
+
+<main class="main">
+
+    <div class="spacer_s"></div>
+    <div class="pattern_bar"></div>
+    <!-- Menu Title -->
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="card">
-                <P>Membership card</P>
-                <div class="flex">
-                    <div class="left">
-                        <img src="<?php echo $image?>" alt="">
-                    </div>
-                    <div class="right">
-                        <h6>Name: <?php echo $name; ?></h6>
-                        <h6>No. : <?php echo $number;?></h6>
-                    </div>
-                </div>
-                <h5><?php echo $card;?></h5>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <h2 class="head_h2">Client Area</h2>
             </div>
         </div>
     </div>
-</div-->
+    <!-- End Menu Title -->
 
-<style>
-    .my_account{
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        background-color: rgb(245, 235, 220);
-    }
-    .my_account .main_box{
-        width: 100%;
-        height: auto;
-        
-        background-color: transparent;
-        border-radius: 12px;
-        box-shadow: rgb(73 73 73 / 20%) 0px 0px 4px 0px;
-        
-    }
-    .my_account .main_box button{
-        width: 100%;
-        height: auto;
-        padding-top: .9rem;
-        padding-bottom: .9rem;
-        background-color: transparent;
-        color: rgb(43, 2, 0);
-        border: none;
-        border-bottom: 2px solid rgb(43, 2, 0);
-        text-align: left;
-        outline: none;
-        padding-left: 1rem;
-    }
-    .my_account .main_box .flex{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .my_account .main_box .flex .left{
-        width: 70%;
-        height: auto;
-        padding: 1rem;
-    }
-    .my_account .main_box .flex .left input[type="text"], input[type="email"], input[type="number"], textarea{
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        padding-left: 1rem;
-        background-color: transparent;
-       
-        border:  1px solid rgb(43, 2, 0);
-        outline: none;
-        margin-bottom: 1rem;
-    }
-    .my_account h4{
-        margin-bottom: 1rem;
-        text-align: center;
-        text-transform: uppercase;
-    }
-</style>
-<div class="my_account">                                                                                                                                                                                                                                                                                                                                           
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
 
-            </div>
-            <div class="col-md-9">
-                <h4>My Account</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="main_box">
-                    <button>Profile & Settings</button>
-                    <button>Membership Details</button>
-                    <button style="margin-bottom: 1rem;">Logout</button>   
-                </div>
-            </div>
-            <div class="col-md-9">
-                
-                <div class="main_box">
-                    <div class="flex">
-                        <div class="left">
-                            <label>Name*:</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label>Email*:</label>
-                            <input type="email" placeholder="Enter Your Email">
-                            <label>Number*:</label>
-                            <input type="number" placeholder="Enter Your Number">
-                            <label>Address*:</label>
-                            <textarea name="" placeholder="Your Address" cols="30" rows="5"></textarea>
-              
+    <div class="spacer_m"></div>
+
+    <!-- Client Details  -->
+    <div class="client">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="row justify-content-around">
+                        <div class="col-md-3 pt-5">
+                            <ul>
+                                <li class="client_links client_active">
+                                    <a href="<?php echo base_url()?>account">Profile And Settings</a>
+                                </li>
+                                <li class="client_links">
+                                    <a href="<?php echo base_url()?>member-card">Membership Details</a>
+                                </li>
+                                <li class="client_links">
+                                    <a href="<?php echo base_url()?>frontend/logout">Logout</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="right">
+                        <div class="col-md-8">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <h1 class="head_h3">Profile Settings</h1>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="px-4">
+                            <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
 
+
+      ?>
+                            <?php echo form_open(base_url( 'frontend/login/update_pro'), array('id'=>'updateprofileform','method'=>'POST'));?>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <label for="" class="b_input_lable">Name *</label>
+                                            <input type="text" name="name" class="b_input" placeholder="*** Your Name ***" value="<?php echo $name?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <label for="" class="b_input_lable">Email *</label>
+                                            <input type="Email" class="b_input" name="email" placeholder="*** Your Email ***" value="<?php echo $email?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <label for="" class="b_input_lable">Phone Number *</label>
+                                            <input type="number" class="b_input" name="mob" placeholder="*** Your Number ***" value="<?php echo $number?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <label for="" class="b_input_lable">Address *</label>
+                                            <textarea name="add" id="" cols="30" rows="4" class="b_input"
+                                                placeholder="*** Your Address ***"><?php echo $add?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <div class="mb-4">
+                                                <button class="member_btn">Update</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php echo form_close(); ?> 
+                            </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- End OF Client  -->
+
+
+
+
+
+
+
+
+
+    <div class="spacer_s"></div>
+    <div class="spacer_s"></div>
+
+
+</main>
+
+<div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <script>
+    $("#updateprofileform").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+        console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#updateprofileform").trigger("reset");
+	});
+});
+
+</script>

@@ -3,17 +3,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h3 class="footer_head">Quick Links</h3>
-                <ul>
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                </ul>
+                <h3 class="footer_head">About BH</h3>
+                <p>Here will Come About Burger Horbour</p>
 
             </div>
             <div class="col-md-3">
-                <h3 class="footer_head">Quick Links</h3>
+                <h3 class="footer_head">Useful Links</h3>
                 <ul>
                     <li><a href="">Link1</a></li>
                     <li><a href="">Link1</a></li>
@@ -22,7 +17,7 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                <h3 class="footer_head">Quick Links</h3>
+                <h3 class="footer_head">Our Location</h3>
                 <ul>
                     <li><a href="">Link1</a></li>
                     <li><a href="">Link1</a></li>
@@ -31,7 +26,7 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                <h3 class="footer_head">Legal</h3>
+                <h3 class="footer_head">Follow Us On:</h3>
                 <ul>
                     <li><a href="">Link1</a></li>
                     <li><a href="">Link1</a></li>

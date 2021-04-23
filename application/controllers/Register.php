@@ -126,7 +126,7 @@ class Register extends CI_Controller {
             
               
            
-        $this->session->set_flashdata('success','Welcome To india'); 
+        $this->session->set_flashdata('success','Welcome To Burger Horbour'); 
         redirect(base_url().'frontend/dashboard');
            
        }

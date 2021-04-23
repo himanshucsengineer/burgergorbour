@@ -9,20 +9,27 @@ $image=$_SESSION["image"];
 
 ?>
 
-
-
-<!--form action="<?php echo base_url();?>register/pay" method="POST">
-    <input type="text" name="name" value="<?php echo $name?>">
-    <input type="email" name="email" value="<?php echo $email?>">
-    <input type="number" name="mob" value="<?php echo $mob?>">
-    <input type="text" name="add" value="<?php echo $add?>">
-    <input type="text" name="pass" value="<?php echo $pass?>">
-    <input type="text" name="card" value="<?php echo $card?>">
-    <input type="text" name="image" value="<?php echo $image?>">
-    <input type="text" name="vali" value="1 month">
-    <input type="number" id="amt" name="amount" value="">
-    <button>Pay Now</button>
-</form-->
+<?php
+if(!isset($_SESSION["email"]))
+{
+    $button1='<a href="'.base_url().'membership"><button class="member_btn"> Get MemberShip</button></a>'; 
+}
+else{
+    $button1='<form action="'.base_url().'register/pay" method="POST">
+    <input type="hidden" name="name" value="'.$_SESSION["name"].'">
+    <input type="hidden" name="email" value="'.$_SESSION["email"].'">
+    <input type="hidden" name="mob" value="'.$_SESSION["number"].'">
+    <input type="hidden" name="add" value="'.$_SESSION["add"].'">
+    <input type="hidden" name="pass" value="'.$_SESSION["pass"].'">
+    <input type="hidden" name="card" value="'.$_SESSION["card"].'">
+    <input type="hidden" name="image" value="'.$_SESSION["image"].'">
+    <input type="hidden" id="bal" name="vali" value="">
+    <input type="hidden" id="amtt" name="amount" value="">
+    <button class="member_btn"> Get MemberShip</button>
+  </form>';
+ 
+}
+?>
 <style>
     button{
         background-color: white;
@@ -58,31 +65,7 @@ $image=$_SESSION["image"];
   color: white;
 }
 </style>
-<!--div class="plans">
-    <div class="container">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-6">
-                
-               
-                  <div>Selected Val:  <span id="selectedVal"></span></div>
-          
-                </div>
-                <div class="col-md-6">
-                    <h1>Membetship Subscription</h1>
-                    <p>Choose The Plan That's Right For You</p>
-                    <div class="flex">
-                      
 
-                    
-
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -338,18 +321,7 @@ console.log(d.toLocaleDateString());
                     <div class="row justify-content-center">
                         <div class="col-md-6 text-center">
                             <div class="mb-4">
-                            <form action="<?php echo base_url();?>register/pay" method="POST">
-                              <input type="hidden" name="name" value="<?php echo $name?>">
-                              <input type="hidden" name="email" value="<?php echo $email?>">
-                              <input type="hidden" name="mob" value="<?php echo $mob?>">
-                              <input type="hidden" name="add" value="<?php echo $add?>">
-                              <input type="hidden" name="pass" value="<?php echo $pass?>">
-                              <input type="hidden" name="card" value="<?php echo $card?>">
-                              <input type="hidden" name="image" value="<?php echo $image?>">
-                              <input type="hidden" id="bal" name="vali" value="">
-                              <input type="hidden" id="amtt" name="amount" value="">
-                              <button class="member_btn"> Get MemberShip</button>
-                            </form>
+                                <?php echo $button1?>
                             </div>
                         </div>
                     </div>
