@@ -59,6 +59,7 @@ $route['account'] = 'frontend/dashboard';
 $route['member-card'] = 'frontend/membercard';
 $route['privacy-policy'] = 'frontend/privacy';
 $route['register'] = 'frontend/register';
+$route['about-us'] = 'frontend/about';
 $route['signin'] = 'frontend/signin';
 $route['default_controller/login'] = 'login';
 // $route['car-insurance'] = 'frontend/carinsurance';

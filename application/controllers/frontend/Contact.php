@@ -26,15 +26,20 @@
             $number = $this->input->post('number');
             $msg = $this->input->post('msg');
             if($this->Contactmodel->insert_data($name,$email,$number,$msg) ){
-                echo "<h6 class='text-success text-center'>Your Query is recorded. Our agent will contact you soon</h6>";
-                
+               
+                $this->session->set_flashdata('success','Your Query is recorded. Our agent will contact you soon'); 
+                redirect(base_url().'contact-us');
             }
             else{
-                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+               
+                $this->session->set_flashdata('error','Error In Submission'); 
+                redirect(base_url().'contact-us');
             }
         }
         else{
-            echo "<h6 class='text-danger text-center'>Please Fill All The Fields</h6>";    
+              
+            $this->session->set_flashdata('error','Please Fill All The Fields'); 
+                redirect(base_url().'contact-us'); 
         }
            
     }
