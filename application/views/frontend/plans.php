@@ -1,136 +1,134 @@
-<?php 
+<?php
 $email = $_SESSION["email"];
-$name=$_SESSION["name"];
+$name = $_SESSION["name"];
 $mob = $_SESSION["number"];
-$add=$_SESSION["add"];
-$pass=$_SESSION["pass"];
-$card=$_SESSION["card"];
-$image=$_SESSION["image"];
+$add = $_SESSION["add"];
+$pass = $_SESSION["pass"];
+$card = $_SESSION["card"];
+$image = $_SESSION["image"];
 
 ?>
 
 <?php
-if(!isset($_SESSION["email"]))
-{
-    $button1='<a href="'.base_url().'membership"><button class="member_btn"> Get MemberShip</button></a>'; 
-}
-else{
-    $button1='<form action="'.base_url().'register/pay" method="POST">
-    <input type="hidden" name="name" value="'.$_SESSION["name"].'">
-    <input type="hidden" name="email" value="'.$_SESSION["email"].'">
-    <input type="hidden" name="mob" value="'.$_SESSION["number"].'">
-    <input type="hidden" name="add" value="'.$_SESSION["add"].'">
-    <input type="hidden" name="pass" value="'.$_SESSION["pass"].'">
-    <input type="hidden" name="card" value="'.$_SESSION["card"].'">
-    <input type="hidden" name="image" value="'.$_SESSION["image"].'">
+if (!isset($_SESSION["email"])) {
+    $button1 = '<a href="' . base_url() . 'membership"><button class="member_btn"> Get MemberShip</button></a>';
+} else {
+    $button1 = '<form action="' . base_url() . 'register/pay" method="POST">
+    <input type="hidden" name="name" value="' . $_SESSION["name"] . '">
+    <input type="hidden" name="email" value="' . $_SESSION["email"] . '">
+    <input type="hidden" name="mob" value="' . $_SESSION["number"] . '">
+    <input type="hidden" name="add" value="' . $_SESSION["add"] . '">
+    <input type="hidden" name="pass" value="' . $_SESSION["pass"] . '">
+    <input type="hidden" name="card" value="' . $_SESSION["card"] . '">
+    <input type="hidden" name="image" value="' . $_SESSION["image"] . '">
     <input type="hidden" id="bal" name="vali" value="">
     <input type="hidden" id="amtt" name="amount" value="">
     <button class="member_btn"> Get MemberShip</button>
   </form>';
- 
 }
 ?>
 <style>
-    button{
-        background-color: white;
-        border: 1px solid #cdcdcd;
-
-    }
-    .plans{
+    .plans {
         width: 100%;
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-    .plans .flex{
+
+    .plans .flex {
         width: 100%;
         height: auto;
         display: flex;
     }
-    .plans .flex .but{
+
+    .plans .flex .but {
         width: 33.33%;
     }
-    .btn {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-size: 18px;
-}
 
-/* Style the active class, and buttons on mouse-over */
-.active, .btn:hover {
-  background-color: #666;
-  color: white;
-}
+    .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    /* Style the active class, and buttons on mouse-over */
+    .active,
+    .btn:hover {
+        background-color: #666;
+        color: white;
+    }
 </style>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <script type='text/javascript'>
-var baseURL= "<?php echo base_url();?>";
-$(document).ready(function() {
-  $('#aBtnGroup button').on('click', function() {
-    var thisBtn = $(this);
-    
-    thisBtn.addClass('active').siblings().removeClass('active');
-    var btnText = thisBtn.text();
-    var btnValue = thisBtn.val();
-    console.log(btnText + ' - ' + btnValue);
-    
-    
-    $.ajax({
-        url:'<?=base_url()?>frontend/Plans/getCityDepartment',
-        method: 'post',
-        data: {course: btnValue},
-        dataType: 'json',
-        success: function(response){
+<script type='text/javascript'>
+    var baseURL = "<?php echo base_url(); ?>";
+    $(document).ready(function() {
+        $('#aBtnGroup button').on('click', function() {
+            var thisBtn = $(this);
 
-          // Remove options 
-      
-          $('#sel_depart').find('option').not(':first').remove();
-
-          // Add options
-          $.each(response,function(index,data){
-             $('#sel_depart').append('<option value="'+data['month']+' '+data['amount']+'">Get Membership in: INR'+data['month']+' with validity: '+data['amount']+'</option>');
-          });
-        }
-     });
+            thisBtn.addClass('active').siblings().removeClass('active');
+            var btnText = thisBtn.text();
+            var btnValue = thisBtn.val();
+            console.log(btnText + ' - ' + btnValue);
 
 
-  });
-  $('#sel_depart').on('click', function() {
-    var thisBtn = $(this).val();
-    var spt   =  thisBtn.split(" ");
-    document.getElementById('amount').innerHTML = spt[0];
-    document.getElementById('amtt').value = spt[0];
-    document.getElementById('bal').value = spt[1];
-    document.getElementById('vali').innerHTML = spt[1]+"Mo.";
-  });
-});
-  // baseURL variable
-  
- 
- 
+            $.ajax({
+                url: '<?= base_url() ?>frontend/Plans/getCityDepartment',
+                method: 'post',
+                data: {
+                    course: btnValue
+                },
+                dataType: 'json',
+                success: function(response) {
 
- // Add active class to the current button (highlight it)
-var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  if (current.length > 0) { 
-    current[0].className = current[0].className.replace(" active", "");
-  }
-  this.className += " active";
-  });
-}
- </script>
+                    // Remove options 
+
+                    $('#sel_depart').find('option').not(':first').remove();
+
+                    // Add options
+                    $.each(response, function(index, data) {
+                        $('#sel_depart').append('<option value="' + data['month'] + ' ' + data['amount'] + '">Get Membership in: INR' + data['month'] + ' with validity: ' + data['amount'] + '</option>');
+                    });
+                }
+            });
 
 
- <!--p id="demo"></p>
+        });
+        $('#sel_depart').on('click', function() {
+            var thisBtn = $(this).val();
+            var spt = thisBtn.split(" ");
+            document.getElementById('amount').innerHTML = spt[0];
+            document.getElementById('amtt').value = spt[0];
+            document.getElementById('bal').value = spt[1];
+            document.getElementById('vali').innerHTML = spt[1] + "Mo.";
+        });
+    });
+    // baseURL variable
+
+
+
+
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+            this.className += " active";
+        });
+    }
+</script>
+
+
+<!--p id="demo"></p>
 
 <script>
 // Set the date we're counting down to
@@ -214,128 +212,102 @@ console.log(d.toLocaleDateString());
     <div class="spacer_s"></div>
 
     <!-- Choose Plan -->
-   
-                        
-      
-                     
-                      
-    <div class="choose_plan">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-11">
-                    <div class="row justify-content-center">
-                        <div class="col-md-2 col-3">
-                          <div id="aBtnGroup">
-                          <?php foreach($course as $city){?>
-                            <button type="button" value="<?php echo $city['course']?>" class="member_btn"> <?php echo $city['course']?></button>
-                            <?php }?>
-                          </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+                <div id="aBtnGroup" class="row justify-content-center">
+
+                    <?php foreach ($course as $city) { ?>
+
+                        <!-- F_card   3 -->
+                        <div class="col-md-4 px-4 py-2 mb-4">
+                            <div class="fcard fcard_bg">
+                                <img src="<?php echo base_url() ?>assest/img/bg3.jpg" alt="" class="fcard_img">
+                                <div class="fcard_content">
+                                    <h3 class="head_h3 mb-1"><?php echo $city['course'] ?></h3>
+                                    <p class="fcard_p">looking Scarlett Johansson once. As a matter </p>
+                                    <ul>
+                                        <li class="fcard_p">6 Days a Week</li>
+                                        <li class="fcard_p">Dedicated Trainer Allocated</li>
+                                        <li class="fcard_p">Diet Plan Included</li>
+                                    </ul>
+                                    <div class="text-center my-1">
+                                        <!-- <div class="col-6  text-center"><span class="mem_card_price">250 </span>
+                                            <span class="mem_card_tag">&#8377 / mon</span>
+                                        </div> -->
+
+                                        <button type="button" value="<?php echo $city['course'] ?>" class="fcard_btn">Select Plan </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <!-- end Fcard -->
+                    <?php } ?>
+
                 </div>
             </div>
         </div>
     </div>
+
+
+
     <div class="spacer_s"></div>
     <!-- End Choose plan -->
 
 
 
 
-        <!-- Plan 1 -->
-        <div class="plan hide">
-            <!-- Amount Section -->
-            <div class="amt_sec">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 text-center">
-                            <p><sup class="amt_sec-sup">IN &#8377</sup> <span class="amt_sec-num">777</span><sub
-                                    class="amt_sec-sub"> / year</sub></p>
 
-                            <div>
-                                <p>Take Your Offers and enjoy Your meal</p>
-                            </div>
+    <!-- end Plan 1 -->
+
+
+
+    <!-- Plan 2 -->
+    <div class="plan">
+        <!-- Amount Section -->
+        <div class="amt_sec">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p><sup class="amt_sec-sup">IN &#8377</sup> <span class="amt_sec-num" id="amount">999</span><sub class="amt_sec-sub"> / <span id="vali">year</span></sub></p>
+
+                        <div>
+                            <p>Take Your Offers and enjoy Your meal</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Amount Section -->
-
-            <!-- Select -->
-            <div class="amt_sec">
-                <div class="container">
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-6 text-center">
-                            <select name="" id="" class="b_input amt_sec-select">
-                                <option value="" selected>Select Your Billing Options</option>
-                                <option value="">Burger</option>
-                                <option value="">Burger</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 text-center">
-                            <div class="mb-4">
-                                <button class="member_btn"> Get MemberShip</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Select -->
         </div>
-        <!-- end Plan 1 -->
+        <!-- End Amount Section -->
 
-
-
-        <!-- Plan 2 -->
-        <div class="plan">
-            <!-- Amount Section -->
-            <div class="amt_sec">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 text-center">
-                            <p><sup class="amt_sec-sup">IN &#8377</sup> <span class="amt_sec-num" id="amount">999</span><sub
-                                    class="amt_sec-sub"> / <span id="vali">year</span></sub></p>
-
-                            <div>
-                                <p>Take Your Offers and enjoy Your meal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Amount Section -->
-
-            <!-- Select -->
-            <div class="amt_sec">
-                <div class="container">
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-6 text-center">
-                          <select id='sel_depart' class="b_input amt_sec-select">
+        <!-- Select -->
+        <div class="amt_sec">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <select id='sel_depart' class="b_input amt_sec-select">
                             <option>Select Your Billing Options</option>
-                          </select>
-                        </div>
+                        </select>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 text-center">
-                            <div class="mb-4">
-                                <?php echo $button1?>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <div class="mb-4">
+                            <?php echo $button1 ?>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!-- End Select -->
         </div>
-        <!-- end Plan 2 -->
+        <!-- End Select -->
+    </div>
+    <!-- end Plan 2 -->
 
 
 
 
- 
+
 
 
     <!-- End Indian Rupees -->

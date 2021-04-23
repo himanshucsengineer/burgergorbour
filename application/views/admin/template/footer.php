@@ -1,9 +1,8 @@
 <style>
-    .footer{
-        position:inherit !important;
-        width:100% !important;
+    .footer {
+        position: inherit !important;
+        width: 100% !important;
     }
-
 </style>
 
 <footer class="footer text-center " style="padding-bottom:20px;">
@@ -12,7 +11,7 @@
     <p style="text-align:center;">© 2018. All rights reserved.</p>
 
     <p style="color:rgba(197, 190, 190, 0.61); text-align:center;">
- POWERED BY <a target="_blank" href="https://www.eniacoder.com/" style="text-decoration:none; color:rgba(197, 190, 190, 0.61);">Eniacoder</a></p>
+        POWERED BY <a target="_blank" href="https://www.eniacoder.com/" style="text-decoration:none; color:rgba(197, 190, 190, 0.61);">Eniacoder</a></p>
 </footer>
 
 </div>
@@ -63,30 +62,33 @@
 <script src="<?php echo base_url(); ?>admin/assets/plugins/summernote/summernote.min.js"></script>
 
 
-        <script>
-
-            jQuery(document).ready(function(){
-
-                $('.summernote').summernote({
-                    height: 350,                 // set editor height
-                    minHeight: null,             // set minimum height of editor
-                    maxHeight: null,             // set maximum height of editor
-                    focus: false                 // set focus to editable area after initializing summernote
-                });
-                
-                $('.inline-editor').summernote({
-                    airMode: true            
-                });
-
-            });
-        </script>
-  <script>tinymce.init({ selector:'.setEditor' });</script>
 <script>
-	$(document).ready(function(){
-    $(".Internationphonecode").intlTelInput({ 
-      utilsScript: "<?php echo base_url(); ?>admin/assets/js/utils.js"
-    }); 
-});	
+    jQuery(document).ready(function() {
+
+        $('.summernote').summernote({
+            height: 350, // set editor height
+            minHeight: null, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            focus: false // set focus to editable area after initializing summernote
+        });
+
+        $('.inline-editor').summernote({
+            airMode: true
+        });
+
+    });
+</script>
+<script>
+    tinymce.init({
+        selector: '.setEditor'
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $(".Internationphonecode").intlTelInput({
+            utilsScript: "<?php echo base_url(); ?>admin/assets/js/utils.js"
+        });
+    });
 </script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
@@ -100,12 +102,13 @@
     });
 </script>
 <script>
-      $('#sidebarToggleTop').click(function(){
+    $('#sidebarToggleTop').click(function() {
         $('#accordionSidebar').toggle();
-      });
-  </script>
+    });
+</script>
 
 
 
 </body>
+
 </html>

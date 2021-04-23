@@ -18,7 +18,7 @@
     </div>
     <!-- End Menu Title -->
 
-    <!--div class="spacer_s"></div>
+        <!--div class="spacer_s"></div>
 
     <div class="container">
         <div class="row">
@@ -27,30 +27,29 @@
             </div>
         </div>
     </div-->
-    <div class="spacer_s"></div>
-    <!-- -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-7">
-            <form method="post" action="<?php echo base_url();?>frontend/login/login" >
-                
-                <div class="mb-4">
-                    <input type="email" class="b_input" name="email" placeholder="Enter Your Email">
+        <div class="spacer_s"></div>
+        <!-- -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form method="post" action="<?php echo base_url(); ?>frontend/login/login">
+
+                        <div class="mb-4">
+                            <input type="email" class="b_input" name="email" placeholder="Enter Your Email">
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" class="b_input" name="password" placeholder="Enter Your password " />
+                        </div>
+                        <div class="mb-4">
+                            <button class="member_btn"> Get MemberShip</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-4">
-                    <input type="password" class="b_input" name="password" placeholder="Enter Your password " />
-                </div>
-                <div class="mb-4">
-                    <button class="member_btn"> Get MemberShip</button>
-                </div>
-            </form>
             </div>
         </div>
-    </div>
-    <!-- End 3 container Section -->
+        <!-- End 3 container Section -->
 
-    <div class="spacer_s"></div>
+        <div class="spacer_s"></div>
 
 
 </main>
-

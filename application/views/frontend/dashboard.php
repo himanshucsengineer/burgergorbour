@@ -1,11 +1,10 @@
-
-<?php 
-$name=$_SESSION["name"];
-$email=$_SESSION["email"];
-$number=$_SESSION["number"];
-$card=$_SESSION["card"];
-$add=$_SESSION["add"];
-$image=$_SESSION["image"];
+<?php
+$name = $_SESSION["name"];
+$email = $_SESSION["email"];
+$number = $_SESSION["number"];
+$card = $_SESSION["card"];
+$add = $_SESSION["add"];
+$image = $_SESSION["image"];
 ?>
 
 
@@ -39,13 +38,13 @@ $image=$_SESSION["image"];
                         <div class="col-md-3 pt-5">
                             <ul>
                                 <li class="client_links client_active">
-                                    <a href="<?php echo base_url()?>account">Profile And Settings</a>
+                                    <a href="<?php echo base_url() ?>account">Profile And Settings</a>
                                 </li>
                                 <li class="client_links">
-                                    <a href="<?php echo base_url()?>member-card">Membership Details</a>
+                                    <a href="<?php echo base_url() ?>member-card">Membership Details</a>
                                 </li>
                                 <li class="client_links">
-                                    <a href="<?php echo base_url()?>frontend/logout">Logout</a>
+                                    <a href="<?php echo base_url() ?>frontend/logout">Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -57,25 +56,22 @@ $image=$_SESSION["image"];
                                 </div>
                             </div>
                             <div class="px-4">
-                            <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
+                                <?php
+                                if ($this->session->flashdata('success')) {
+                                    echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                                } else if ($this->session->flashdata('error')) {
+                                    echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                                }
 
 
-      ?>
-                            <?php echo form_open(base_url( 'frontend/login/update_pro'), array('id'=>'updateprofileform','method'=>'POST'));?>
+                                ?>
+                                <?php echo form_open(base_url('frontend/login/update_pro'), array('id' => 'updateprofileform', 'method' => 'POST')); ?>
 
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-4">
                                             <label for="" class="b_input_lable">Name *</label>
-                                            <input type="text" name="name" class="b_input" placeholder="*** Your Name ***" value="<?php echo $name?>">
+                                            <input type="text" name="name" class="b_input" placeholder="*** Your Name ***" value="<?php echo $name ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +79,7 @@ $image=$_SESSION["image"];
                                     <div class="col">
                                         <div class="mb-4">
                                             <label for="" class="b_input_lable">Email *</label>
-                                            <input type="Email" class="b_input" name="email" placeholder="*** Your Email ***" value="<?php echo $email?>">
+                                            <input type="Email" class="b_input" name="email" placeholder="*** Your Email ***" value="<?php echo $email ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +87,7 @@ $image=$_SESSION["image"];
                                     <div class="col">
                                         <div class="mb-4">
                                             <label for="" class="b_input_lable">Phone Number *</label>
-                                            <input type="number" class="b_input" name="mob" placeholder="*** Your Number ***" value="<?php echo $number?>">
+                                            <input type="number" class="b_input" name="mob" placeholder="*** Your Number ***" value="<?php echo $number ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -99,8 +95,7 @@ $image=$_SESSION["image"];
                                     <div class="col">
                                         <div class="mb-4">
                                             <label for="" class="b_input_lable">Address *</label>
-                                            <textarea name="add" id="" cols="30" rows="4" class="b_input"
-                                                placeholder="*** Your Address ***"><?php echo $add?></textarea>
+                                            <textarea name="add" id="" cols="30" rows="4" class="b_input" placeholder="*** Your Address ***"><?php echo $add ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +108,7 @@ $image=$_SESSION["image"];
                                         </div>
                                     </div>
                                 </div>
-                                <?php echo form_close(); ?> 
+                                <?php echo form_close(); ?>
                             </div>
                         </div>
                     </div>
@@ -138,35 +133,34 @@ $image=$_SESSION["image"];
 </main>
 
 <div class="modal" id="myModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <!-- Modal Header -->
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span id="validation" class="form_errors"></span>
-                  </div>
-                </div>
-              </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <!-- Modal body -->
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <span id="validation" class="form_errors"></span>
             </div>
+        </div>
+    </div>
+</div>
 
-    <script>
-    $("#updateprofileform").submit(function(event){
-	event.preventDefault();
-	var post_url = $(this).attr("action"); 
-	var request_method = $(this).attr("method"); 
-	var form_data = $(this).serialize(); 
-	
-	$.ajax({
-		url : post_url,
-		type: request_method,
-		data : form_data,
-	}).done(function(response){ //
-        console.log(response);
-        $('#validation').html(response);
-        $('#myModal').modal('show').fadeIn('slow');
-        $("#updateprofileform").trigger("reset");
-	});
-});
+<script>
+    $("#updateprofileform").submit(function(event) {
+        event.preventDefault();
+        var post_url = $(this).attr("action");
+        var request_method = $(this).attr("method");
+        var form_data = $(this).serialize();
 
+        $.ajax({
+            url: post_url,
+            type: request_method,
+            data: form_data,
+        }).done(function(response) { //
+            console.log(response);
+            $('#validation').html(response);
+            $('#myModal').modal('show').fadeIn('slow');
+            $("#updateprofileform").trigger("reset");
+        });
+    });
 </script>
