@@ -1,0 +1,70 @@
+.hero {
+}
+
+.c_sec_1 {
+  background-image: linear-gradient(
+      rgba(56, 14, 14, 0.288),
+      rgba(95, 30, 30, 0.404)
+    ),
+    url("../img2/slider1.jpg");
+}
+.c_sec_2 {
+  background-image: linear-gradient(
+      rgba(56, 14, 14, 0.589),
+      rgba(95, 30, 30, 0.671)
+    ),
+    url("../img2/slider2.jpg");
+}
+.c_sec_3 {
+  background-image: linear-gradient(
+      rgba(56, 14, 14, 0.178),
+      rgba(95, 30, 30, 0.281)
+    ),
+    url("../img2/bg5.jpg");
+}
+
+.super_h1 {
+  font-size: 7rem;
+  color: #eee;
+  font-weight: 900;
+  word-spacing: 0.5rem;
+}
+
+.super_btn {
+  border: none;
+  background-color: rgb(230, 115, 22);
+  font-size: 2.5rem;
+  padding: 1rem 3rem;
+  border-radius: 3px;
+  font-weight: 800;
+  color: #eee;
+}
+
+.c_herosection {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 55rem;
+  padding-top: 13rem;
+}
+
+.c_img {
+  width: 100%;
+  height: 50rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .section_10 {
+    padding: 5rem 0rem;
+  }
+  .c_herosection {
+    height: 40rem;
+    padding-top: 8rem;
+  }
+  .super_h1 {
+    font-size: 4.3rem;
+  }
+
+  .super_btn {
+    font-size: 1.9rem;
+  }
+}
