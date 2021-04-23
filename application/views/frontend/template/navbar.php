@@ -54,30 +54,37 @@ else{
         border: 2px solid #f3cb38;
         color: #f3cb38;
     }
+    .d-flex{
+        float:right;
+    }
 </style>    
 <!-- Header -->
 <header class="header">
     <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-2">Logo</div>
-            <div class="col-6 h_nav">
+        <div class="row ">
+            <div class="col-md-2">Logo</div>
+            <div class="col-md-10 h_nav">
                 <ul class="d-flex">
                     <li class="h_nav_links"><a href="<?php echo base_url()?>" class="nodecoration">Home</a></li>
                     <li><a href="<?php echo base_url()?>menu" class="nodecoration">Menu</a></li>
                     <li><a href="<?php echo base_url()?>plans" class="nodecoration">Plans</a></li>
                     <li><a href="<?php echo base_url()?>membership" class="nodecoration">Membership</a></li>
                     <li><a href="<?php echo base_url()?>contact-us" class="nodecoration">Contact</a></li>
+                    <li><a href="<?php echo base_url()?>about-us" class="nodecoration">About </a></li>
                     <?php echo $button?>
                     
                 </ul>
             </div>
-            <div class="col-2 h_burger">
-                <p>btn</p>
-            </div>
+            
         </div>
     </div>
 </header>
-<!-- End Header -->
+
+
+
+
+
+
 
 
 
