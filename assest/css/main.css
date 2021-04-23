@@ -136,7 +136,7 @@ main {
   background-color: #b42821;
   color: #fff;
   font-size: 1.6rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.6rem 0.8rem;
   border-radius: 0.2rem;
   transition: all 0.3s ease;
 }
@@ -411,6 +411,18 @@ p {
 
 .amt_sec-select option {
   color: #444444;
+}
+
+.mem_card_price {
+  color: #b42821;
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+
+.mem_card_tag {
+  color: #858383;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .client_links {
