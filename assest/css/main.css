@@ -433,4 +433,9 @@ p {
 .client_active a {
   color: #eee;
 }
+
+.bg_box {
+  background-color: #ffefef;
+  padding: 5rem 0rem;
+}
 /*# sourceMappingURL=main.css.map */
