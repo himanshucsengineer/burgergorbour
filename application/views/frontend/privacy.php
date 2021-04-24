@@ -1,22 +1,24 @@
 <style>
-    .privacy{
+    .privacy {
         width: 100%;
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
         background-color: rgb(245, 235, 220);
     }
-    .privacy h1{
+
+    .privacy h1 {
         text-align: center;
         text-transform: uppercase;
-        color: #da3028  ;
+        color: #da3028;
         font-size: 2.5rem;
         font-weight: 800;
         font-family: Flame, "Cooper Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
         letter-spacing: 1;
         margin-bottom: 2rem;
     }
-    .privacy h5{
+
+    .privacy h5 {
         color: rgb(43, 2, 0);
         text-align: center;
         margin-bottom: 1rem;
@@ -24,17 +26,19 @@
         font-size: 17px;
         font-weight: 400;
     }
-    .privacy p{
+
+    .privacy p {
         color: rgb(43, 2, 0);
         text-align: center;
         margin-bottom: 2rem;
-        
+
     }
+
     @media screen and (max-width: 600px) {
-        .privacy h1{
-        font-size: 2rem;
+        .privacy h1 {
+            font-size: 2rem;
+        }
     }
-}
 </style>
 <div class="privacy">
     <div class="container">

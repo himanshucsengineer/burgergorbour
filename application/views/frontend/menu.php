@@ -103,14 +103,14 @@
     
     <div class="container">
         <div class="flex ">
-            <?php foreach($menu as $value){?>
+            <?php foreach ($menu as $value) { ?>
             <div class="card">
                 <div class="card_main">
-                    <img src="<?php echo $value['file']?>" alt="demo image ">
-                    <h5><?php echo $value['name']?></h5>
+                    <img src="<?php echo $value['file'] ?>" alt="demo image ">
+                    <h5><?php echo $value['name'] ?></h5>
                 </div>
             </div>
-            <?php }?>
+            <?php } ?>
             
         </div>
     </div>
@@ -155,27 +155,27 @@
             <div class="col-md-10">
                 <div class="row">
                     <!-- F_card -->
-                    <?php foreach($menu as $value){?>
-                    <div class="col-md-4 px-4 py-2 mb-3 col-6">
-                        <a href="" class="nodecoration">
-                        
-                            <div class="fcard">
-                                <img src="<?php echo $value['file']?>" alt="" class="fcard_img menu_img">
-                                <div class="fcard_content menu_content">
-                                    <h3 class="head_h3 mb-1"><?php echo $value['name']?></h3>
+                    <?php foreach ($menu as $value) { ?>
+                        <div class="col-md-4 px-4 py-2 mb-3 col-6">
+                            <a href="" class="nodecoration">
+
+                                <div class="fcard">
+                                    <img src="<?php echo $value['file'] ?>" alt="" class="fcard_img menu_img">
+                                    <div class="fcard_content menu_content">
+                                        <h3 class="head_h3 mb-1"><?php echo $value['name'] ?></h3>
+                                    </div>
                                 </div>
-                            </div>
-                       
-                        </a>
-                    </div>
-                    <?php }?>
+
+                            </a>
+                        </div>
+                    <?php } ?>
                     <!-- end Fcard -->
 
                     <!-- F_card -->
-                   
+
                     <!-- end Fcard -->
                     <!-- F_card -->
-                    
+
                     <!-- end Fcard -->
 
 

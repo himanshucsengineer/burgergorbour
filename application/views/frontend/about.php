@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-4">
                 <div class="spacer_m"></div>
-                <img src="../img/combo.svg" alt="">
+                <img src="<?php echo base_url() ?>assest/img/combo.svg" alt="">
             </div>
         </div>
     </div>

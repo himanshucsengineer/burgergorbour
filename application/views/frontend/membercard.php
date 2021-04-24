@@ -1,24 +1,40 @@
-<?php 
-$name=$_SESSION["name"];
-$email=$_SESSION["email"];
-$number=$_SESSION["number"];
-$card=$_SESSION["card"];
-$add=$_SESSION["add"];
-$image=$_SESSION["image"];
-$date=$_SESSION["date"];
-$vali=$_SESSION["vali"];
-?>
 <?php
-if(!isset($_SESSION["date"]))
-{
-    $button='<p> <span class="bh_tag">Valid To : '.$_SESSION["vali"].' Month</span> </p>';
-}
-else{
-  $button='<p> <span class="bh_tag">Expire In : '.$_SESSION["date"].'</span> </p>'; 
+$name = $_SESSION["name"];
+$email = $_SESSION["email"];
+$number = $_SESSION["number"];
+$card = $_SESSION["card"];
+$add = $_SESSION["add"];
+$image = $_SESSION["image"];
+$date = $_SESSION["date"];
+$vali = $_SESSION["vali"];
+?>
+
+<?php
+$validity = "+".$vali." month";
+$regdate = strtotime($date);
+$updateddate=date('Y-m-d',strtotime($validity,$regdate));
+
+$currntdate= date("Y-m-d");
+//if($updateddate==$currntdate){
+  //  echo "expird";
+
+//}else{
+  //  echo "available";
+//}
+
+?>
+
+
+
+<?php
+if (!isset($_SESSION["date"])) {
+    $button = '<p> <span class="bh_tag">Valid To : ' . $_SESSION["vali"] . ' Month</span> </p>';
+} else {
+    $button = '<p> <span class="bh_tag">Expire In : ' . $_SESSION["date"] . '</span> </p>';
 }
 ?>
 <!--p id="demo"></p>
-<input type="text" id="getdate" value="<?php echo $date?>">
+<input type="text" id="getdate" value="<?php echo $date ?>">
 <script>
      var dat =document.getElementById('getdate').value;
      var date_spl = dat.split("-");
@@ -76,13 +92,13 @@ var x = setInterval(function() {
                         <div class="col-md-3 pt-5">
                             <ul>
                                 <li class="client_links client_active">
-                                    <a href="<?php echo base_url()?>account">Profile And Settings</a>
+                                    <a href="<?php echo base_url() ?>account">Profile And Settings</a>
                                 </li>
                                 <li class="client_links">
-                                    <a href="<?php echo base_url()?>member-card">Membership Details</a>
+                                    <a href="<?php echo base_url() ?>member-card">Membership Details</a>
                                 </li>
                                 <li class="client_links">
-                                    <a href="<?php echo base_url()?>frontend/logout">Logout</a>
+                                    <a href="<?php echo base_url() ?>frontend/logout">Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -103,22 +119,22 @@ var x = setInterval(function() {
                                             <div class="member_card_border">
                                                 <div class="row mb-4 mem_row1">
                                                     <div class="col-4 mem_row1_col-left">
-                                                        <img src="<?php echo $image?>" alt="" class="member_card_img">
+                                                        <img src="<?php echo $image ?>" alt="" class="member_card_img">
                                                     </div>
                                                     <div class="col-8">
                                                         <div>
                                                             <div class="mb-2 ">
-                                                                <p><span class="member_card_name px-3 pb-0"><?php echo $name?></span>
+                                                                <p><span class="member_card_name px-3 pb-0"><?php echo $name ?></span>
                                                                 </p>
                                                             </div>
                                                             <div>
                                                                 <p><span class="member_card_mn">Member No.</span>
-                                                                    <span class="member_card_num"><?php echo $card?></span>
+                                                                    <span class="member_card_num"><?php echo $card ?></span>
                                                                 </p>
                                                             </div>
                                                             <div>
                                                                 <p><span class="member_card_mn">Phone.</span>
-                                                                    <span class="member_card_phone"><?php echo $number?></span>
+                                                                    <span class="member_card_phone"><?php echo $number ?></span>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -143,7 +159,7 @@ var x = setInterval(function() {
 
                                 <div class="row mb-4">
                                     <div class="col">
-                                        <?php echo $button?>
+                                        <?php echo $button ?>
                                     </div>
                                 </div>
 

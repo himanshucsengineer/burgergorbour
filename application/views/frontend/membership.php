@@ -64,7 +64,7 @@
         <div class="col-md-6">
             <h2>Become A Member Of Burger Horbour and Get Discount On Your Order</h2>
             <div class="main_box">
-                <form method="post" action="<?php echo base_url();?>frontend/login/signup" enctype="multipart/form-data">
+                <form method="post" action="<?php echo base_url(); ?>frontend/login/signup" enctype="multipart/form-data">
                     <input type="text" name="name" placeholder="enter Your Name">
                     <input type="email" name="email" placeholder="enter Your Email">
                     <input type="number" name="mob" placeholder="Enter Your Number">
@@ -147,30 +147,29 @@ $(function () {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7">
-            <form method="post" action="<?php echo base_url();?>frontend/login/signup" enctype="multipart/form-data">
-                <div class="mb-4">
-                    <input type="text" class="b_input" name="name" placeholder="Enter Your Name">
-                </div>
-                <div class="mb-4">
-                    <input type="email" class="b_input" name="email" placeholder="Enter Your Email">
-                </div>
-                <div class="mb-4">
-                    <input type="file" class="b_input" id="fileupload" name="images"/>
-                </div>
-                <div class="mb-4">
-                    <input type="number" class="b_input" name="mob" placeholder="Enter Your Phone Number " />
-                </div>
-                <div class="mb-4">
-                    <textarea name="add" id="" cols="30" rows="4" class="b_input"
-                        placeholder="Enter Your Address "></textarea>
-                </div>
-                <div class="mb-4">
-                    <input type="password" class="b_input" name="pass" placeholder="Enter Your password " />
-                </div>
-                <div class="mb-4">
-                    <button class="member_btn"> Get MemberShip</button>
-                </div>
-            </form>
+                <form method="post" action="<?php echo base_url(); ?>frontend/login/signup" enctype="multipart/form-data">
+                    <div class="mb-4">
+                        <input type="text" class="b_input" name="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" class="b_input" name="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="mb-4">
+                        <input type="file" class="b_input" id="fileupload" name="images" />
+                    </div>
+                    <div class="mb-4">
+                        <input type="number" class="b_input" name="mob" placeholder="Enter Your Phone Number " />
+                    </div>
+                    <div class="mb-4">
+                        <textarea name="add" id="" cols="30" rows="4" class="b_input" placeholder="Enter Your Address "></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <input type="password" class="b_input" name="pass" placeholder="Enter Your password " />
+                    </div>
+                    <div class="mb-4">
+                        <button class="member_btn"> Get MemberShip</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -182,32 +181,30 @@ $(function () {
 </main>
 
 <script language="javascript" type="text/javascript">
-
-$(function () {
-    $("#fileupload").change(function () {
-        $("#dvPreview").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
-        if (regex.test($(this).val().toLowerCase())) {
-            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
-                $("#dvPreview").show();
-                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
-            }
-            else {
-                if (typeof (FileReader) != "undefined") {
+    $(function() {
+        $("#fileupload").change(function() {
+            $("#dvPreview").html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
+            if (regex.test($(this).val().toLowerCase())) {
+                if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                     $("#dvPreview").show();
-                    $("#dvPreview").append("<img class='thunbnail_image images_preview'/>");
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $("#dvPreview img").attr("src", e.target.result);
-                    }
-                    reader.readAsDataURL($(this)[0].files[0]);
+                    $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
                 } else {
-                    alert("This browser does not support FileReader.");
+                    if (typeof(FileReader) != "undefined") {
+                        $("#dvPreview").show();
+                        $("#dvPreview").append("<img class='thunbnail_image images_preview'/>");
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $("#dvPreview img").attr("src", e.target.result);
+                        }
+                        reader.readAsDataURL($(this)[0].files[0]);
+                    } else {
+                        alert("This browser does not support FileReader.");
+                    }
                 }
+            } else {
+                alert("Please upload a valid file.");
             }
-        } else {
-            alert("Please upload a valid file.");
-        }
+        });
     });
-});
 </script>
