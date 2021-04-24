@@ -126,6 +126,15 @@ main {
   font-size: 1.6rem;
 }
 
+.fcard_li {
+  list-style-type: none;
+  padding: 0rem;
+}
+
+.fcard_icon {
+  color: #b42821;
+}
+
 .fcard_btn {
   border: none;
   background-color: #b42821;
@@ -451,12 +460,12 @@ p {
 }
 
 .amt_sec-sup, .amt_sec-sub {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 400;
 }
 
 .amt_sec-num {
-  font-size: 7rem;
+  font-size: 3.8rem;
   font-weight: 800;
   color: #b42821;
 }
@@ -464,8 +473,10 @@ p {
 .amt_sec-select {
   border: none;
   border-radius: 0 !important;
-  border-bottom: 2px solid #b42821;
+  border: 1px dashed #b42821;
   color: #b42821;
+  font-size: 1.7rem;
+  margin: .5rem 0rem 1.5rem 0rem;
 }
 
 .amt_sec-select option {

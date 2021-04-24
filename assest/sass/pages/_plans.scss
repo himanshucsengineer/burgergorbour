@@ -1,21 +1,25 @@
 .amt_sec {
   &-sup,
   &-sub {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 400;
   }
 
   &-num {
-    font-size: 7rem;
+    font-size: 3.8rem;
     font-weight: 800;
     color: $prime;
   }
 
+
+
   &-select {
     border: none;
     border-radius: 0 !important;
-    border-bottom: 2px solid $prime;
+    border: 1px dashed $prime;
     color: $prime;
+    font-size: 1.7rem;
+    margin: .5rem 0rem 1.5rem 0rem;
 
     option {
       color: rgb(68, 68, 68);
@@ -29,8 +33,33 @@
   font-size: 2.8rem;
 }
 
-.mem_card_tag{
+.mem_card_tag {
   color: rgb(133, 131, 131);
   font-weight: 600;
   font-size: 1.3rem;
 }
+
+// Previous Code
+// &-sup,
+// &-sub {
+//   font-size: 2rem;
+//   font-weight: 400;
+// }
+
+// &-num {
+//   font-size: 7rem;
+//   font-weight: 800;
+//   color: $prime;
+// }
+
+
+  // &-select {
+  //   border: none;
+  //   border-radius: 0 !important;
+  //   border-bottom: 2px solid $prime;
+  //   color: $prime;
+
+  //   option {
+  //     color: rgb(68, 68, 68);
+  //   }
+  // }

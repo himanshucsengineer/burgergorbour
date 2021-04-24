@@ -18,6 +18,14 @@
     color: rgb(70, 70, 70);
     font-size: 1.6rem;
   }
+  &_li {
+    list-style-type: none;
+    padding: 0rem;
+  }
+
+  &_icon {
+    color: $prime;
+  }
 
   &_btn {
     border: none;
