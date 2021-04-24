@@ -52,7 +52,25 @@ class Course extends CI_controller
     echo json_encode(array('data' => $arrya_json));
   }
 
+  public function editdata()
+  {
+    if ($_POST['action'] == 'edit') {
 
+      $data = $this->input->post();
+      unset($data['action']);
+      unset($data['id']);
+
+      $id = $this->input->post('id'); //refrence id key for editing data
+      $this->db->where('id', $id)->update('admin_plans', $data);
+      echo json_encode($_POST);
+    }
+
+    if ($_POST['action'] == 'delete') {
+      $id = $this->input->post('id'); //refrence id key for editing data
+      $this->db->where('id', $id)->delete('admin_plans');
+      echo json_encode($_POST);
+    }
+  }
 
   public function deleteplandetail()
   {

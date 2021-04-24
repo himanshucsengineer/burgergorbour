@@ -8,6 +8,24 @@ $image = $_SESSION["image"];
 $date = $_SESSION["date"];
 $vali = $_SESSION["vali"];
 ?>
+
+<?php
+$validity = "+".$vali." month";
+$regdate = strtotime($date);
+$updateddate=date('Y-m-d',strtotime($validity,$regdate));
+
+$currntdate= date("Y-m-d");
+//if($updateddate==$currntdate){
+  //  echo "expird";
+
+//}else{
+  //  echo "available";
+//}
+
+?>
+
+
+
 <?php
 if (!isset($_SESSION["date"])) {
     $button = '<p> <span class="bh_tag">Valid To : ' . $_SESSION["vali"] . ' Month</span> </p>';

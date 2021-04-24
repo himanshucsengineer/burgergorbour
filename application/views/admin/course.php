@@ -8,6 +8,24 @@
         display: none;
     }
 
+    .edit_sliders {
+        width: 100%;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border: 1px solid #b42821;
+        border-radius: 0px;
+        outline: none;
+        color: white;
+        background-color: #b42821;
+        transition: .5s;
+    }
+
+    .edit_sliders:hover {
+        background-color: transparent;
+        color: #b42821 !important;
+
+    }
 
     .btn-group,
     .btn-group-vertical {
@@ -169,7 +187,35 @@ if ($this->session->flashdata('success')) {
             "ajax": "<?php echo base_url(); ?>admin/course/addinventory_api"
         });
 
+        $('#lowinventory').on('draw.dt', function() {
+            $('#lowinventory').Tabledit({
+                url: '<?php echo base_url("admin/course/editdata"); ?>',
+                dataType: 'json',
 
+                columns: {
+                    identifier: [0, 'id'],
+                    editable: [
+                        [1, 'course'],
+                    ]
+
+                },
+                restoreButton: false,
+                deleteButton: false,
+                buttons: {
+                    edit: {
+                        class: 'edit_sliders',
+                        html: '<a class="" data-id="380" type="button"  data-toggle="tooltip" data-original-title="edit">Edit</a>',
+                        action: 'edit'
+                    }
+                },
+                onSuccess: function(data, textStatus, jqXHR) {
+                    if (data.action == 'delete') {
+                        $('#' + data.id).remove();
+                        $('#lowinventory').DataTable().ajax.reload();
+                    }
+                }
+            });
+        });
         $(document).on('click', '.delete_sliders', function() {
 
             $('.deletesliderId').val($(this).attr('data-id'));

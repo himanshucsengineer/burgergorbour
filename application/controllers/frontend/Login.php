@@ -34,6 +34,7 @@ class Login extends CI_controller
                 $_SESSION["card"] = $value["card"];
                 $_SESSION["image"] = $value["file"];
                 $_SESSION["date"] = $value["date"];
+                $_SESSION["vali"] = $value["vali"];
                 $login_success = 1;
                 break;
             }
