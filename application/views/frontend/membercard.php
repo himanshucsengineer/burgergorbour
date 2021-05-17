@@ -91,10 +91,10 @@ var x = setInterval(function() {
                     <div class="row justify-content-around">
                         <div class="col-md-3 pt-5">
                             <ul>
-                                <li class="client_links client_active">
+                                <li class="client_links ">
                                     <a href="<?php echo base_url() ?>account">Profile And Settings</a>
                                 </li>
-                                <li class="client_links">
+                                <li class="client_links client_active">
                                     <a href="<?php echo base_url() ?>member-card">Membership Details</a>
                                 </li>
                                 <li class="client_links">

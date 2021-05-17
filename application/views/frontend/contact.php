@@ -1,3 +1,42 @@
+<style>
+.contact_icon .flex{
+    width:100%;
+    height:auto;
+    display:flex;
+    margin-bottom:1.5rem;
+}
+.contact_icon .flex .left{
+    width:15%;
+    height:auto;
+   
+}
+.contact_icon .flex .left .fa, .far{
+    font-size:35px;
+   color:#b42821;
+}
+.contact_icon .flex .right{
+    width:85%;
+    height:auto;
+   margin-top:-1rem;
+}
+@media only screen and (max-width: 600px) {
+ .contact_icon .flex .left .fa, .far{
+    font-size:30px;
+  
+}
+.contact_icon .flex .left{
+    width:20%;
+    height:auto;
+   
+}
+.contact_icon .flex .right{
+    width:80%;
+    height:auto;
+   
+}
+}
+
+</style>
 <main class="main">
 
     <div class="spacer_s"></div>
@@ -58,21 +97,54 @@
                             </form>
                             <!-- End Contact Form -->
                         </div>
-                        <div class="col-md-5 px-5">
-
-                            <div>
-                                <h2 class="head_h3">Our Office</h2>
-                                <p>Ground Floor, Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana
-                                    125001 </p>
+                        <div class="col-md-5 px-5 contact_icon">
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="right">
+                                   
+                                        <h2 class="head_h3">Our Office</h2>
+                                        <p>SSB 1&2 PLA, Shopping Complex Near Town Park, Hisar, Haryana (125001)</p>
+                                    
+                                </div>    
+                            </div>    
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="fa fa-phone" ></i>
+                                </div>
+                                <div class="right">
+                                   <div>
+                                        <h2 class="head_h3">Give Us a Call</h2>
+                                        <p>+91 7206324915</p>
+                                    </div>
+                                </div>    
                             </div>
-                            <div>
-                                <h2 class="head_h3">Give Us a Call</h2>
-                                <p>+91 8957450000</p>
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="fa fa-envelope" ></i>
+                                </div>
+                                <div class="right">
+                                   <div>
+                                        <h2 class="head_h3">Email</h2>
+                                        <p>Info@burgerhurbour.com </p>
+                                    </div>
+                                </div>    
                             </div>
-                            <div>
-                                <h2 class="head_h3">Email</h2>
-                                <p>Info@burgerhurbour.com </p>
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <div class="right">
+                                   <div>
+                                        <h2 class="head_h3">Opening Hour</h2>
+                                        <p>10:00 AM -10:30 PM Everyday </p>
+                                    </div>
+                                </div>    
                             </div>
+                            
+                            
+                            
 
                         </div>
                     </div>

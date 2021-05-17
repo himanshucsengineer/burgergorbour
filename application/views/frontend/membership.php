@@ -147,6 +147,15 @@ $(function () {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7">
+                <?php
+                                if ($this->session->flashdata('success')) {
+                                    echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                                } else if ($this->session->flashdata('error')) {
+                                    echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                                }
+
+
+                                ?>
                 <form method="post" action="<?php echo base_url(); ?>frontend/login/signup" enctype="multipart/form-data">
                     <div class="mb-4">
                         <input type="text" class="b_input" name="name" placeholder="Enter Your Name">

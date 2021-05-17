@@ -35,15 +35,17 @@ class Login extends CI_controller
                 $_SESSION["image"] = $value["file"];
                 $_SESSION["date"] = $value["date"];
                 $_SESSION["vali"] = $value["vali"];
+                $_SESSION['razorpay_order_id'] = $value["order_id"];
                 $login_success = 1;
                 break;
             }
         }
         if ($login_success == 1) {
+            $this->session->set_flashdata('success', 'Login Successfull');
             redirect(base_url() . 'account');
         } else {
-            $this->session->set_flashdata('error', 'Wrong Email Or Password or Your Profile Is not Approved');
-            redirect($url);
+            $this->session->set_flashdata('error', 'Wrong Email or Password.');
+            redirect(base_url() . 'signin');
         }
     }
 
@@ -66,7 +68,7 @@ class Login extends CI_controller
                 $config['file_name'] = $File_name;
                 $config['overwrite'] = TRUE;
                 $config["allowed_types"] = 'png|jpg|jpeg';
-                $config["max_size"] = 2048;
+                $config["max_size"] = '6144';
 
                 $this->load->library('upload', $config);
 
@@ -75,7 +77,7 @@ class Login extends CI_controller
                     $this->data['error'] = $this->upload->display_errors();
                     $this->session->set_flashdata('error', $this->upload->display_errors());
 
-                    redirect('frontend/career');
+                    redirect(base_url().'membership');
                 } else {
                     $dataimage_return = $this->upload->data();
                     $imageurl = base_url() . 'upload/user/' . $dataimage_return['file_name'];
@@ -93,7 +95,7 @@ class Login extends CI_controller
             redirect(base_url() . 'frontend/plans');
         } else {
             $this->session->set_flashdata('error', 'This  email already used by someone try with another email');
-            redirect(base_url());
+            redirect(base_url().'membership');
         }
     }
 

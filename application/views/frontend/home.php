@@ -11,32 +11,67 @@
         }
     }
 </style>
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="<?php echo base_url() ?>assest/img2/slider1.jpg" class="d-block clider_img" alt="slider 1">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+<!-- Hero Section -->
+<div class="hero">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="c_herosection c_sec_1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <h1 class="super_h1">LET THE GREAT TAST BEGIN</h1>
+                                <div class="my-5">
+                                    <a href="<?php echo base_url()?>menu"><button class="super_btn">MENU</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div> -->
+            </div>
+            <div class="carousel-item">
+                <div class="c_herosection c_sec_2">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <h1 class="super_h1">JOIN OUR BEGGY FAMILY</h1>
+                                <div class="my-5">
+                                    <a href="<?php echo base_url()?>membership"><button class="super_btn">MEMBERSHIP</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="c_herosection c_sec_3">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <h1 class="super_h1">GET IN TOUCH TO KNOW MORE</h1>
+                                <div class="my-5">
+                                    <a href="<?php echo base_url()?>contact-us"><button class="super_btn">CONTACT</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="<?php echo base_url() ?>assest/img2/slider2.jpg" class="d-block clider_img" alt="slider 2">
-        </div>
-        <div class="carousel-item">
-            <img src="<?php echo base_url() ?>assest/img2/slider3.jpeg" class="d-block clider_img" alt="slider 3">
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
-
 <!-- Hero Section -->
 
 <div class="spacer_s"></div>
@@ -83,45 +118,105 @@
 <!-- 3 Container Section -->
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-11">
             <div class="row justify-content-center">
-                <!-- F_card -->
+
+                <!-- F_card   3 -->
                 <div class="col-md-4 px-4 py-2 mb-4">
-                    <a href="" class="nodecoration">
+                    <a href="<?php echo base_url()?>plans" class="nodecoration">
                         <div class="fcard fcard_bg">
-                            <img src="<?php echo base_url() ?>assest/img/bg2.jpg" alt="" class="fcard_img">
+                            <img src="<?php echo base_url()?>assest/img/bg3.jpg" alt="" class="fcard_img">
                             <div class="fcard_content">
-                                <h3 class="head_h3 mb-1">Veg Combo</h3>
+                                <h3 class="head_h3 mb-1">Only Burger Horbour</h3>
                                 <p class="fcard_p">looking Scarlett Johansson once. As a matter </p>
-                                <button class="fcard_btn"> Order Now</button>
+                                <ul class="p-2">
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        6 Days a
+                                        Week</li>
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        Dedicated Trainer Allocated</li>
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        Diet Plan Included</li>
+                                </ul>
+                                <!-- <div class="text-center my-1">
+                                   
+                                    <button class="fcard_btn"> Choose Plan</button>
+
+                                </div> -->
                             </div>
                         </div>
                     </a>
                 </div>
                 <!-- end Fcard -->
-                <!-- F_card -->
+
+                <!-- F_card   3 -->
                 <div class="col-md-4 px-4 py-2 mb-4">
-                    <a href="" class="nodecoration">
+                    <a href="<?php echo base_url()?>plans" class="nodecoration">
                         <div class="fcard fcard_bg">
-                            <img src="<?php echo base_url() ?>assest/img/bg3.jpg" alt="" class="fcard_img">
+                            <img src="<?php echo base_url()?>assest/img/bg3.jpg" alt="" class="fcard_img">
                             <div class="fcard_content">
-                                <h3 class="head_h3 mb-1">Biryani Burgur</h3>
+                                <h3 class="head_h3 mb-1">Only Choup Horbour</h3>
                                 <p class="fcard_p">looking Scarlett Johansson once. As a matter </p>
-                                <button class="fcard_btn"> Order Now</button>
+                                <ul class="p-2">
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        6 Days a
+                                        Week</li>
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        Dedicated Trainer Allocated</li>
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        Diet Plan Included</li>
+                                </ul>
+                                <!-- <div class="text-center my-1">
+                                   
+                                    <button class="fcard_btn"> Choose Plan</button>
+
+                                </div> -->
                             </div>
                         </div>
                     </a>
                 </div>
                 <!-- end Fcard -->
-                <!-- F_card -->
+
+                <!-- F_card   3 -->
                 <div class="col-md-4 px-4 py-2 mb-4">
-                    <a href="" class="nodecoration">
+                    <a href="<?php echo base_url()?>plans" class="nodecoration">
                         <div class="fcard fcard_bg">
-                            <img src="<?php echo base_url() ?>assest/img/bg4.jpg" alt="" class="fcard_img">
+                            <img src="<?php echo base_url()?>assest/img/bg3.jpg" alt="" class="fcard_img">
                             <div class="fcard_content">
-                                <h3 class="head_h3 mb-1">Burger Pick</h3>
+                                <h3 class="head_h3 mb-1">Both</h3>
                                 <p class="fcard_p">looking Scarlett Johansson once. As a matter </p>
-                                <button class="fcard_btn"> Order Now</button>
+                                <ul class="p-2">
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        6 Days a
+                                        Week</li>
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        Dedicated Trainer Allocated</li>
+                                    <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        Diet Plan Included</li>
+                                </ul>
+                                <!-- <div class="text-center my-1">
+                                   
+                                    <button class="fcard_btn"> Choose Plan</button>
+
+                                </div> -->
                             </div>
                         </div>
                     </a>
@@ -132,6 +227,10 @@
         </div>
     </div>
 </div>
+<!-- Membership card plans -->
+
+
+
 <!-- End 3 container Section -->
 
 <div class="spacer_m"></div>
