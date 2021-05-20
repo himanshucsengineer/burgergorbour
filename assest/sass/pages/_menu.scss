@@ -6,12 +6,59 @@
     url("../img/cp.svg");
   padding: 3rem;
 }
+
+.menu_p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: rgb(228, 129, 15);
+}
+
+.menu_head_tag {
+  font-size: 1.7rem;
+  color: $prime;
+}
+
+.menu_prize {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: $prime;
+  // color: rgb(92, 92, 92);
+}
+
+.prize_row {
+  border-bottom: 1px dashed $prime;
+}
+
+.menu_item_head {
+  font-size: 3rem;
+  font-family: "Pattaya", sans-serif;
+}
+
+.recipe_menu {
+  padding: 2rem;
+  margin: 1rem;
+  // background-color: rgb(255, 249, 249);
+  border: 1px dashed $prime;
+}
+
 @media only screen and (max-width: 600px) {
+
+  .menu_prize{
+    font-size: 1.5rem;
+  }
+  .recipe_menu {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
   .menu_img {
     height: 14rem;
   }
 
   .menu_content {
     padding: 0.5rem 0.8rem;
+  }
+
+  .menu_p {
+    font-size: 1.3rem;
   }
 }
