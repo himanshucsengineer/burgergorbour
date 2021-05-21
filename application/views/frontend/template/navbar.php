@@ -7,8 +7,9 @@ if (!isset($_SESSION["email"])) {
             ' . $_SESSION["name"] . '
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <a class="" href="' . base_url() . 'account"><button>Dashboard</button></a>
-                <a class="" href="' . base_url() . 'logout"><button>Logout</button></a>
+                <a class="" href="' . base_url() . 'account"><button><i class="far fa-user"></i> Profile & Setting</button></a>
+                <a class="" href="' . base_url() . 'member-card"><button><i class="fas fa-id-card"></i>Membership Details</button></a>
+                <a class="" href="' . base_url() . 'logout"><button><i class="fas fa-sign-out-alt"></i>Logout</button></a>
                
             </div>
         </li>
@@ -22,9 +23,9 @@ if (!isset($_SESSION["email"])) {
 
 <?php
 if (!isset($_SESSION["razorpay_order_id"])) {
-    $plans = '<li class="mm"><a href="'.base_url().'plans" class="nodecoration">Plans</a></li> ';
+    $plans = '<li class="mm"><a href="' . base_url() . 'plans" class="nodecoration">Plans</a></li> ';
 } else {
-    $plans = '<li class="mm"><a href="'.base_url().'renewplans" class="nodecoration">Renew Plans</a></li>
+    $plans = '<li class="mm"><a href="' . base_url() . 'renewplans" class="nodecoration">Renew Plans</a></li>
   
   
   
@@ -47,61 +48,63 @@ if (!isset($_SESSION["email"])) {
 }
 ?>
 <style>
-.ws{
-    position: fixed;
-    width: 15rem;
-    outline:none !important;
-    height: auto;
-    padding-top:.5rem;
-    padding-bottom:.5rem;
-    padding-left:1rem;
-    padding-right:1rem;
-    bottom: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border: 1px solid #cdcdcd;
-    border-radius:50px;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 2px 3px 10px #999;
-    right: 15px;
-    z-index: 100;
-    transition:.5s;
-    display:block;
-    
-}
-.ws:hover{
-    
-    transform: scale(1.1);
-}
+    .ws {
+        position: fixed;
+        width: 15rem;
+        outline: none !important;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        bottom: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border: 1px solid #cdcdcd;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 18px;
+        box-shadow: 2px 3px 10px #999;
+        right: 15px;
+        z-index: 100;
+        transition: .5s;
+        display: block;
 
-.wss{
-    position: fixed;
-    width: 9rem;
-    outline:none !important;
-    height: auto;
-    padding-top:.3rem;
-    padding-bottom:.3rem;
-    padding-left:.5rem;
-    padding-right:.5rem;
-    bottom: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border: 1px solid #cdcdcd;
-    border-radius:50px;
-    text-align: center;
-    font-size: 15px;
-    box-shadow: 2px 3px 10px #999;
-    right: 15px;
-    z-index: 100;
-    transition:.5s;
-    display:none;
-    
-}
-.wss:hover{
-    
-    transform: scale(1.1);
-}
+    }
+
+    .ws:hover {
+
+        transform: scale(1.1);
+    }
+
+    .wss {
+        position: fixed;
+        width: 9rem;
+        outline: none !important;
+        height: auto;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        bottom: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border: 1px solid #cdcdcd;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 15px;
+        box-shadow: 2px 3px 10px #999;
+        right: 15px;
+        z-index: 100;
+        transition: .5s;
+        display: none;
+
+    }
+
+    .wss:hover {
+
+        transform: scale(1.1);
+    }
 
 
     .sidepanel {
@@ -157,7 +160,7 @@ if (!isset($_SESSION["email"])) {
     .dropdown-menu {
         width: 100%;
         height: auto;
-        border: 1px solid #cdcdcd;
+        margin-top: 2rem;
         border-radius: 0px !important;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
@@ -166,11 +169,23 @@ if (!isset($_SESSION["email"])) {
     .dropdown-menu button {
         width: 100%;
         height: auto;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         background-color: white;
-        border: none;
-        border-bottom: 1px solid #cdcdcd;
+        border-top:none !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: 1px solid #cdcdcd !important;
+        outline: none;
+        text-align: left;
+        padding-left: 1.5rem;
+        font-size: 15px !important;
+        color: rgb( 95, 96, 96 ) !important;
+
+    }
+    .dropdown-menu .far,.fa,.fas {
+        margin-right: 1rem;
+        font-size: 17px !important;
     }
 
 
@@ -240,18 +255,25 @@ if (!isset($_SESSION["email"])) {
             float: right;
             margin-top: -2.5rem;
         }
-.ws{
-            display:none !important;
+
+        .ws {
+            display: none !important;
         }
-        .wss{
-            display:block !important;
+
+        .wss {
+            display: block !important;
         }
+
         .nodecoration {
             display: none !important;
         }
 
         .mm {
             display: none !important;
+        }
+
+        .d-flex {
+            margin-bottom: 0rem !important;
         }
     }
 </style>
@@ -287,7 +309,7 @@ if (!isset($_SESSION["email"])) {
                 <ul class="d-flex h_nav">
                     <li class="h_nav_links mm"><a href="<?php echo base_url() ?>" class="nodecoration">Home</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>menu" class="nodecoration">Menu</a></li>
-                    <?php echo $plans;?>
+                    <?php echo $plans; ?>
                     <li class="mm"><a href="<?php echo base_url() ?>membership" class="nodecoration">Membership</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>contact-us" class="nodecoration">Contact</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>about-us" class="nodecoration">About </a></li>
@@ -303,9 +325,9 @@ if (!isset($_SESSION["email"])) {
         </div>
     </div>
 </header>
-<a  href="https://web.whatsapp.com/send?phone=+917206324915&text=Hi, Sir I want to know about an order can you help me out?" target="_blank"><button class="ws"> <i class="fa fa-whatsapp" aria-hidden="true" style="margin-right:.5rem;"></i>Chat Now</button></a>
-   <a href="https://api.whatsapp.com/send?phone=+917206324915&text=Hi, Sir I want to know about an order can you help me out?" target="_blank"><button class="wss"> <i class="fa fa-whatsapp" aria-hidden="true" style="margin-right:.5rem;"></i>Chat?</button></a>
-    
+<a href="https://web.whatsapp.com/send?phone=+917206324915&text=Hi, Sir I want to know about an order can you help me out?" target="_blank"><button class="ws"> <i class="fa fa-whatsapp" aria-hidden="true" style="margin-right:.5rem;"></i>Chat Now</button></a>
+<a href="https://api.whatsapp.com/send?phone=+917206324915&text=Hi, Sir I want to know about an order can you help me out?" target="_blank"><button class="wss"> <i class="fa fa-whatsapp" aria-hidden="true" style="margin-right:.5rem;"></i>Chat?</button></a>
+
 <script>
     function openNav() {
         document.getElementById("mySidepanel").style.width = "250px";
@@ -315,4 +337,3 @@ if (!isset($_SESSION["email"])) {
         document.getElementById("mySidepanel").style.width = "0";
     }
 </script>
-

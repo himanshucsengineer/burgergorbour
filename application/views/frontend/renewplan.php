@@ -26,13 +26,13 @@ $image = $_SESSION["image"];
     <div class="container">
         <div class="row mt-3">
             <div class="col text-center">
-                <h2 class="head_h2">Membership Plans Offers</h2>
+                <h2 class="head_h2">Renew My Membership</h2>
             </div>
         </div>
 
         <div class="row">
             <div class="col text-center">
-                <p class="title_para">*** Join Our membership and get reward for it ***</p>
+                <p class="title_para">*** Continue Our membership and get reward for it ***</p>
             </div>
         </div>
     </div>
@@ -94,20 +94,20 @@ $image = $_SESSION["image"];
                                     </div>
                                 </div>
                                 <div class="text-center my-2">
-                                    <?php
-if (!isset($_SESSION["email"])) {
-    echo '<a href="' . base_url() . 'membership"><button class="fcard_btn px-4">Buy Now</button></a>';
-} else {
-   echo '<form action="' . base_url() . 'renewplan/pay" method="POST">
-
-    <input type="hidden" name="email" value="' . $_SESSION["email"] . '">
-  
-    <input type="hidden" id="bal'.$i.'" name="vali" value="">
-    <input type="hidden" id="amtt'.$i.'" name="amount" value="">
-    <button class="fcard_btn px-4">Buy Now</button>
-  </form>';
-}
-?>
+                                    <?php 
+                                        if (!isset($_SESSION["email"])) {
+                                        echo '<a href="' . base_url() . 'membership"><button class="fcard_btn px-4">Buy Now</button></a>';
+                                                } else {
+                                            echo '<form action="' . base_url() . 'renewplan/pay" method="POST">
+                                                    <input type="hidden" name="email" value="' . $_SESSION["email"] . '">
+                                                    <input type="text" id="old_vali" value="'.$_SESSION['vali'].'">
+                                                    <input type="text" id="acc'.$i.'" name="acc_type" value="">
+                                                    <input type="text" id="bal'.$i.'" name="vali" value="">
+                                                    <input type="hidden" id="amtt'.$i.'" name="amount" value="">
+                                                    <button class="fcard_btn px-4">Buy Now</button>
+                                                </form>';
+                                            }
+                                        ?>
                                 </div>
                                 <hr>
                                 
@@ -140,93 +140,13 @@ if (!isset($_SESSION["email"])) {
 
 
     <div class="spacer_s"></div>
-    <!-- End Choose plan -->
-
-
-
-
-
-    <!-- end Plan 1 -->
-
-
-
-    <!-- Plan 2 -->
-    <!--div class="plan">
   
-        <div class="amt_sec">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center">
-                        <p><sup class="amt_sec-sup">IN &#8377</sup> <span class="amt_sec-num" id="amount">999</span><sub class="amt_sec-sub"> / <span id="vali">year</span></sub></p>
-
-                        <div>
-                            <p>Take Your Offers and enjoy Your meal</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-     
-
-
-        <div class="amt_sec">
-            <div class="container">
-                <div class="row mb-5 justify-content-center">
-                    <div class="col-md-6 text-center">
-                        <select id='sel_depart' class="b_input amt_sec-select">
-                            <option>Select Your Billing Options</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 text-center">
-                        <div class="mb-4">
-                            <?php echo $button1 ?>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <!-- end Plan 2 -->
 
 
 
 
 
 
-
-    <!-- End Indian Rupees -->
-
-    <!-- -->
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-7">
-                <div class="mb-4">
-                    <input type="text" class="b_input" placeholder="*** Your Name ***">
-                </div>
-                <div class="mb-4">
-                    <input type="email" class="b_input" placeholder="*** Your Email ***">
-                </div>
-                <div class="mb-4">
-                    <input type="file" class="b_input" />
-                </div>
-                <div class="mb-4">
-                    <input type="number" class="b_input" placeholder="*** Your Phone Number ***" />
-                </div>
-                <div class="mb-4">
-                    <textarea name="" id="" cols="30" rows="4" class="b_input"
-                        placeholder="*** Your Address ***"></textarea>
-                </div>
-                <div class="mb-4">
-                    <button class="member_btn"> Get MemberShip</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End 3 container Section -->
 
     <div class="spacer_s"></div>
     <div class="spacer_s"></div>
@@ -245,16 +165,18 @@ if (!isset($_SESSION["email"])) {
 
 
     $(document).ready(function() {
-     
+        const oll= document.getElementById('old_vali').value;
+        
         $( '#sel_depart1' ).change(function () {
            $( "#sel_depart1 option:selected" ).each(function() {
                 var thisBtn = $(this).val();
                  var spt = thisBtn.split(" ");
-            console.log(spt[1])
+            const sum = Number(spt[1]) +  Number(oll);
             document.getElementById('amount1').innerHTML = spt[0];
-            document.getElementById('exire1').innerHTML = spt[1] + "Mo.";
+            document.getElementById('exire1').innerHTML = spt[1] + " " + spt[2];
             document.getElementById('amtt1').value = spt[0];
-            document.getElementById('bal1').value = spt[1];
+            document.getElementById('bal1').value = sum;
+            document.getElementById('acc1').value = "Premium";
             });
             }).change();
     });
@@ -268,16 +190,17 @@ if (!isset($_SESSION["email"])) {
 
 
     $(document).ready(function() {
-     
+        const oll= document.getElementById('old_vali').value;
         $( '#sel_depart2' ).change(function () {
            $( "#sel_depart2 option:selected" ).each(function() {
                 var thisBtn = $(this).val();
                  var spt = thisBtn.split(" ");
-            console.log(spt[1])
+                 const sum = Number(spt[1]) +  Number(oll);
             document.getElementById('amount2').innerHTML = spt[0];
-            document.getElementById('exire2').innerHTML = spt[1] + "Mo.";
+            document.getElementById('exire2').innerHTML = spt[1] + " " + spt[2];
             document.getElementById('amtt2').value = spt[0];
-            document.getElementById('bal2').value = spt[1];
+            document.getElementById('bal2').value = sum;
+            document.getElementById('acc2').value = "Gold";
             });
             }).change();
     });
@@ -291,16 +214,17 @@ if (!isset($_SESSION["email"])) {
 
 
     $(document).ready(function() {
-     
+        const oll= document.getElementById('old_vali').value;
         $( '#sel_depart3' ).change(function () {
            $( "#sel_depart3 option:selected" ).each(function() {
                 var thisBtn = $(this).val();
                  var spt = thisBtn.split(" ");
-            console.log(spt[1])
+                 const sum = Number(spt[1]) +  Number(oll);
             document.getElementById('amount3').innerHTML = spt[0];
-            document.getElementById('exire3').innerHTML = spt[1] + "Mo.";
+            document.getElementById('exire3').innerHTML = spt[1] + " " + spt[2];
             document.getElementById('amtt3').value = spt[0];
-            document.getElementById('bal3').value = spt[1];
+            document.getElementById('bal3').value = sum;
+            document.getElementById('acc3').value = "Silver";
             });
             }).change();
     });

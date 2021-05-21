@@ -1,126 +1,24 @@
-<!--style>
-    .main_menu{
-        width: 100%;
-        height: auto;
-        
-        background-color: rgb(245, 235, 220);
-    }    
-    .main_menu .flex_1{
-        width: 100%;
-        height: auto;
-        display: flex;
-    }
-    .main_menu .flex_1 .menu_heading{
-        width: 17%;
-        height: auto;
-        padding-top: 3rem;
-        padding-bottom: 0rem;
-        border-bottom:4px solid rgb(43, 2, 0) ;
-    }
-    .main_menu .flex_1 .menu_heading h1{
-        text-align: center;
-        color: rgb(43, 2, 0);
-    }
-    .main_menu .flex{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-    .main_menu .flex .card{
-        width: 25%;
-        height: auto;
-        border: none;
-      
-        padding: 10px;
-        background-color: transparent;
-        
-    }
-    .main_menu .flex .card .card_main{
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        background-color: white;
-    }
-    .main_menu .flex .card .card_main img{
-        width: 100%;
-        height: 200px;
-        border-radius: 12px 12px 0px 0px;
-    }
-    .main_menu .flex .card .card_main h5{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        font-weight: 700;
-        color: rgb(43, 2, 0);
-    }
+<style>
 
-    @media only screen and (max-width: 600px) {
-        .main_menu .flex .card{
-        width: 50%;
-        height: auto;
-        border: none;
-      
-        padding: 5px;
-        background-color: transparent;
-        
-    }
-    .main_menu .flex .card .card_main img{
-        width: 100%;
-        height: 100px;
-        border-radius: 12px 12px 0px 0px;
-    }
-    .main_menu .flex .card .card_main h5{
-        margin-top: .8rem;
-        margin-bottom: .8rem;
-        font-size: 15px;
-        font-weight: 600;
-       
-    }
-    .main_menu .flex_1 .menu_heading{
-        width: 50%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 0rem;
-       
-        opacity: .8;
-        
-    }
-    .main_menu .flex_1 .menu_heading h1{
-        font-size: 28px;
-        
-    }
+@media only screen and (max-width: 600px) {
+    .recipe_menu{
+    margin: 0rem !important;
+}
+.menu_p{
+    font-size: 11px !important;
+}
+.head_h5{
+    font-size: 1.7rem !important;
+}
+.menu_item_head{
+    font-size: 2.5rem !important;
+}
+.subdes{
+    word-break: break-all;
+}
 }
 </style>
-<div class="main_menu">
-    <div class="flex_1 justify-content-center">
-        <div class="menu_heading">
-            <h1>Our Menu</h1>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="flex ">
-            <?php foreach ($menu as $value) { ?>
-            <div class="card">
-                <div class="card_main">
-                    <img src="<?php echo $value['file'] ?>" alt="demo image ">
-                    <h5><?php echo $value['name'] ?></h5>
-                </div>
-            </div>
-            <?php } ?>
-            
-        </div>
-    </div>
-
-</div-->
-
-
-
 <main class="main">
-
     <div class="spacer_s"></div>
     <div class="pattern_bar"></div>
     <!-- Menu Title -->
@@ -130,62 +28,676 @@
                 <h2 class="head_h2">Our Menu</h2>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <p class="title_para">*** Taste The delious One ***</p>
-            </div>
-        </div>
     </div>
     <!-- End Menu Title -->
 
-    <div class="spacer_s"></div>
 
+    <!-- Menu Item  -->
     <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h3 class="head_h3">*** Veg Layers Burgur Combo ***</h3>
-            </div>
-        </div>
-    </div>
-    <div class="spacer_s"></div>
-    <!-- -->
-    <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center ">
             <div class="col-md-10">
-                <div class="row">
-                    <!-- F_card -->
-                    <?php foreach ($menu as $value) { ?>
-                        <div class="col-md-4 px-4 py-2 mb-3 col-6">
-                            <a href="" class="nodecoration">
 
-                                <div class="fcard">
-                                    <img src="<?php echo $value['file'] ?>" alt="" class="fcard_img menu_img">
-                                    <div class="fcard_content menu_content">
-                                        <h3 class="head_h3 mb-1"><?php echo $value['name'] ?></h3>
-                                    </div>
-                                </div>
+                <div class="recipe_menu">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h2 class="head_h2 text-center menu_item_head">Tandoori Chaap</h2>
+                                </th>
+                                <th scope="col" colspan="2" class="text-center head_h5">HALF</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">FULL</th>
 
-                            </a>
-                        </div>
-                    <?php } ?>
-                    <!-- end Fcard -->
 
-                    <!-- F_card -->
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Stuff Masala</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">120</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">100</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">200</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">140</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Stuff Malai</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">130 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">220 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150 </span></p>
+                                </td>
+                            </tr>
 
-                    <!-- end Fcard -->
-                    <!-- F_card -->
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Malai Chaap</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Afgani</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110 </span></p>
+                                </td>
+                            </tr>
 
-                    <!-- end Fcard -->
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Haryali</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Lemon</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">90 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110 </span></p>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Masala</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Achari</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">90 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110 </span></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Garlic</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">180</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">130</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Honey Mustard</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">120 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">100 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">200 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150 </span></p>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
 
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End 3 container Section -->
 
-    <div class="spacer_s"></div>
+        <div class="spacer_s"></div>
+    </div>
+    <!-- Menu Item  -->
+
+    <!-- Menu Item  -->
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-md-10">
+
+                <div class="recipe_menu">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h2 class="head_h2 text-center menu_item_head">Tikka Special</h2>
+                                </th>
+                                <th scope="col" colspan="2" class="text-center head_h5">HALF</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">FULL</th>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Panner Tikka</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">100</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">180</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Malai Panner Tikka</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">120 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">200 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">160 </span></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Mashroom Tikka</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">150</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">120</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Pure Veg Mutton</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">100 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">160 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">140 </span></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Roop Ki Rani</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">40</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">30</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">70</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">50</span></p>
+                                </td>
+                            </tr>
+                          
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer_s"></div>
+    </div>
+    <!-- Menu Item  -->
+
+
+    <!-- Menu Item  -->
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-md-10">
+
+                <div class="recipe_menu">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h2 class="head_h2 text-center menu_item_head">Tandoori Momos</h2>
+                                </th>
+                                <th scope="col" colspan="2" class="text-center head_h5">HALF</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">FULL</th>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Malai Momos (10 Pcs.)</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">120</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Chatpata Momos (10 Pcs.)</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">120 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90 </span></p>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer_s"></div>
+    </div>
+
+
+
+    <!-- Menu Item  -->
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-md-10">
+
+                <div class="recipe_menu">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h2 class="head_h2 text-center menu_item_head">Platter</h2>
+                                </th>
+                                <th scope="col" colspan="2" class="text-center head_h5">HALF</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">FULL</th>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Chaap Platter</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">200</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">110</span></p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Tikka Platter</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">250 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">180 </span></p>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer_s"></div>
+    </div>
+
+
+     <!-- Menu Item  -->
+     <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-md-10">
+
+                <div class="recipe_menu">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h2 class="head_h2 text-center menu_item_head">Chaap Roll</h2>
+                                </th>
+                                <th scope="col" colspan="2" class="text-center head_h5">HALF</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">FULL</th>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Masala Chaap Roll</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">70</span></p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Malai Chaap Roll</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">90 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">70 </span></p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Afgani Chaap Roll</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">90</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">70</span></p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Panner Tikka Roll</h4>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">100 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">70 </span></p>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer_s"></div>
+    </div>
+
+
+
+
+
+    <!-- Menu Item -->
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-md-10">
+
+                <div class="recipe_menu">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h2 class="head_h2 text-center menu_item_head">Pizza Mania</h2>
+                                </th>
+                                <th scope="col" colspan="2" class="text-center head_h5">Small(8")</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">Medium(10")</th>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Actual</th>
+                                <th scope="col" class="text-center head_h6 menu_p">Member</th>
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                                <th scope="col" class="text-center head_h6"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Margrita</h4>
+                                    <p class="menu_p subdes">Cheese Topping</p>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">120</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">70</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">180</span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">100</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <h4 class="head_h5">Mix Veg.</h4>
+                                    <p class="menu_p subdes">Onion,tomato,capsicum,cheese</p>
+                                </th>
+                                <td class="text-center">
+                                    <p><span class="menu_prize py-2">140 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">80 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">220 </span></p>
+                                </td>
+                                <td class="text-center">
+                                    <p><span class="menu_prize">120 </span></p>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer_s"></div>
+    </div>
+    <!-- Menu Item -->
+
+
+
+
 
 
 </main>

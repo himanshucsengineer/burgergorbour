@@ -7,65 +7,133 @@ $add = $_SESSION["add"];
 $image = $_SESSION["image"];
 $date = $_SESSION["date"];
 $vali = $_SESSION["vali"];
+$acc_type = $_SESSION["acc_type"];
 ?>
 
 <?php
 $validity = "+".$vali." month";
 $regdate = strtotime($date);
-$updateddate=date('Y-m-d',strtotime($validity,$regdate));
+$updateddate=date('d/m/y',strtotime($validity,$regdate));
 
-$currntdate= date("Y-m-d");
-//if($updateddate==$currntdate){
-  //  echo "expird";
+$currntdate= date("d/m/y");
+if($currntdate==$updateddate){ 
+    $finaldate='<div class="member_card">
+    <div class="member_card_border">
+        <div class="row mb-4 mem_row1">
+            <div class="col-4 mem_row1_col-left">
+                <img src="'.base_url().'assest/img/acc_block2.png" alt="" class="member_card_img">
+            </div>
+            <div class="col-8">
+                <div>
+                    <div class="mb-2 ">
+                        <p><span class="member_card_name px-3 pb-0">'.$name.'</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Member No. :</span>
+                            <span class="member_card_num">xxxxxx</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Phone:</span>
+                            <span class="member_card_phone">'.$number.'</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Membership:</span>
+                            <span class="member_card_phone">xxxxx</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-//}else{
-  //  echo "available";
-//}
+        <div class="row mem_row2 mx-1">
+            <div class="col-7 text-center">
+                <p> <span class="mem_text">Valid Up To: Suspended</span> </p>
+            </div>
+            <div class="col-5 text-center">
+                <p><span class="mem_text">Logo</span> </p>
+            </div>
+        </div>
+    </div>
+   
+</div>';
+}else{
+    $finaldate = '<div class="member_card">
+    <div class="member_card_border">
+        <div class="row mb-4 mem_row1">
+            <div class="col-4 mem_row1_col-left">
+                <img src="'.$image.'" alt="" class="member_card_img">
+            </div>
+            <div class="col-8">
+                <div>
+                    <div class="mb-2 ">
+                        <p><span class="member_card_name px-3 pb-0">'.$name.'</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Member No. :</span>
+                            <span class="member_card_num">'.$card.'</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Phone:</span>
+                            <span class="member_card_phone">'.$number.'</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Membership:</span>
+                            <span class="member_card_phone">'.$acc_type.'</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-?>
-
-
-
-<?php
-if (!isset($_SESSION["date"])) {
-    $button = '<p> <span class="bh_tag">Valid To : ' . $_SESSION["vali"] . ' Month</span> </p>';
-} else {
-    $button = '<p> <span class="bh_tag">Expire In : ' . $_SESSION["date"] . '</span> </p>';
+        <div class="row mem_row2 mx-1">
+            <div class="col-7 text-center">
+                <p> <span class="mem_text">Valid Up To: '.$updateddate.'</span> </p>
+            </div>
+            <div class="col-5 text-center">
+                <p><span class="mem_text">Logo</span> </p>
+            </div>
+        </div>
+    </div>
+   
+</div>';
 }
-?>
-<!--p id="demo"></p>
-<input type="text" id="getdate" value="<?php echo $date ?>">
-<script>
-     var dat =document.getElementById('getdate').value;
-     var date_spl = dat.split("-");
-     var yr = date_spl[0];
-     var mond = date_spl[1];
-     var da = date_spl[2]
-     console.log(da);
-var countDownDate = new Date("Jan 5, 2022");
-console.log(countDownDate);
-// Update the count down every 1 second
-var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d ";
-    
-  // If the count down is over, write some text 
-  if (distance <= 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script-->
+?>
+
+
+
+
+<style>
+    .blocked{
+        width: 100%;
+        height: auto;
+        margin-top: -24rem !important;
+    }
+    .member_card{
+        height: auto !important;
+
+    }
+    .member_card_border{
+        height: auto !important;
+    }
+    .mx-1{
+        margin-bottom: 1rem !important;
+    }
+    @media only screen and (max-width: 600px) {
+        .mobile_view{
+        display: none !important;
+    }
+    .mem_row1{
+        padding: 1.8rem 0.8rem .5rem 0.8rem !important;
+    }
+}
+</style> 
 <main class="main">
 
     <div class="spacer_s"></div>
@@ -89,7 +157,7 @@ var x = setInterval(function() {
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="row justify-content-around">
-                        <div class="col-md-3 pt-5">
+                        <div class="col-md-3 pt-5 mobile_view">
                             <ul>
                                 <li class="client_links ">
                                     <a href="<?php echo base_url() ?>account">Profile And Settings</a>
@@ -109,64 +177,30 @@ var x = setInterval(function() {
                                     <hr>
                                 </div>
                             </div>
-                            <div class="px-4">
+                            
 
                                 <div class="spacer_s"></div>
                                 <!-- Member Card -->
                                 <div class="row justify-content-start">
                                     <div class="col-md-10">
-                                        <div class="member_card">
-                                            <div class="member_card_border">
-                                                <div class="row mb-4 mem_row1">
-                                                    <div class="col-4 mem_row1_col-left">
-                                                        <img src="<?php echo $image ?>" alt="" class="member_card_img">
-                                                    </div>
-                                                    <div class="col-8">
-                                                        <div>
-                                                            <div class="mb-2 ">
-                                                                <p><span class="member_card_name px-3 pb-0"><?php echo $name ?></span>
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p><span class="member_card_mn">Member No.</span>
-                                                                    <span class="member_card_num"><?php echo $card ?></span>
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p><span class="member_card_mn">Phone.</span>
-                                                                    <span class="member_card_phone"><?php echo $number ?></span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mem_row2 mx-1">
-                                                    <div class="col-7 text-center">
-                                                        <p> <span class="mem_text">www.burgerharbour.com</span> </p>
-                                                    </div>
-                                                    <div class="col-5 text-center">
-                                                        <p><span class="mem_text">Logo</span> </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php echo $finaldate;?>
+                                        
                                     </div>
                                 </div>
                                 <!-- End Membership Card -->
 
                                 <div class="spacer_s"></div>
 
-                                <div class="row mb-4">
+                                <!--div class="row mb-4">
                                     <div class="col">
                                         <?php echo $button ?>
                                     </div>
-                                </div>
+                                </div-->
 
                                 <div class="row justify-content-start">
                                     <div class="col-md-4 ">
                                         <div class="mb-4">
-                                            <button class="member_btn"> Renew Your Card</button>
+                                            <a href="<?php echo base_url()?>renewplans"><button class="member_btn"> Renew Your Card</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +209,7 @@ var x = setInterval(function() {
 
 
 
-                            </div>
+                        
                         </div>
                     </div>
                 </div>

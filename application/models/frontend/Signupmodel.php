@@ -31,13 +31,13 @@ class Signupmodel extends CI_Model
         $this->db->where('email', $email);
         $this->db->update('user', $data);
     }
-    function update_data($order_id,$email,$vali,$amount)
+    function update_data($order_id,$email,$acc_type,$vali,$amount)
     {
         $data = array(
         'order_id' => $order_id,
         
         'email' =>$email,
-        
+        'acc_type' =>$acc_type,
         'vali' => $vali,
      
         'amount' => $amount,

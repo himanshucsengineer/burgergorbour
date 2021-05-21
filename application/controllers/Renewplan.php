@@ -26,14 +26,13 @@ class Renewplan extends CI_Controller
      * You can calculate payment amount as per your logic
      * Always set the amount from backend for security reasons
      */
-    $_SESSION['name'] = $this->input->post('name');
+ 
     $_SESSION['email'] = $this->input->post('email');
-    $_SESSION['mob'] = $this->input->post('mob');
-    $_SESSION['add'] = $this->input->post('add');
-    $_SESSION['pass'] = $this->input->post('pass');
-    $_SESSION['card'] = $this->input->post('card');
-    $_SESSION['image'] = $this->input->post('image');
+   
+   
+
     $_SESSION['vali'] = $this->input->post('vali');
+    $_SESSION['acc_type'] = $this->input->post('acc_type');
     $_SESSION['payable_amount'] = $this->input->post('amount');
     $razorpayOrder = $api->order->create(array(
       'receipt'         => rand(),
@@ -73,13 +72,13 @@ class Renewplan extends CI_Controller
         $order_id = $_SESSION['razorpay_order_id'];
       
         $email = $_SESSION['email'];
-
+        $acc_type = $_SESSION['acc_type'];
      
         $vali = $_SESSION['vali'];
       
         $amount = $_SESSION['payable_amount'];
    
-      if ($this->Signupmodel->update_data($order_id,$email,$vali,$amount)) {
+      if ($this->Signupmodel->update_data($order_id,$email,$acc_type,$vali,$amount)) {
         $phone = "918905366876";
         $user_message = "this is test msg";
         /*Your authentication key*/
@@ -125,7 +124,7 @@ class Renewplan extends CI_Controller
 
 
 
-        $this->session->set_flashdata('success', 'You have successfull but new plan');
+        $this->session->set_flashdata('success', 'You have successfull Update Your plan');
         redirect(base_url() . 'frontend/dashboard');
       } else {
         $this->session->set_flashdata('error', 'Error In submisstion');
@@ -154,7 +153,7 @@ class Renewplan extends CI_Controller
         "merchant_order_id" => rand(),
       ),
       "theme"  => array(
-        "color"  => "Blue"
+        "color"  => "#52120e"
       ),
       "order_id" => $razorpayOrderId,
     );
