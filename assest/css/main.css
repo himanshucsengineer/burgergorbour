@@ -10,18 +10,6 @@ html {
   font-size: 62.5% !important;
 }
 
-
-@media only screen and (max-width: 600px) {
-  .head_h3{
-    font-size: 2rem !important;
-  }
-  .head_h2{
-      font-size: 30px !important;
-  }
-  .title_para{
-      font-size: 1.5rem !important;
-  }
-}
 body {
   font-family: "Lato", sans-serif;
   font-size: 1.8rem !important;
@@ -445,6 +433,7 @@ p {
   font-size: 1.9rem;
   font-weight: 600;
   color: #b42821;
+  color: #e6c9c9;
 }
 
 .prize_row {
@@ -454,12 +443,21 @@ p {
 .menu_item_head {
   font-size: 3rem;
   font-family: "Pattaya", sans-serif;
+  color: #fff0f0;
 }
 
 .recipe_menu {
   padding: 2rem;
   margin: 1rem;
+  background-image: linear-gradient(rgba(73, 4, 4, 0.801), rgba(73, 4, 4, 0.87));
   border: 1px dashed #b42821;
+}
+
+.menu_space {
+  background-size: 20rem;
+  background-image: linear-gradient(rgba(73, 4, 4, 0.568), rgba(73, 4, 4, 0.726)), url("../img/bgimg2.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -611,6 +609,3 @@ p {
   padding: 3rem 2rem;
 }
 /*# sourceMappingURL=main.css.map */
-
-
-

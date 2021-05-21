@@ -22,6 +22,7 @@
   font-size: 1.9rem;
   font-weight: 600;
   color: $prime;
+  color: rgb(230, 201, 201);
   // color: rgb(92, 92, 92);
 }
 
@@ -32,18 +33,34 @@
 .menu_item_head {
   font-size: 3rem;
   font-family: "Pattaya", sans-serif;
+  color: rgb(255, 240, 240);
 }
 
 .recipe_menu {
   padding: 2rem;
   margin: 1rem;
   // background-color: rgb(255, 249, 249);
+  background-image: linear-gradient(
+    rgba(73, 4, 4, 0.801),
+    rgba(73, 4, 4, 0.87)
+  );
   border: 1px dashed $prime;
 }
 
-@media only screen and (max-width: 600px) {
+.menu_space {
+  background-size: 20rem;
 
-  .menu_prize{
+  background-image: linear-gradient(
+      rgba(73, 4, 4, 0.568),
+      rgba(73, 4, 4, 0.726)
+    ),
+    url("../img/bgimg2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu_prize {
     font-size: 1.5rem;
   }
   .recipe_menu {
