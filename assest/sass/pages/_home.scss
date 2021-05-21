@@ -6,42 +6,48 @@
       rgba(56, 14, 14, 0.288),
       rgba(95, 30, 30, 0.404)
     ),
-    url("../img2/slider1.jpg");
+    url("../img/bgimg1.jpg");
 }
 .c_sec_2 {
   background-image: linear-gradient(
-      rgba(56, 14, 14, 0.589),
-      rgba(95, 30, 30, 0.671)
+      rgba(56, 14, 14, 0.288),
+      rgba(95, 30, 30, 0.404)
     ),
-    url("../img2/slider2.jpg");
+    url("../img/bgimg2.jpg");
 }
 .c_sec_3 {
   background-image: linear-gradient(
-      rgba(56, 14, 14, 0.178),
-      rgba(95, 30, 30, 0.281)
+      rgba(56, 14, 14, 0.288),
+      rgba(95, 30, 30, 0.404)
     ),
-    url("../img2/bg5.jpg");
+    url("../img/bgimg3.jpg");
 }
 
 .super_h1 {
-  font-size: 7rem;
+  font-size: 6rem;
   color: #eee;
   font-weight: 900;
   word-spacing: 0.5rem;
 }
 
+.super_p {
+  color: #fff;
+  font-size: 2rem;
+}
+
 .super_btn {
   border: none;
   background-color: rgb(230, 115, 22);
-  font-size: 2.5rem;
+  box-shadow: 0px 0px 5px rgb(61, 0, 0);
   padding: 1rem 3rem;
   border-radius: 3px;
-  font-weight: 800;
+  font-weight: 600;
   color: #eee;
 }
 
 .c_herosection {
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 55rem;
   padding-top: 13rem;
@@ -68,3 +74,7 @@
     font-size: 1.9rem;
   }
 }
+
+// url("../img2/slider1.jpg");
+// url("../img2/slider2.jpg");
+// url("../img2/bg5.jpg");
