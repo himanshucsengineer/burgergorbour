@@ -127,7 +127,7 @@ $(function () {
 
         <div class="row">
             <div class="col text-center">
-                <p class="title_para">*** Join Our membership and get reward for it ***</p>
+                <p class="title_para">*** Join our 2 year mebership and get heavy discount on every item. ***</p>
             </div>
         </div>
     </div>

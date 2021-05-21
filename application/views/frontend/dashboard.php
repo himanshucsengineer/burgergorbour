@@ -10,7 +10,14 @@ $image = $_SESSION["image"];
 
 
 
-
+<style>
+    
+    @media only screen and (max-width: 600px) {
+        .mobile_view{
+        display: none !important;
+    }
+}
+</style>   
 
 <main class="main">
 
@@ -35,7 +42,7 @@ $image = $_SESSION["image"];
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="row justify-content-around">
-                        <div class="col-md-3 pt-5">
+                        <div class="col-md-3 pt-5 mobile_view">
                             <ul>
                                 <li class="client_links client_active">
                                     <a href="<?php echo base_url() ?>account">Profile And Settings</a>

@@ -1,19 +1,3 @@
-<!-- Footer -->
-
-
-<!--Start of Tawk.to Script>
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/608466d862662a09efc1c884/1f42j3g2b';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 <style>
     
     .touch .flex{
@@ -62,7 +46,59 @@ s0.parentNode.insertBefore(s1,s0);
         width:85%;
         height:auto;
     }
-
+    .bottombar{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .bottombar h1{
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb( 255, 255, 255 );
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+.bottombar p{
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb( 226, 226, 226 );
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: 1rem;
+}
+.bottombar a{
+   color: #f39933;
+}
+.bottombar .fa-iconbs{
+    font-size: 15px;
+    color: white !important;
+    border: 1px solid #FC8817;
+    text-align: center;
+    margin: 0px 0px 10px 4px;
+    padding: 1px 4px;
+    border-radius: 6px;
+}
+.footer .footer_head{
+    width: 100% !important;
+    font-size: 17px !important;
+    text-transform: uppercase !important;
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    margin: 10px 20px 2px 10px !important;
+    font-weight: 500 !important;
+    color: #fff !important;
+}
+.footer_hori{
+    border-top: 1px solid #f39933!important;
+    margin-top: 0px !important;
+    opacity: 1 !important;
+    margin-bottom: 1.5rem !important;
+}
+.footer p{
+    color: rgb( 226, 226, 226 ) !important;
+    font-size: 16px !important;
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    margin-left: 10px !important;
+}
 </style>
 
 
@@ -71,33 +107,32 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="row">
             <div class="col-md-3">
                 <h3 class="footer_head">About BH</h3>
+                <hr class="footer_hori">
                 <p>Its a Burger adda, serving freshly made Burger, Pizza, Pasta, Sandwitch, Wraps, Shakes and many more.... Customers love to eat and spend their quality time here. Burger Harbour is currently present in Hisar.</p>
-
-
             </div>
-            
             <div class="col-md-3">
-                <h3 class="footer_head">Quick Links</h3>
+                <h3 class="footer_head">Important Links</h3>
+                <hr class="footer_hori">
                 <ul>
                     <li><a href="<?php echo base_url()?>menu">Menu</a></li>
                     <li><a href="<?php echo base_url()?>Plans">Plans</a></li>
                     <li><a href="<?php echo base_url()?>membership">Membership</a></li>
-                    <li><a href="<?php echo base_url()?>contact-us">Contact Us</a></li>
-                    <li><a href="<?php echo base_url()?>about-us">About Us</a></li>
                     
                 </ul>
             </div>
             <div class="col-md-3">
-                 <h3 class="footer_head">Legal Links</h3>
+                <h3 class="footer_head">Quick Links</h3>
+                <hr class="footer_hori">
                 <ul>
                     <li><a href="<?php echo base_url()?>term-condition">Term and Condition</a></li>
                     <li><a href="<?php echo base_url()?>privacy-policy">Privacy-Policy</a></li>
-                   
+                    <li><a href="<?php echo base_url()?>contact-us">Contact Us</a></li>
+                    <li><a href="<?php echo base_url()?>about-us">About Us</a></li>
                 </ul>
-
             </div>
             <div class="col-md-3 touch">
                 <h3 class="footer_head">Get In Touch</h3>
+                <hr class="footer_hori">
                 <div class="flex">
                     <div class="left">
                         <input type="email" placeholder="Enter Email">  
@@ -106,7 +141,6 @@ s0.parentNode.insertBefore(s1,s0);
                         <button>Send</button>
                     </div>    
                 </div> 
-                
                 <div class="flex">
                     <div class="add_left">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -131,7 +165,6 @@ s0.parentNode.insertBefore(s1,s0);
                         <p>+91 7206324915<p>
                     </div>    
                 </div> 
-                
             </div>
         </div>
     </div>
@@ -139,13 +172,18 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- Footer -->
 
 <div class="bottombar">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col text-center">
-                @Copyright BurgurHarbour
+    <div class="container text-center">
+        <h1>Follow Us On</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <a class="fa-iconbs" href=""><i class="fa fa-youtube "></i></a>
+                    <a class="fa-iconbs" href=""><i class="fa fa-twitter "></i></a>
+                    <a class="fa-iconbs" href=""><i class="fa fa-instagram "></i></a>
+                    <a class="fa-iconbs" href=""><i class="fa fa-facebook "></i></a>
+                    <a class="fa-iconbs" href=""><i class="fa fa-linkedin "></i></a>
+                </div>
             </div>
-        </div>
+        <p>@2021 BURGER HARBOUR ALL RIGHTS RESERVED. DEVELOPED BY <a href="https://digifever.in/">DIGIFEVER</a></p>
     </div>
 </div>
 

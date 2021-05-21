@@ -79,6 +79,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Number</th>
+                  <th>Subject</th>
                   <th>Message</th>
 
 

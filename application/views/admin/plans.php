@@ -126,7 +126,7 @@ if ($this->session->flashdata('success')) {
                         <option>1 Month</option>
                         <option>3 Month</option>
                         <option>6 Month</option>
-                        <option>12 Month</option>
+                        <option>2 Year</option>
                     </select>
                     <input type="number" name="amount" placeholder="Please Enter Amount">
                     <button>Create</button>
@@ -153,7 +153,7 @@ if ($this->session->flashdata('success')) {
                                 <th>Course Name</th>
                                 <th>Validity</th>
                                 <th>Amount(Inr)</th>
-                                <th>Action</th>
+                                
                             </tr>
                         </thead>
                         <tbody>

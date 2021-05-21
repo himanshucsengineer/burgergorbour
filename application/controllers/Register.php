@@ -26,6 +26,8 @@ class Register extends CI_Controller
      * You can calculate payment amount as per your logic
      * Always set the amount from backend for security reasons
      */
+    
+
     $_SESSION['name'] = $this->input->post('name');
     $_SESSION['email'] = $this->input->post('email');
     $_SESSION['mob'] = $this->input->post('mob');
@@ -34,6 +36,8 @@ class Register extends CI_Controller
     $_SESSION['card'] = $this->input->post('card');
     $_SESSION['image'] = $this->input->post('image');
     $_SESSION['vali'] = $this->input->post('vali');
+    $_SESSION['acc_type'] = $this->input->post('acc_type');
+    $_SESSION['date'] = date("Y-m-d");
     $_SESSION['payable_amount'] = $this->input->post('amount');
     $razorpayOrder = $api->order->create(array(
       'receipt'         => rand(),
@@ -79,6 +83,8 @@ class Register extends CI_Controller
         'file' => $_SESSION['image'],
         'vali' => $_SESSION['vali'],
         'pass' => $_SESSION['pass'],
+        'date' => $_SESSION['date'],
+        'acc_type'=>$_SESSION['acc_type'],
         'amount' => $_SESSION['payable_amount'],
       );
       if ($this->Signupmodel->insert_data($data)) {
@@ -143,7 +149,7 @@ class Register extends CI_Controller
     $data = array(
       "key" => "rzp_test_If4Pd1l3k6g25g",
       "amount" => $amount,
-      "name" => "Dog Bazar",
+      "name" => "Burgur Harbour",
       "description" => "Buying a Plan",
       "image" => base_url() . "admin/assets/images/admin_b.jpg",
       "prefill" => array(
@@ -156,7 +162,7 @@ class Register extends CI_Controller
         "merchant_order_id" => rand(),
       ),
       "theme"  => array(
-        "color"  => "Blue"
+        "color"  => "#52120e"
       ),
       "order_id" => $razorpayOrderId,
     );

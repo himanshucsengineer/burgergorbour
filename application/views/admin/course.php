@@ -139,7 +139,7 @@ if ($this->session->flashdata('success')) {
                                 <th>Sr. No.</th>
                                 <th>Course Name</th>
 
-                                <th>Action</th>
+                             
                             </tr>
                         </thead>
                         <tbody>

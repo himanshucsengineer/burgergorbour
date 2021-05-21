@@ -35,6 +35,7 @@ class Login extends CI_controller
                 $_SESSION["image"] = $value["file"];
                 $_SESSION["date"] = $value["date"];
                 $_SESSION["vali"] = $value["vali"];
+                $_SESSION["acc_type"] = $value["acc_type"];
                 $_SESSION['razorpay_order_id'] = $value["order_id"];
                 $login_success = 1;
                 break;
@@ -56,7 +57,7 @@ class Login extends CI_controller
         $this->form_validation->set_rules('email', 'Email', 'required|is_unique[user.email]');
         if ($this->form_validation->run()) {
             $code = '';
-            for ($i = 0; $i < 16; $i++) {
+            for ($i = 0; $i < 6; $i++) {
                 $code .= mt_rand(0, 9);
             }
 
