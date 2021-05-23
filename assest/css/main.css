@@ -50,12 +50,20 @@ main {
   padding: 2.5rem;
 }
 
+.section_4 {
+  padding: 2rem 0;
+}
+
 .section_5 {
   padding: 5rem 0;
 }
 
 .section_6 {
   padding: 6rem 0;
+}
+
+.section_8 {
+  padding: 8rem 0;
 }
 
 .section_10 {
@@ -537,6 +545,22 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 8rem;
+}
+
+.bg_quote_sec {
+  background-color: rgba(247, 247, 247, 0.856);
+}
+
+.bg_quote {
+  background-image: linear-gradient(rgba(247, 247, 247, 0.856), rgba(247, 247, 247, 0.856)), url("../img/bh_bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg_quote_title {
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+  color: #b42821;
 }
 
 @media only screen and (max-width: 600px) {
