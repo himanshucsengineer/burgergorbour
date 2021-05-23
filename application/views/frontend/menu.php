@@ -17,6 +17,7 @@
     word-break: break-all;
 }
 }
+
 </style>
 <main class="main">
     <div class="spacer_s"></div>
@@ -251,7 +252,7 @@
         <div class="spacer_s"></div>
     </div>
     <!-- Menu Item  -->
-
+   
     <!-- Menu Item  -->
     <div class="container">
         <div class="row justify-content-center ">
