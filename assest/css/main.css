@@ -448,7 +448,10 @@ p {
 .recipe_menu {
   padding: 2rem;
   margin: 1rem;
-  background-color: #f8f8f8;
+  background-color: rgba(248, 248, 248, 0.842);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/combo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px dashed #b42821;
 }
 
