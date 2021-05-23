@@ -183,14 +183,13 @@ main {
 }
 
 .f_image {
-  background-image: linear-gradient(rgba(99, 9, 9, 0.315), rgba(99, 9, 9, 0.384)), url("../img/bg3.jpg");
+  background-image: linear-gradient(rgba(99, 9, 9, 0.315), rgba(99, 9, 9, 0.384)), url("../img/bg4.jpg");
   background-size: cover;
   background-position: center;
-  padding: 14rem;
+  padding: 17rem 0rem;
 }
 
 .f_image_border {
-  border: 8px solid #fff;
   padding: 1rem;
 }
 
@@ -449,7 +448,7 @@ p {
   padding: 2rem;
   margin: 1rem;
   background-color: rgba(248, 248, 248, 0.842);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/combo.svg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/cb2.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 1px dashed #b42821;
