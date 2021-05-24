@@ -79,7 +79,7 @@
     }
 
     .menu input[type="text"],
-    input[type="file"] {
+    input[type="file"],select {
         width: 100%;
         height: auto;
         padding-top: .5rem;
@@ -114,17 +114,45 @@
         <h3 style="margin-bottom: 1rem;">Add Item In Menu List</h3>
         <div class="menu">
             <form action="<?php echo base_url(); ?>admin/menu/inset_menu" method="POST" enctype="multipart/form-data">
-                <label>Enter Dish Name</label>
-                <input type="text" name="name" placeholder="Enter dish Name">
-
-                <label>Upload Dish Image</label>
-                <input type="file" id="fileupload" name="images" placeholder="uplode image">
+                <label>Select MenU Type</label>
+                <select name="menu_name" id="">
+                    <option value="pizza">Pizza Mania</option>
+                    <option value="burger">Burger</option>
+                    <option value="fries">French Fries</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="wrap">Wrap</option>
+                    <option value="sabdwitch">Sandwitch</option>
+                    <option value="calzone">Calzone</option>
+                    <option value="garlic">Garlic Bread</option>
+                    <option value="shakes">Shakes</option>
+                    <option value="ice">Ice Cream</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="tandoori">Tandoori Chaap</option>
+                    <option value="tikka">Tikka Special</option>
+                    <option value="rolls">Chaap Rolls</option>
+                    <option value="platter">Platter</option>
+                    <option value="momos">Momos</option>
+                    <option value="saloon">Salon</option>
+                </select>
+                <label for="">Dish Name</label>
+                <input type="text" name="d_name" placeholder="Enter dish Name">
+                <label for="">Description</label>
+                <input type="text" name="d_desc" id="" placeholder="Enter Description">
+                <label for="">Half Original Price</label>
+                <input type="text" name="h_o_price" placeholder="Enter Half Original Price">
+                <label for="">Half Member Price</label>
+                <input type="text" name="h_m_price" placeholder="Enter Half Membership Price">
+                <label for="">Full Original Price</label>
+                <input type="text" name="f_o_price" placeholder="Enter Full Original Price">
+                <label for="">Full Member Price</label>
+                <input type="text" name="f_m_price" placeholder="Enter Full Membership Price">
                 <button>Submit</button>
             </form>
         </div>
 
 
-        <h3 style="margin-top: 4rem;margin-bottom:2rem">Menu List</h3>
+        <!--h3 style="margin-top: 4rem;margin-bottom:2rem">Menu List</h3>
         <div class="card-box table-responsive">
 
             <table id="lowinventory" data-order='[[ 0, "desc" ]]' style="width:100%" class="table table-striped table-bordered table_shop_custom display">
@@ -141,7 +169,7 @@
 
                 </tbody>
             </table>
-        </div>
+        </div-->
     </div>
 </div>
 
@@ -229,31 +257,3 @@
 
 
 
-<script language="javascript" type="text/javascript">
-    $(function() {
-        $("#fileupload").change(function() {
-            $("#dvPreview").html("");
-            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
-            if (regex.test($(this).val().toLowerCase())) {
-                if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
-                    $("#dvPreview").show();
-                    $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
-                } else {
-                    if (typeof(FileReader) != "undefined") {
-                        $("#dvPreview").show();
-                        $("#dvPreview").append("<img class='thunbnail_image images_preview'/>");
-                        var reader = new FileReader();
-                        reader.onload = function(e) {
-                            $("#dvPreview img").attr("src", e.target.result);
-                        }
-                        reader.readAsDataURL($(this)[0].files[0]);
-                    } else {
-                        alert("This browser does not support FileReader.");
-                    }
-                }
-            } else {
-                alert("Please upload a valid file.");
-            }
-        });
-    });
-</script>

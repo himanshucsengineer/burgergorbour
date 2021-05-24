@@ -943,7 +943,11 @@ p {
     margin-right: 0rem !important;
   }
 }
-
+.barbar_bg{
+  background-color: rgba(248, 248, 248, 0.842) !important;
+  background-size: 70%;
+  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/barbar.png") !important;
+}
 @media only screen and (max-width: 600px) {
   .recipe_menu {
     margin: 0rem !important;
@@ -960,5 +964,68 @@ p {
   .subdes {
     word-break: break-all;
   }
+  .member_flexx .left{
+    width: 40% !important;
+    height: auto;
+  }
+  .member_flexx .right{
+    width: 60% !important;
+    height: auto;
+  }
+  .home_flex .left{
+    width: 50% !important;
+    height: auto;
+  }
+  
+  .home_flex .right button{
+    padding: .7rem .8rem !important;
+  }
+  .moblijf{
+    margin-right: .7rem !important;
+  }
+  
+  
+}
+.super_btn{
+  background-color: #e7be27e1 !important;
+}
+.member_flexx{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.member_flexx .left{
+  width: 20%;
+  height: auto;
+}
+.member_flexx .left label{
+  background-color: whitesmoke !important;
+  border-radius: 7px 0px 0px 7px !important;
+  font-size: 15px !important;
+  padding: 1.2rem 0rem 1.3rem 0rem !important;
+  text-align: center !important;
+}
+.member_flexx .right{
+  width: 80%;
+  height: auto;
+}
+.member_flexx .right .b_input{
+  margin: 0px 0px !important;
+  border-left: 0px !important;
+  border-radius: 0px 7px 7px 0px !important;
+}
+.home_flex{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.home_flex .left{
+  width: 30%;
+  height: auto;
+}
+.home_flex .right{
+  width: 50%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */
+

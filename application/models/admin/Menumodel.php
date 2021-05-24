@@ -2,11 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Menumodel extends CI_Model {
-    function menu($name,$file){
-        $data = array(
-            'name' => $name,
-            'file' => $file,
-        );
+    function menu($data){
+       
         return  $this->db->insert('menu',$data);
     }
     public function fetchinventory_api() {

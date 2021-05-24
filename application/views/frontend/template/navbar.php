@@ -23,7 +23,7 @@ if (!isset($_SESSION["email"])) {
 
 <?php
 if (!isset($_SESSION["razorpay_order_id"])) {
-    $plans = '<li class="mm"><a href="' . base_url() . 'plans" class="nodecoration">Plans</a></li> ';
+    $plans = '<li class="mm"><a href="' . base_url() . 'plans" class="nodecoration">Our Plans</a></li> ';
 } else {
     $plans = '<li class="mm"><a href="' . base_url() . 'renewplans" class="nodecoration">Renew Plans</a></li>
   
@@ -35,7 +35,7 @@ if (!isset($_SESSION["razorpay_order_id"])) {
 
 <?php
 if (!isset($_SESSION["razorpay_order_id"])) {
-    $membershipp = '<li class="mm"><a href="' . base_url() . 'membership" class="nodecoration">My Card</a></li> ';
+    $membershipp = '<li class="mm"><a href="' . base_url() . 'signin" class="nodecoration">My Card</a></li> ';
 } else {
     $membershipp = '<li class="mm"><a href="' . base_url() . 'member-card" class="nodecoration">My Card</a></li>
   
@@ -49,7 +49,7 @@ if (!isset($_SESSION["razorpay_order_id"])) {
 <?php
 if (!isset($_SESSION["email"])) {
     $button4 = '<a href="' . base_url() . 'signin">Login</a> ';
-    $memberbut = '<a href="' . base_url() . 'membership">My Card</a>';
+    $memberbut = '<a href="' . base_url() . 'signin">My Card</a>';
     $namebut = '<h4>Welcome To BH</h4>';
 } else {
     $namebut = '<h4>' . $_SESSION["name"] . '</h4>';
@@ -73,12 +73,12 @@ if (!isset($_SESSION["email"])) {
     <a href="<?php echo base_url() ?>">Home</a>
     <?php echo $profilebut ?>
     <?php echo $memberbut ?>
-    <a href="<?php echo base_url() ?>menu">Our Menu</a>
-    <a href="<?php echo base_url() ?>plans">Plans</a>
-   
+    <a href="<?php echo base_url() ?>menu">Menu</a>
+    <a href="<?php echo base_url() ?>plans">Our Plans</a>
+    <a href="<?php echo base_url() ?>membership">Buy Membership</a>
     <a href="<?php echo base_url() ?>about-us">About Us</a>
     <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
-    <?php echo $button4 ?>
+  
 
     <?php echo $logout ?>
 
@@ -92,13 +92,13 @@ if (!isset($_SESSION["email"])) {
             <div class="col-md-10 ">
                 <ul class="d-flex h_nav">
                     <li class="h_nav_links mm"><a href="<?php echo base_url() ?>" class="nodecoration">Home</a></li>
-                    <li class="mm"><a href="<?php echo base_url() ?>menu" class="nodecoration">Our Menu</a></li>
+                    <li class="mm"><a href="<?php echo base_url() ?>menu" class="nodecoration">Menu</a></li>
                     <?php echo $plans; ?>
-                    <?php echo $membershipp;?>
                     
+                    <li class="mm"><a href="<?php echo base_url() ?>membership" class="nodecoration">Buy Membership</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>contact-us" class="nodecoration">Contact Us</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>about-us" class="nodecoration">About Us</a></li>
-                    <?php echo $button ?>
+                    <?php echo $membershipp ?>
 
                 </ul>
                 <div class="mobile-bar ">

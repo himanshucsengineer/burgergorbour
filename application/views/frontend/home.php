@@ -26,7 +26,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8 text-center">
-                                <h1 class="super_h1">JOIN OUR BEGGY FAMILY KUDOOS!</h1>
+                                <h1 class="super_h1">JOIN OUR BIG FAMILY KUDOOS!</h1>
                                 <div class="my-5">
                                     <a href="<?php echo base_url()?>membership"><button class="super_btn">MEMBERSHIP</button></a>
                                 </div>
@@ -65,7 +65,7 @@
 
 
 <!-- Home About -->
-<div class="home_about section_10">
+<!--div class="home_about section_10">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 text-center">
@@ -78,9 +78,23 @@
             </div>
         </div>
     </div>
-</div>
+</div-->
 <!-- End Home About -->
-
+<div class="home_about section_10">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <div>
+                    <h2 class="head_h2 pb-3 mob_head_h2">Best Dessi Deals on Burgur Harbour</h2>
+                </div>
+                <p class="mpb">Burger Harbour Offering You A Membership Program In Which You Get <b>UPTO 50% DISCOUNT</b> On Complete Menu. We Are Also Tie Up With Sallon Who Also Giving Heavy Discount On Their Product And Services.</p>
+                <div class="my-5 ">
+                    <a href="<?php echo base_url()?>plans"><button class="super_btn">View Our Plans</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Memebership -->
 
     <div class="row home_memebership">
@@ -90,9 +104,19 @@
                 <div class="py-4">
                     <p><i class="super_p">"Just Have Our Fries With Indian Vegge! With Margretta Pizza and Special Indian Coke" </i></p>
                 </div>
-                <div class="my-4 ">
-                    <a href="<?php echo base_url()?>menu"><button class="super_btn">Our Menu</button></a>
+                <div class="home_flex">
+                    <div class="left">
+                        <div class="my-4 ">
+                            <a href="<?php echo base_url()?>menu"><button class="super_btn">Our Menu</button></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="my-4 ">
+                            <a href="#"><button class="super_btn">Download Menu</button></a>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
         <div class="col-md-5 p-0">
@@ -103,27 +127,11 @@
 <!-- End Membership -->
 
 <!-- Home About -->
-<div class="home_about section_10">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 text-center">
-                <div>
-                    <h2 class="head_h2 pb-3 mob_head_h2">Best Dessi Deals on Burgur Harbour</h2>
-                </div>
-                <p class="mpb">looking Scarlett Johansson once. As a matter of fact, this got us thinking. About burgers and the
-                    ways people love eating them. Found in every part of the world and a favorite among various age
-                    groups from freckled teenagers to the wiser generation, </p>
-                <div class="my-5 ">
-                    <a href="<?php echo base_url()?>plans"><button class="super_btn">View Our Plans</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- End Home About -->
 
 <!-- Featured Image -->
-<div class="f_image">
+<div class="f_image moblijf">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7">

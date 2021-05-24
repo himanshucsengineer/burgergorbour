@@ -103,19 +103,22 @@ $parts = basename($url);
 
 
 
-        <li class="nav-item <?php echo ($parts == 'menu') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/menu"><i class="fas fa-fw fa-table"></i><span>Add Menu</span></a>
+     
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#menu" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Menu</span>
+          </a>
+          <div id="menu" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/menu" style="font-size:1.3rem; ">Upload Menu</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/chaap" style="font-size:1.3rem; ">Chaap Data</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/burger" style="font-size:1.3rem; ">Burger Data</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/salon" style="font-size:1.3rem; ">Salon Data</a>
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
         </li>
-        <!--li class="nav-item <?php echo ($parts == 'yourpage') ? "active" : "" ?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/yourpage"><i class="fas fa-fw fa-table" ></i><span >Page Request</span></a>
-    </li>
-    <li class="nav-item <?php echo ($parts == 'account') ? "active" : "" ?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/account"><i class="fas fa-fw fa-table" ></i><span >Login Request</span></a>
-    </li>
-    
-    <li class="nav-item <?php echo ($parts == 'campaign') ? "active" : "" ?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/campaign"><i class="fas fa-fw fa-table" ></i><span >Campaign</span></a>
-    </li-->
 
         <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesss" aria-expanded="true" aria-controls="collapsePages">

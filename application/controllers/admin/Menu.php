@@ -25,39 +25,26 @@ class  Menu extends CI_controller
   {
     $this->load->model('admin/Menumodel');
     $this->input->post('formSubmit');
-    $this->form_validation->set_rules('name', 'name', 'required');
+    $this->form_validation->set_rules('menu_name', 'Menu name', 'required');
+    $this->form_validation->set_rules('d_name', 'name', 'required');
+    $this->form_validation->set_rules('f_o_price', 'name', 'required');
+    $this->form_validation->set_rules('f_m_price', 'name', 'required');
     if ($this->form_validation->run()) {
 
+      $data = array(
+        'menu_name' => $this->input->post('menu_name'),
+        'd_name' => $this->input->post('d_name'),
+        'd_desc' => $this->input->post('d_desc'),
+        'h_o_price' => $this->input->post('h_o_price'),
+        'h_m_price' => $this->input->post('h_m_price'),
+        'f_o_price' => $this->input->post('f_o_price'),
+        'f_m_price' => $this->input->post('f_m_price'),
+        
+      );
 
-      if (!empty($_FILES['images']['name'])) {
+ 
 
-        $File_name = 'userimage-' . strtotime(date('YmdHis'));
-
-        $config['upload_path'] = APPPATH . '../upload/menu';
-        $config['file_name'] = $File_name;
-        $config['overwrite'] = TRUE;
-        $config["allowed_types"] = 'png|jpg|jpeg';
-        $config["max_size"] = 2048;
-
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('images')) {
-
-          $this->data['error'] = $this->upload->display_errors();
-          $this->session->set_flashdata('error', $this->upload->display_errors());
-
-          redirect('admin/menu');
-        } else {
-          $dataimage_return = $this->upload->data();
-          $imageurl = base_url() . 'upload/menu/' . $dataimage_return['file_name'];
-        }
-      }
-
-      $file = $imageurl;
-
-      $name = $this->input->post('name');
-
-      if ($this->Menumodel->menu($name, $file)) {
+      if ($this->Menumodel->menu($data)) {
 
         $this->session->set_flashdata('success', 'Item Created');
         redirect(base_url() . 'admin/menu');

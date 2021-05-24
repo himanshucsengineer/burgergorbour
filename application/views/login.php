@@ -34,7 +34,7 @@
     width: 417px!important;
     margin: 30px auto;
 }
-        </style>
+      </style>
 
         </head>
         <body>
@@ -43,7 +43,7 @@
         <div class="wrapper-page">
         <div class=" card-box card_box_custom">
         <div class="panel-heading">
-        <h3 class="text-center"> <img style="width: 100%;" src="<?php echo base_url(); ?>assest/img/Digifever_logo.svg" class="logo_head"/></h3>
+        <h3 class="text-center"> <img style="width: 100%;" src="<?php echo base_url(); ?>assest/img/burger_logo .svg" class="logo_head"/></h3>
         </div>
         <div class="panel-body">
         <?php

@@ -53,6 +53,8 @@
                             <button class="member_btn"> Get MemberShip</button>
                         </div>
                     </form>
+
+                    
                 </div>
             </div>
         </div>
