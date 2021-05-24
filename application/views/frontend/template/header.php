@@ -36,6 +36,8 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/36a236c794.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
     <!-- end Font Awesome -->
 
     <!-- Css Link -->
