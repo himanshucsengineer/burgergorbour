@@ -73,7 +73,7 @@ $image = $_SESSION["image"];
                             <img src="<?php echo base_url()?>assest/img/bg3.jpg" alt="" class="fcard_img">
                             <div class="fcard_content">
                                 <h3 class="head_h3 mb-1"><?php echo $city['course']?></h3>
-                                <p class="fcard_p">looking Scarlett Johansson once. As a matter </p>
+                              
                                 <div class="row justify-content-center">
                                     <div class="col text-center">
                                         <p><sup class="amt_sec-sup">IN &#8377</sup> <span

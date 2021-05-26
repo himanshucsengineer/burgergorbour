@@ -99,7 +99,9 @@ $parts = basename($url);
 
 
 
-
+        <li class="nav-item <?php echo ($parts == 'adduser') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/adduser"><i class="fas fa-fw fa-table"></i><span>Add User</span></a>
+        </li>
 
 
 

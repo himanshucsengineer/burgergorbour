@@ -23,7 +23,7 @@ $image = $_SESSION["image"];
 
         <div class="row">
             <div class="col text-center">
-                <p class="title_para">*** Join Our membership and get reward for it ***</p>
+                <p class="title_para">*** Join Our membership and Get UPTO 50% DISCOUNT ***</p>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@ $image = $_SESSION["image"];
                                 <img src="<?php echo base_url() ?>assest/img/bg3.jpg" alt="" class="fcard_img">
                                 <div class="fcard_content">
                                     <h3 class="head_h3 mb-1"><?php echo $city['course'] ?></h3>
-                                    <p class="fcard_p">looking Scarlett Johansson once. As a matter </p>
+                                    
                                     <div class="row justify-content-center">
                                         <div class="col text-center">
                                             <p><sup class="amt_sec-sup">IN &#8377</sup> <span class="amt_sec-num" id="amount<?php echo $i ?>">777</span><sub class="amt_sec-sub"> / <span id="exire<?php echo $i ?>">year</span></sub></p>

@@ -20,11 +20,13 @@ class Login extends CI_controller
         $this->load->model('frontend/Signupmodel');
         $model_data = $this->Signupmodel->fetchModeldata();
         $login_success = 0;
+       
         $user_data = array(
             'email' => $this->input->post('email'),
             'password' => $this->input->post('password'),
         );
         foreach ($model_data as $value) {
+           
             if ((strtolower($value['email']) == strtolower($user_data['email'])) && ($value['pass'] == $user_data['password'])) {
 
                 $_SESSION["email"] = $value["email"];
@@ -42,6 +44,28 @@ class Login extends CI_controller
             }
         }
         if ($login_success == 1) {
+          //  $numbers = "918905366876";
+          //  $message = "testyfbf";
+            // Account details
+         //    $apiKey = urlencode('ODJiYmZjOTEzNzhjN2Y5YzFiMjJkYmMwYmNkM2VjNmI='); //Enter your TextLocal key
+            // Message details
+          //  $sender = urlencode('TXTLCL');
+            // Prepare data for POST request
+          //  $data = array('apikey' => $apiKey, 'numbers' => $numbers, 'sender' => $sender, 'message' => $message);
+            // Send the POST request with cURL
+          //  $ch = curl_init('https://api.textlocal.in/send/');
+          //  curl_setopt($ch, CURLOPT_POST, true);
+          //  curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+          //  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          //  $response = curl_exec($ch);
+          //  echo $response;
+          //  if (!$response) {
+          //      echo "please try again letter";
+          //  }else{
+           //      echo "sent";
+           // }
+           // curl_close($ch);
+            //die;
             $this->session->set_flashdata('success', 'Login Successfull');
             redirect(base_url() . 'account');
         } else {
@@ -56,6 +80,12 @@ class Login extends CI_controller
         $this->input->post('formSubmit');
         $this->form_validation->set_rules('email', 'Email', 'required|is_unique[user.email]');
         if ($this->form_validation->run()) {
+           
+            
+
+
+
+
             $code = '';
             for ($i = 0; $i < 6; $i++) {
                 $code .= mt_rand(0, 9);
