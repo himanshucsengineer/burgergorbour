@@ -456,7 +456,7 @@ p {
   padding: 2rem;
   margin: 1rem;
   background-color: rgba(248, 248, 248, 0.842);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/cb2.svg");
+  /*background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/cb2.svg");*/
   background-repeat: no-repeat;
   background-position: center;
   border: 1px dashed #b42821;
@@ -651,27 +651,12 @@ p {
   height: auto;
 }
 
-.recipe_menu {
-  background-color: rgba(248, 248, 248, 0.842) !important;
-  background-size: 70%;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/cb2.svg") !important;
-}
 
-.pizz_table {
-  background-color: rgba(248, 248, 248, 0.842) !important;
-  background-size: 70%;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/cook.png") !important;
-}
 
-.burger_table {
-  background-size: 50% !important;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/burger_bg.png") !important;
-}
 
-.fries_table {
-  background-size: 25% !important;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/fries2.png") !important;
-}
+
+
+
 
 .f_image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/4.jpg") !important;
@@ -943,11 +928,7 @@ p {
     margin-right: 0rem !important;
   }
 }
-.barbar_bg{
-  background-color: rgba(248, 248, 248, 0.842) !important;
-  background-size: 70%;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/barbar.png") !important;
-}
+
 @media only screen and (max-width: 600px) {
   .recipe_menu {
     margin: 0rem !important;

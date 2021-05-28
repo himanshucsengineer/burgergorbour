@@ -52,11 +52,11 @@
                         <div class="member_flexx">
                             <div class="left">
                                 <label for="imageUpload"  class="btn b_input"> Upload Photo</label>
-                                <input id="imageUpload" style="display:none;" type="file">
+                                <input id="imageUpload" name="images" style="display:none;" type="file">
                             </div>
                             <div class="right">
                             
-                            <input type="text" class="b_input" id="imagename" name="images" value="" placeholder="Upload Your Photo" readonly>
+                            <input type="text" class="b_input" id="imagename"  value="" placeholder="Upload Your Photo" readonly>
                             </div>
                         </div>
                     </div>

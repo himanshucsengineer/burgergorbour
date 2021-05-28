@@ -79,6 +79,7 @@ class Login extends CI_controller
         $this->load->model('frontend/Signupmodel');
         $this->input->post('formSubmit');
         $this->form_validation->set_rules('email', 'Email', 'required|is_unique[user.email]');
+        $this->form_validation->set_rules('mob', 'Email', 'required|is_unique[user.number]');
         if ($this->form_validation->run()) {
            
             
@@ -111,7 +112,7 @@ class Login extends CI_controller
                     redirect(base_url().'membership');
                 } else {
                     $dataimage_return = $this->upload->data();
-                    $imageurl = base_url() . 'upload/user/' . $dataimage_return['file_name'];
+                    $imageurl =  $dataimage_return['file_name'];
                 }
             }
 
@@ -165,6 +166,52 @@ class Login extends CI_controller
                 redirect(base_url() . 'account');
             }
         } else {
+
+            $this->session->set_flashdata('error', 'Please Fill All The Fields');
+            redirect(base_url() . 'account');
+        }
+    }
+
+
+
+
+
+    public function change_pass()
+    {
+        $this->load->model('frontend/Signupmodel');
+        $model_data = $this->Signupmodel->fetchModeldata();
+        $this->input->post('formSubmit');
+
+
+        $this->form_validation->set_rules('o_pass', 'Name', 'required');
+        $this->form_validation->set_rules('n_pass', 'Email', 'required');
+        $o_pass = $this->input->post('o_pass');
+            $n_pass = $this->input->post('n_pass');
+            $email = $_SESSION['email'];
+        if ($this->form_validation->run()) {
+            
+            foreach($model_data as $value){
+                if($value['email']==$_SESSION['email']){
+                    if($value['pass']==$o_pass){
+                        if ($this->Signupmodel->update_pass($email,$n_pass)) {
+
+
+            
+                            $this->session->set_flashdata('error', 'Error In Submission');
+                            redirect(base_url() . 'account');
+                        } else {
+            
+                            $this->session->set_flashdata('success', 'Your Password Has Been Changed Please Login Again');
+                            redirect(base_url() . 'account');
+                        }
+                    }else{
+                        $this->session->set_flashdata('error', 'Old Password Not Matched');
+                        redirect(base_url() . 'account');
+                    }
+                }
+                
+            }
+            } else {
 
             $this->session->set_flashdata('error', 'Please Fill All The Fields');
             redirect(base_url() . 'account');

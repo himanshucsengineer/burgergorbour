@@ -64,7 +64,7 @@ if($currntdate==$updateddate){
     <div class="member_card_border">
         <div class="row mb-4 mem_row1">
             <div class="col-4 mem_row1_col-left">
-                <img src="'.$image.'" alt="" class="member_card_img">
+                <img src="'.base_url().'upload/user/'.$image.'" alt="" class="member_card_img">
             </div>
             <div class="col-8">
                 <div>

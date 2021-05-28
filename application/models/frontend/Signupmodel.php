@@ -31,6 +31,24 @@ class Signupmodel extends CI_Model
         $this->db->where('email', $email);
         $this->db->update('user', $data);
     }
+
+
+
+    function update_pass($email,$n_pass)
+    {
+
+        $data = array(
+            
+            'email' => $email,
+            'pass' => $n_pass,
+            
+        );
+
+        $this->db->set($data);
+        $this->db->where('email', $email);
+        $this->db->update('user', $data);
+    }
+
     function update_data($order_id,$email,$acc_type,$vali,$amount)
     {
         $data = array(

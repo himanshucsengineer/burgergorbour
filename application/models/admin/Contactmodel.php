@@ -10,6 +10,22 @@ class Contactmodel extends CI_Model
     return $this->db->get('contact')->result_array();
   }
 
+
+  function update_bank($bank_acc,$id){
+                        
+                  
+    $data = array(
+                       'account_status' =>$bank_acc,
+                       
+                   );
+                   
+       $this->db->set($data);
+       $this->db->where('id',$id);
+        $this->db->update('contact',$data);
+   }
+
+
+
   public function deletecontactdata($data)
   {
     $explodData = explode(',', $data);

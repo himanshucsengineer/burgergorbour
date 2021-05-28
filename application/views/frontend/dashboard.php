@@ -117,6 +117,45 @@ $image = $_SESSION["image"];
                                 </div>
                                 <?php echo form_close(); ?>
                             </div>
+
+                            <div class="row mb-3" style="margin-top: 5rem;">
+                                <div class="col">
+                                    <h1 class="head_h3">Change Password</h1>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="px-4" >
+                               
+                               
+                                <form action="<?php echo base_url()?>frontend/login/change_pass" method="post">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <label for="" class="b_input_lable">Old Password *</label>
+                                            <input type="text" name="o_pass" class="b_input" placeholder="*** Enter Old Password ***" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <label for="" class="b_input_lable">New Password *</label>
+                                            <input type="text" class="b_input" name="n_pass" placeholder="*** Enter New Password ***" >
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <div class="mb-4">
+                                                <button class="member_btn">Change Password</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

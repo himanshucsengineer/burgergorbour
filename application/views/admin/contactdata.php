@@ -52,7 +52,7 @@
 
 <div class="all_post">
   <div class="container">
-    <h3>User Data</h3>
+    <h3>Contact Data</h3>
     <hr>
 
     <?php
@@ -64,7 +64,7 @@
 
 
     ?>
-    <form method="post" action="<?php echo base_url(); ?>admin/user/user">
+    
 
       <div class="row">
         <div class="col-md-12">
@@ -81,22 +81,41 @@
                   <th>Number</th>
                   <th>Subject</th>
                   <th>Message</th>
-
-
-
+                  <th>Status</th>
+                  <th>Choose Action</th>
                   <th>Action</th>
 
                 </tr>
 
               </thead>
               <tbody>
+                <?php foreach ($list as $value) { ?>
+                  <?php $sts = $value['account_status']; ?>
+                  <tr>
+                    <form action="<?php echo base_url(); ?>admin/contactdata/update_bank/<?php echo $value['id']; ?>" method="post">
+                    <td><?php echo $value['id']; ?></td>
+                      <td><?php echo $value['name']; ?></td>
+                      <td><?php echo $value['email']; ?></td>
+                      <td><?php echo $value['number']; ?></td>
+                      <td><?php echo $value['subject']; ?></td>
+                      <td><?php echo $value['msg']; ?></td>
+                      <td><?php echo ($value['account_status'] == false) ? "<span class='text-white badge badge-warning'>New Query</span>" : "<span class='text-white badge badge-success'>$sts</span>"; ?></td>
+                      <td><select name="action">
+                          <option value="">Select Action</option>
+                          <option value="Pending">Pending</option>
+                          <option value="Solved">Solved</option>
+                        </select></td>
+                      <td><button class="btn btn-success ">Change Status</button></td>
+                    </form>
+                  </tr>
 
+                <?php } ?>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-    </form>
+
   </div>
 </div>
 
@@ -138,7 +157,7 @@
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable({
-      "ajax": "<?php echo base_url(); ?>admin/contactdata/addinventory_api"
+     
     });
 
 

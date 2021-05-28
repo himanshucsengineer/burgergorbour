@@ -15,13 +15,45 @@ class Contactdata extends CI_controller
   {
 
 
-
+    $data['list']=$this->Contactmodel->fetchinventory_api();
     $this->load->view('admin/template/header');
     $this->load->view('admin/template/sidebar');
     $this->load->view('admin/template/topbar');
-    $this->load->view('admin/contactdata');
+    $this->load->view('admin/contactdata',$data);
     $this->load->view('admin/template/footer');
   }
+
+
+  public function update_bank($id){
+    $this->load->model('admin/Contactmodel');
+    $this->input->post('formSubmit');
+
+         
+        $this->form_validation->set_rules('action', 'Action', 'required');
+        
+        if ($this->form_validation->run()){ 
+         
+                $bank_acc = $this->input->post('action');
+                   
+                    
+                if($this->Contactmodel->update_bank($bank_acc,$id)){
+                    $this->session->set_flashdata('error','Updated Successfully'); 
+                    redirect(base_url().'admin/contactdata');  
+                }
+                else{
+                    $this->session->set_flashdata('success','Updated Successfully'); 
+                    redirect(base_url().'admin/contactdata'); 
+                }
+            }
+            else{
+                $this->session->set_flashdata('dashboard_error','Plase Choose An action'); 
+                redirect(base_url().'admin/contactdata');   
+            }
+   
+}
+
+
+
 
 
 

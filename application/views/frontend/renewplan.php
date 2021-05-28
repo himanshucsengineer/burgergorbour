@@ -100,9 +100,9 @@ $image = $_SESSION["image"];
                                                 } else {
                                             echo '<form action="' . base_url() . 'renewplan/pay" method="POST">
                                                     <input type="hidden" name="email" value="' . $_SESSION["email"] . '">
-                                                    <input type="text" id="old_vali" value="'.$_SESSION['vali'].'">
-                                                    <input type="text" id="acc'.$i.'" name="acc_type" value="">
-                                                    <input type="text" id="bal'.$i.'" name="vali" value="">
+                                                    <input type="hidden" id="old_vali" value="'.$_SESSION['vali'].'">
+                                                    <input type="hidden" id="acc'.$i.'" name="acc_type" value="">
+                                                    <input type="hidden" id="bal'.$i.'" name="vali" value="">
                                                     <input type="hidden" id="amtt'.$i.'" name="amount" value="">
                                                     <button class="fcard_btn px-4">Buy Now</button>
                                                 </form>';

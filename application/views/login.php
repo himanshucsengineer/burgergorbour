@@ -18,7 +18,7 @@
         <style>
         .account-pages
         {
-        background: url(admin/assets/images/admin_bg.jpg);
+        background: url(assets/images/admin_bg.jpg);
         position: absolute;
         height: 100%;
         width: 100%;
@@ -56,7 +56,7 @@
                 echo "<div class='alert alert-success'>".$this->session->flashdata('success')."</div>";
         }
         ?>
-        <?php echo form_open(base_url( 'Login' ),  array( 'method' => 'post', 'class' => 'form-horizontal','id'=>"loginForm" ));?>
+        <?php echo form_open(base_url( 'admin/Login' ),  array( 'method' => 'post', 'class' => 'form-horizontal','id'=>"loginForm" ));?>
         <div class="form-group ">
         <div class="col-xs-12">
         <input class="form-control name_validation email_validation required_validation_for_login_customer" type="text"  name="email"  placeholder="Email Address" >

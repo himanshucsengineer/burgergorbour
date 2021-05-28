@@ -31,7 +31,7 @@ class Contact extends CI_controller
             $msg = $this->input->post('msg');
             if ($this->Contactmodel->insert_data($name, $email, $number,$sub, $msg)) {
 
-                $this->session->set_flashdata('success', 'Your Query is recorded. Our agent will contact you soon');
+                $this->session->set_flashdata('success', 'Your Query is recorded. Our Team will contact you soon');
                 redirect(base_url() . 'contact-us');
             } else {
 

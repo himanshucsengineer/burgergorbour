@@ -183,7 +183,7 @@
                  <i class="fas fa-user fa-sm fa-fw mr-2 "></i>
                  Profile
                </a>
-               <a style="font-size:15px;" class="dropdown-item" href="<?php echo base_url(); ?>Login/logoutVendor">
+               <a style="font-size:15px;" class="dropdown-item" href="<?php echo base_url(); ?>admin/Login/logoutVendor">
                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 "></i>
                  Logout
                </a>

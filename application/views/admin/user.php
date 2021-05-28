@@ -84,6 +84,7 @@
                   <th>Card Number</th>
                   <th>Validity</th>
                   <th>Payment Recived</th>
+                  <th>Password</th>
                   <th>Order id</th>
 
                   <th>Action</th>

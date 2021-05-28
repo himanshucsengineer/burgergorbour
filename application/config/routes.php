@@ -63,7 +63,7 @@ $route['privacy-policy'] = 'frontend/privacy';
 $route['register'] = 'frontend/register';
 $route['about-us'] = 'frontend/about';
 $route['signin'] = 'frontend/signin';
-$route['default_controller/login'] = 'login';
+
 
  $route['404_override'] = 'Error404';
 $route['translate_uri_dashes'] = FALSE;

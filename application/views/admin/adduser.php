@@ -79,7 +79,7 @@
     }
 
     .menu input[type="text"],
-    input[type="file"],select {
+    input[type="file"],select,input[type="number"],input[type="password"],input[type="email"] {
         width: 100%;
         height: auto;
         padding-top: .5rem;
@@ -111,65 +111,43 @@
     }
     ?>
     <div class="container">
-        <h3 style="margin-bottom: 1rem;">Add Item In Menu List</h3>
+        <h3 style="margin-bottom: 1rem;">Add Coustomer</h3>
         <div class="menu">
-            <form action="<?php echo base_url(); ?>admin/menu/inset_menu" method="POST" enctype="multipart/form-data">
-                <label>Select MenU Type</label>
-                <select name="menu_name" id="">
-                    <option value="pizza">Pizza Mania</option>
-                    <option value="burger">Burger</option>
-                    <option value="fries">French Fries</option>
-                    <option value="pasta">Pasta</option>
-                    <option value="wrap">Wrap</option>
-                    <option value="sabdwitch">Sandwitch</option>
-                    <option value="calzone">Calzone</option>
-                    <option value="garlic">Garlic Bread</option>
-                    <option value="shakes">Shakes</option>
-                    <option value="ice">Ice Cream</option>
-                    <option value="drinks">Drinks</option>
-                    <option value="dessert">Dessert</option>
-                    <option value="tandoori">Tandoori Chaap</option>
-                    <option value="tikka">Tikka Special</option>
-                    <option value="rolls">Chaap Rolls</option>
-                    <option value="platter">Platter</option>
-                    <option value="momos">Momos</option>
-                    <option value="saloon">Salon</option>
+            <form action="<?php echo base_url(); ?>admin/adduser/create_user" method="POST" enctype="multipart/form-data">
+                <label for="">User Name</label>
+                <input type="text" name="name" placeholder="Enter Customer Name">
+                <label for="">User Email</label>
+                <input type="email" name="email" placeholder="Enter Email">
+                <label for="">User Number</label>
+                <input type="number" name="mob" placeholder="Enter Number">
+                <label for="">User Address</label>
+                <input type="text"  name="add" placeholder="Enter Address">
+                <label for="">Password</label>
+                <input type="password" name="pass" placeholder="Enter Password">
+                <label for="">User Photo</label>
+                <input type="file" id="imageUpload" name="images" >
+                <label for="">Validity</label>
+               
+                <select name="vali" id="">
+                    <option value="1 Month">1 Month</option>
+                    <option value="3 Month">3 Month</option>
+                    <option value="6 Month">6 Month</option>
+                    <option value="2 year">2 Year</option>
                 </select>
-                <label for="">Dish Name</label>
-                <input type="text" name="d_name" placeholder="Enter dish Name">
-                <label for="">Description</label>
-                <input type="text" name="d_desc" id="" placeholder="Enter Description">
-                <label for="">Half Original Price</label>
-                <input type="text" name="h_o_price" placeholder="Enter Half Original Price">
-                <label for="">Half Member Price</label>
-                <input type="text" name="h_m_price" placeholder="Enter Half Membership Price">
-                <label for="">Full Original Price</label>
-                <input type="text" name="f_o_price" placeholder="Enter Full Original Price">
-                <label for="">Full Member Price</label>
-                <input type="text" name="f_m_price" placeholder="Enter Full Membership Price">
+                <label for="">Select Plan</label>
+                <select name="acc_type" id="">
+                    <?php foreach($list as $value){?>
+                        <option value="<?php echo $value['course']?>"><?php echo $value['course']?></option>
+                    <?php }?>
+                </select>
+                <label for="">Amount</label>
+                <input type="number" name="amount" placeholder="Enter Amount">
                 <button>Submit</button>
             </form>
         </div>
 
 
-        <!--h3 style="margin-top: 4rem;margin-bottom:2rem">Menu List</h3>
-        <div class="card-box table-responsive">
-
-            <table id="lowinventory" data-order='[[ 0, "desc" ]]' style="width:100%" class="table table-striped table-bordered table_shop_custom display">
-                <thead>
-                    <tr>
-                        <th>Sr. No.</th>
-                        <th>Name</th>
-                        <th>Item Image</th>
-                        <th>Action</th>
-                    </tr>
-
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </div-->
+        
     </div>
 </div>
 
@@ -177,83 +155,31 @@
 
 
 
-
-<!--Delete-->
-
-<!--Delete-->
-
-<div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <?php echo form_open(base_url('admin/menu/deletemenudetail'), array('method' => 'post')); ?>
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
-                <h4 class="modal-title">Delete Course</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="hidden" class="deletesliderId" name="deletesliderId" />
-                        <h4><b>Do you really want to Delete this Course ?</b></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                <input type="submit" class="btn btn-info" name="deleteslider" value="Delete">
-            </div>
-        </div>
-        <?php echo form_close(); ?>
-    </div>
-</div>
-
-
-<script>
-    $(document).ready(function() {
-        $('#lowinventory').DataTable({
-            "ajax": "<?php echo base_url(); ?>admin/menu/addinventory_api"
-        });
-
-        $('#lowinventory').on('draw.dt', function() {
-            $('#lowinventory').Tabledit({
-                url: '<?php echo base_url("admin/menu/editdata"); ?>',
-                dataType: 'json',
-
-                columns: {
-                    identifier: [0, 'id'],
-                    editable: [
-                        [1, 'name'],
-                        
-                    ]
-
-                },
-                restoreButton: false,
-                deleteButton: false,
-                buttons: {
-                    edit: {
-                        class: 'edit_sliders',
-                        html: '<a class="" data-id="380" type="button"  data-toggle="tooltip" data-original-title="edit">Edit</a>',
-                        action: 'edit'
-                    }
-                },
-                onSuccess: function(data, textStatus, jqXHR) {
-                    if (data.action == 'delete') {
-                        $('#' + data.id).remove();
-                        $('#lowinventory').DataTable().ajax.reload();
+<script language="javascript" type="text/javascript">
+    $(function() {
+        $("#fileupload").change(function() {
+            $("#dvPreview").html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
+            if (regex.test($(this).val().toLowerCase())) {
+                if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                    $("#dvPreview").show();
+                    $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+                } else {
+                    if (typeof(FileReader) != "undefined") {
+                        $("#dvPreview").show();
+                        $("#dvPreview").append("<img class='thunbnail_image images_preview'/>");
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $("#dvPreview img").attr("src", e.target.result);
+                        }
+                        reader.readAsDataURL($(this)[0].files[0]);
+                    } else {
+                        alert("This browser does not support FileReader.");
                     }
                 }
-            });
+            } else {
+                alert("Please upload a valid file.");
+            }
         });
-        $(document).on('click', '.delete_sliders', function() {
-
-            $('.deletesliderId').val($(this).attr('data-id'));
-            $('#deletePurchaseModal').modal('show');
-
-        });
-
     });
 </script>
-
-
-
-
