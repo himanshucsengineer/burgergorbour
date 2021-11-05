@@ -393,7 +393,7 @@
 
 <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <?php echo form_open(base_url('admin/chaap/deletemenudetail'), array('method' => 'post')); ?>
+        <?php echo form_open(base_url('admin/burger/deletemenudetail'), array('method' => 'post')); ?>
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -475,7 +475,7 @@
         });
 
         $('#burger').on('draw.dt', function() {
-            $('#tikka').Tabledit({
+            $('#burger').Tabledit({
                 url: '<?php echo base_url("admin/burger/editdata"); ?>',
                 dataType: 'json',
 
@@ -573,7 +573,7 @@
         });
 
         $('#pasta').on('draw.dt', function() {
-            $('#platter').Tabledit({
+            $('#pasta').Tabledit({
                 url: '<?php echo base_url("admin/burger/editdata"); ?>',
                 dataType: 'json',
 

@@ -5,6 +5,14 @@
 
 
 <style type="text/css">
+
+table {
+    counter-reset: tableCount;     
+}
+.counterCell:before {              
+    content: counter(tableCount); 
+    counter-increment: tableCount; 
+}
   a.edit {
     display: none;
   }
@@ -141,7 +149,11 @@
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable({
-      "ajax": "<?php echo base_url(); ?>admin/user/addinventory_api"
+      "ajax": "<?php echo base_url(); ?>admin/user/addinventory_api",
+      "fnRowCallback" : function(nRow, aData, iDisplayIndex){
+                $("td:first", nRow).html(iDisplayIndex +1);
+               return nRow;
+            },
     });
 
 
@@ -154,3 +166,4 @@
 
   });
 </script>
+

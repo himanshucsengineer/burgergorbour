@@ -41,6 +41,27 @@
                         comments about our privacy policy, please contact us and we'll be happy to address your
                         concerns.
                     </p>
+                    <h3>Sharing of Information</h3>
+                    <p class="fcard_p">
+                        Burger Harbour may also disclose or transfer User's personal and other information which a User provides, to another third party as part of reorganization or a sale of the assets of Burger Harbour division or company. Any third party to which Burger Harbour transfers or sells its assets will have the right to continue to use the personal and other information that a User provide to us.
+                    </p>
+                    <p class="fcard_p">To the extent necessary to provide Users with the services on the Website, Burger Harbour may provide their Personal Information to third party contractors who work on behalf of or with Burger Harbour to provide Users with such services , to help Burger Harbour communicate with Users or to maintain the Website. Generally, these contractors do not have any independent right to share this information, however certain contractors who provide services on the Website, including the providers of online communications services, will have rights to use and disclose the personal information collected in connection with the provision of these services in accordance with their own privacy policies.</p>
+                    <h3>A. General</h3>
+                    <p class="fcard_p">
+                        In this policy, the words "we", "our", and "us" refer to Burger Harbour and the privacy mechanism outlined identify personally identifiable or personal information that may be collected, how such information is used, and the choices you have regarding our use of this information.
+                    </p>
+                    
+                    <h3>B. Applicability</h3>
+                    <p class="fcard_p">
+                       This privacy policy applies to all Users who access the Website and are therefore required to read and understand the privacy policy before submitting any Personal Information. If you have inadvertently submitted any such information to Burger Harbour prior to reading the privacy statements set out herein, and you do not agree with the manner in which such information is collected, stored or used, then you may access, modify and delete all information stored about You by writing to us at info@burgerharbour.com. Burger Harbour is keeping personal data of the User, and every User is also entitled to require Burger Harbour to delete and destroy all such information (but not that of other Users).
+                    </p>
+                    <h3>C. Personal Information</h3>
+                    <p class="fcard_p">
+                       Personal Information shall mean the information which identifies the User, name, identification number email, address, age, phone number, password or any financial account information provided to Burger Harbour at the time of registration or any time thereafter.
+                    </p>
+                   
+                    
+                    
                     <h3>Types of Information We Collect</h3>
                     <p class="fcard_p">
                         You do not have to provide any personal information to us in order to use our website. The only
@@ -90,6 +111,12 @@
                         The products and services that we offer on the Burger Hurbour Website are entirely voluntary.
                         It is your choice to "opt-in" to participate in any of the services provided therein.
                     </p>
+                    <h3>Revision of terms & Grievance reporting</h3>
+                    <p class="fcard_p">
+                        Burger Harbour may update or amend this privacy policy at any time, with or without advance notice. In the event there are significant changes in the way Burger Harbour treats User's personally identifiable information, Burger Harbour will display a notice on the Website or send Users an email. Burger Harbour current privacy policy applies to all information that Burger Harbour has about Users and their account.
+                    </p>
+                    <p class="fcard_p">Notwithstanding the above, Burger Harbour shall not be required to notify the Users of any changes made to the privacy policy. Should you have any concern or reject the changes in the privacy policy you can refuse to accept the amendments and opt for withdrawing your Personal Information by writing to us at info@burgerharbour.com</p>
+                    <p class="fcard_p">If you have any compliant or grievances with respect to Website or this Privacy Policy please write to us at info@burgerharbour.com.</p>
                 </div>
             </div>
         </div>

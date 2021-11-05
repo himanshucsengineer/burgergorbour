@@ -115,16 +115,19 @@ $image = $_SESSION["image"];
                                     <li class="fcard_p fcard_li"><span><i
                                                 class="far fa-check-square fcard_icon"></i></span>
                                         &nbsp;
-                                        6 Days a
-                                        Week</li>
+                                        2 year membership only at ₹ 1000</li>
                                     <li class="fcard_p fcard_li"><span><i
                                                 class="far fa-check-square fcard_icon"></i></span>
                                         &nbsp;
-                                        Dedicated Trainer Allocated</li>
+                                        Get any 1 pizza free 1 time with two year membership</li>
                                     <li class="fcard_p fcard_li"><span><i
                                                 class="far fa-check-square fcard_icon"></i></span>
                                         &nbsp;
-                                        Diet Plan Included</li>
+                                        2 year membership will cost you less than ₹ 600 after getting free pizza</li>
+                                        <li class="fcard_p fcard_li"><span><i
+                                                class="far fa-check-square fcard_icon"></i></span>
+                                        &nbsp;
+                                        salon package is included with this membership</li>
                                 </ul>
                                 
                             </div>
@@ -176,7 +179,7 @@ $image = $_SESSION["image"];
             document.getElementById('exire1').innerHTML = spt[1] + " " + spt[2];
             document.getElementById('amtt1').value = spt[0];
             document.getElementById('bal1').value = sum;
-            document.getElementById('acc1').value = "Premium";
+            document.getElementById('acc1').value = "Gold";
             });
             }).change();
     });
@@ -200,7 +203,7 @@ $image = $_SESSION["image"];
             document.getElementById('exire2').innerHTML = spt[1] + " " + spt[2];
             document.getElementById('amtt2').value = spt[0];
             document.getElementById('bal2').value = sum;
-            document.getElementById('acc2').value = "Gold";
+            document.getElementById('acc2').value = "Silver";
             });
             }).change();
     });

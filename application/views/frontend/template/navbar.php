@@ -1,5 +1,5 @@
 <?php
-if (!isset($_SESSION["email"])) {
+if (!isset($_SESSION["status"])) {
     $button = '<li class="mm"><a href="' . base_url() . 'signin"><button class="login-button">Login</button></a></li> ';
 } else {
     $button = '<li class="nav-item dropdown mm h_nav_links">
@@ -22,7 +22,7 @@ if (!isset($_SESSION["email"])) {
 
 
 <?php
-if (!isset($_SESSION["razorpay_order_id"])) {
+if (!isset($_SESSION["status"])) {
     $plans = '<li class="mm"><a href="' . base_url() . 'plans" class="nodecoration">Our Plans</a></li> ';
 } else {
     $plans = '<li class="mm"><a href="' . base_url() . 'renewplans" class="nodecoration">Renew Plans</a></li>
@@ -34,7 +34,7 @@ if (!isset($_SESSION["razorpay_order_id"])) {
 ?>
 
 <?php
-if (!isset($_SESSION["razorpay_order_id"])) {
+if (!isset($_SESSION["status"])) {
     $membershipp = '<li class="mm"><a href="' . base_url() . 'signin" class="nodecoration">My Card</a></li> ';
 } else {
     $membershipp = '<li class="mm"><a href="' . base_url() . 'member-card" class="nodecoration">My Card</a></li>
@@ -47,7 +47,7 @@ if (!isset($_SESSION["razorpay_order_id"])) {
 
 
 <?php
-if (!isset($_SESSION["email"])) {
+if (!isset($_SESSION["status"])) {
     $button4 = '<a href="' . base_url() . 'signin">Login</a> ';
     $memberbut = '<a href="' . base_url() . 'signin">My Card</a>';
     $namebut = '<h4>Welcome To BH</h4>';
@@ -76,6 +76,7 @@ if (!isset($_SESSION["email"])) {
     <a href="<?php echo base_url() ?>menu">Menu</a>
     <a href="<?php echo base_url() ?>plans">Our Plans</a>
     <a href="<?php echo base_url() ?>membership">Buy Membership</a>
+    <a href="<?php echo base_url() ?>allcourse">Our Course</a>
     <a href="<?php echo base_url() ?>about-us">About Us</a>
     <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
   
@@ -96,6 +97,7 @@ if (!isset($_SESSION["email"])) {
                     <?php echo $plans; ?>
                     
                     <li class="mm"><a href="<?php echo base_url() ?>membership" class="nodecoration">Buy Membership</a></li>
+                    <li class="mm"><a href="<?php echo base_url() ?>allcourse" class="nodecoration">Our Courses</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>contact-us" class="nodecoration">Contact Us</a></li>
                     <li class="mm"><a href="<?php echo base_url() ?>about-us" class="nodecoration">About Us</a></li>
                     <?php echo $membershipp ?>

@@ -63,7 +63,10 @@ $route['privacy-policy'] = 'frontend/privacy';
 $route['register'] = 'frontend/register';
 $route['about-us'] = 'frontend/about';
 $route['signin'] = 'frontend/signin';
-
+$route['refund-policy'] = 'frontend/refund';
+$route['allcourse'] = 'frontend/allcourse';
+//$route['singlecourse'] = 'frontend/singlecourse';
+$route['course/(:any)'] = 'frontend/singlecourse/index/$1';
 
  $route['404_override'] = 'Error404';
 $route['translate_uri_dashes'] = FALSE;

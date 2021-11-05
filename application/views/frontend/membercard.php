@@ -16,6 +16,7 @@ $regdate = strtotime($date);
 $updateddate=date('d/m/y',strtotime($validity,$regdate));
 
 $currntdate= date("d/m/y");
+if($acc_type == 'Silver' || $acc_type == 'Gold'){
 if($currntdate==$updateddate){ 
     $finaldate='<div class="member_card">
     <div class="member_card_border">
@@ -58,7 +59,16 @@ if($currntdate==$updateddate){
         </div>
     </div>
    
-</div>';
+</div>
+<div class="spacer_s"></div>
+
+<div class="row justify-content-start">
+                                    <div class="col-md-4 ">
+                                        <div class="mb-4">
+                                            <a href="<?php echo base_url()?>renewplans"><button class="member_btn"> Renew Your Card</button></a>
+                                        </div>
+                                    </div>
+                                </div>';
 }else{
     $finaldate = '<div class="member_card">
     <div class="member_card_border">
@@ -101,7 +111,62 @@ if($currntdate==$updateddate){
         </div>
     </div>
    
-</div>';
+</div>
+<div class="spacer_s"></div>
+
+<div class="row justify-content-start">
+                                    <div class="col-md-4 ">
+                                        <div class="mb-4">
+                                            <a href="<?php echo base_url()?>renewplans"><button class="member_btn"> Renew Your Card</button></a>
+                                        </div>
+                                    </div>
+                                </div>';
+}
+}else{
+    $finaldate='<p>Note:- You Do not have any membership plan.</p>
+    <div class="member_card">
+    <div class="member_card_border">
+        <div class="row mb-4 mem_row1">
+            <div class="col-4 mem_row1_col-left">
+                <img src="'.base_url().'assest/img/acc_block2.png" alt="" class="member_card_img">
+            </div>
+            <div class="col-8">
+                <div>
+                    <div class="mb-2 ">
+                        <p><span class="member_card_name px-3 pb-0">xxxxxxxx</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Member No. :</span>
+                            <span class="member_card_num">xxxxxx</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Phone:</span>
+                            <span class="member_card_phone">xxxxxx</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p><span class="member_card_mn">Membership:</span>
+                            <span class="member_card_phone">xxxxx</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mem_row2 mx-1">
+            <div class="col-7 text-center">
+                <p> <span class="mem_text">Valid Up To: Suspended</span> </p>
+            </div>
+            <div class="col-5 text-center">
+                <p><span class="mem_text">Logo</span> </p>
+            </div>
+        </div>
+    </div>
+   
+</div>
+';
 }
 
 ?>
@@ -197,13 +262,7 @@ if($currntdate==$updateddate){
                                     </div>
                                 </div-->
 
-                                <div class="row justify-content-start">
-                                    <div class="col-md-4 ">
-                                        <div class="mb-4">
-                                            <a href="<?php echo base_url()?>renewplans"><button class="member_btn"> Renew Your Card</button></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="spacer_s"></div>
 

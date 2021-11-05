@@ -66,6 +66,7 @@ class Login extends CI_controller
            // }
            // curl_close($ch);
             //die;
+            $_SESSION["status"] = 1;
             $this->session->set_flashdata('success', 'Login Successfull');
             redirect(base_url() . 'account');
         } else {
@@ -114,6 +115,10 @@ class Login extends CI_controller
                     $dataimage_return = $this->upload->data();
                     $imageurl =  $dataimage_return['file_name'];
                 }
+            }else{
+                $this->session->set_flashdata('error','Please Upload Your Photo');
+
+                    redirect(base_url().'membership');
             }
 
             $_SESSION["email"] = $this->input->post('email');

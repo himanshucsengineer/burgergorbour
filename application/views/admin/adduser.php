@@ -132,6 +132,7 @@
                     <option value="1 Month">1 Month</option>
                     <option value="3 Month">3 Month</option>
                     <option value="6 Month">6 Month</option>
+                    <option value="6 Month">12 Month</option>
                     <option value="2 year">2 Year</option>
                 </select>
                 <label for="">Select Plan</label>
@@ -139,6 +140,8 @@
                     <?php foreach($list as $value){?>
                         <option value="<?php echo $value['course']?>"><?php echo $value['course']?></option>
                     <?php }?>
+                    <option value="chaap">Chaap Course</option>
+                    <option value="pizza and burger">Pizza & burger Course</option>
                 </select>
                 <label for="">Amount</label>
                 <input type="number" name="amount" placeholder="Enter Amount">

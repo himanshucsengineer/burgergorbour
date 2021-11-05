@@ -21,7 +21,7 @@ class Renewplan extends CI_Controller
    */
   public function pay()
   {
-    $api = new Api('rzp_test_If4Pd1l3k6g25g', 'IdgTV3Z597LLTadL1rn2n5n2');
+    $api = new Api('rzp_live_bou6qzyqxGBpoq', 'qcrNfwgWbQTyn3J964uNJseR');
     /**
      * You can calculate payment amount as per your logic
      * Always set the amount from backend for security reasons
@@ -54,7 +54,7 @@ class Renewplan extends CI_Controller
     $success = true;
     $error = "payment_failed";
     if (empty($_POST['razorpay_payment_id']) === false) {
-      $api = new Api('rzp_test_If4Pd1l3k6g25g', 'IdgTV3Z597LLTadL1rn2n5n2');
+      $api = new Api('rzp_live_bou6qzyqxGBpoq', 'qcrNfwgWbQTyn3J964uNJseR');
       try {
         $attributes = array(
           'razorpay_order_id' => $_SESSION['razorpay_order_id'],
@@ -79,48 +79,7 @@ class Renewplan extends CI_Controller
         $amount = $_SESSION['payable_amount'];
    
       if ($this->Signupmodel->update_data($order_id,$email,$acc_type,$vali,$amount)) {
-        $phone = "918905366876";
-        $user_message = "this is test msg";
-        /*Your authentication key*/
-        $authKey = "359226AbtfGxXjL607f32d5P1";
-        /*Multiple mobiles numbers separated by comma*/
-        $mobileNumber = $phone;
-        /*Sender ID,While using route4 sender id should be 6 characters long.*/
-        $senderId = "Burger";
-        /*Your message to send, Add URL encoding here.*/
-        $message = $user_message;
-        /*Define route */
-        $route = "route=4";
-        /*Prepare you post parameters*/
-        $postData = array(
-          'authkey' => $authKey,
-          'mobiles' => $mobileNumber,
-          'message' => $message,
-          'sender' => $senderId,
-          'route' => $route
-        );
-        /*API URL*/
-        $url = "https://control.msg91.com/api/sendhttp.php";
-        /* init the resource */
-        $ch = curl_init();
-        curl_setopt_array($ch, array(
-          CURLOPT_URL => $url,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_POST => true,
-          CURLOPT_POSTFIELDS => $postData
-          /*,CURLOPT_FOLLOWLOCATION => true*/
-        ));
-        /*Ignore SSL certificate verification*/
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        /*get response*/
-        $output = curl_exec($ch);
-        /*Print error if any*/
-        if (curl_errno($ch)) {
-          echo 'error:' . curl_error($ch);
-        }
-        curl_close($ch);
-
+        
 
 
 
@@ -138,7 +97,7 @@ class Renewplan extends CI_Controller
   public function prepareData($amount, $razorpayOrderId)
   {
     $data = array(
-      "key" => "rzp_test_If4Pd1l3k6g25g",
+      "key" => "rzp_live_bou6qzyqxGBpoq",
       "amount" => $amount,
       "name" => "Burger Harbour",
       "description" => "Buying a Plan",

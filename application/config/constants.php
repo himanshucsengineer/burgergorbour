@@ -86,4 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('RAZOR_KEY_ID', 'XXXXXXXXXX');
 define('RAZOR_KEY_SECRET', 'XXXXXXXXXX');
-  
+

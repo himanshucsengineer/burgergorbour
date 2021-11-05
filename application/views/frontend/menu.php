@@ -96,11 +96,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Burger</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -158,11 +158,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">French Fries</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -216,11 +216,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Pasta</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -277,11 +277,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Wrap</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -336,11 +336,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Sandwitch</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -397,11 +397,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Calzones</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -456,11 +456,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Garlic Bread</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -515,11 +515,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Shakes</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -575,11 +575,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Ice Cream</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -634,11 +634,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Drinks</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -692,14 +692,14 @@
                         <thead>
                             <tr>
                                 <th scope="col" colspan="5">
-                                    <h2 class="head_h2 text-center menu_item_head">Desert</h2>
+                                    <h2 class="head_h2 text-center menu_item_head">Dessert </h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -757,8 +757,8 @@
                             </tr>
                             <tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
-                                <th scope="col" colspan="2" class="text-center head_h5">Small(8")</th>
-                                <th scope="col" colspan="2" class="text-center head_h5">Medium(10")</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">Half</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">Full</th>
                             </tr>
                             <tr>
                                 <th scope="col"></th>
@@ -822,8 +822,8 @@
                             </tr>
                             <tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
-                                <th scope="col" colspan="2" class="text-center head_h5">Small(8")</th>
-                                <th scope="col" colspan="2" class="text-center head_h5">Medium(10")</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">Half</th>
+                                <th scope="col" colspan="2" class="text-center head_h5">Full</th>
                             </tr>
                             <tr>
                                 <th scope="col"></th>
@@ -884,11 +884,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Chaap Roll</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -944,11 +944,11 @@
                                     <h2 class="head_h2 text-center menu_item_head">Platter</h2>
                                 </th>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <th scope="col" colspan="1" class="text-center head_h5"></th>
                                 
                                 <th scope="col" colspan="2" class="text-center head_h5">Full</th>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col" class="text-center head_h6 menu_p">Actual</th>
@@ -992,7 +992,7 @@
 
 
     <!-- Menu Item  -->
-    <div class="container">
+    <!--div class="container">
         <div class="row justify-content-center ">
             <div class="col-md-10">
 
@@ -1048,7 +1048,7 @@
         </div>
 
         <div class="spacer_s"></div>
-    </div>
+    </div-->
 
 
     <div class="container">
@@ -1064,9 +1064,16 @@
                                 </th>
                             </tr>
                             <tr>
-                                <th scope="col" colspan="1" class="text-center head_h5"></th>
-                                
-                                
+                               <th scope="col"><h4 class="head_h5">Name:-</h4></th>
+                                 <th scope="col"><p class="menu_p subdes">Lorean Salon</p></th>
+                            </tr>
+                            <tr>
+                               <th scope="col"><h4 class="head_h5">Address:-</h4></th>
+                                 <th scope="col"><p class="menu_p subdes">SSB 20, BASEMENT, PLA SHOPPING COMPLEX, NEAR BURGER HARBOUR, HISAR</p></th>
+                            </tr>
+                            <tr>
+                               <th scope="col"><h4 class="head_h5">Mobile no:-</h4></th>
+                                 <th scope="col"><p class="menu_p subdes">9729581545</p></th>
                             </tr>
                             <tr>
                                 <th scope="col"></th>

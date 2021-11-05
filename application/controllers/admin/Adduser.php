@@ -76,15 +76,20 @@ class  Adduser extends CI_controller
           }else{
             $finalvali = $validity[0];
           }
-        
+         
           if($accc[0] == "Both"){
             $finalacc_type = "Premium";
           }elseif($accc[0]== "Burger"){
             $finalacc_type = "Gold";
-          }else{
+          }elseif($accc[0]== "pizza"){
+            $finalacc_type = "pizza and burger";
+          }elseif($accc[0]== "chaap"){
+            $finalacc_type = "chaap";
+          }
+          else{
             $finalacc_type = "Silver";
           }
-        
+         
         
           $data = array(
             'name' => $this->input->post('name'),

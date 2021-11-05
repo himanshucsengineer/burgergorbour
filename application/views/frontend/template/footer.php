@@ -128,6 +128,7 @@
                     <li><a href="<?php echo base_url()?>privacy-policy">Privacy-Policy</a></li>
                     <li><a href="<?php echo base_url()?>contact-us">Contact Us</a></li>
                     <li><a href="<?php echo base_url()?>about-us">About Us</a></li>
+                    <li><a href="<?php echo base_url()?>refund-policy">Refund & Cancellation</a></li>
                 </ul>
             </div>
             <div class="col-md-3 touch">

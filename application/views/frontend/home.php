@@ -11,8 +11,8 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8 text-center">
-                                <h1 class="super_h1">LET THE GREAT TAST BEGIN</h1>
-                                <p><i class="super_p">" Slice the up our royal tast " </i></p>
+                                <h1 class="super_h1">LET THE GREAT TASTE BEGIN</h1>
+                                <p><i class="super_p">" Slice the up our royal taste " </i></p>
                                 <div class="my-5">
                                     <a href="<?php echo base_url()?>menu"><button class="super_btn">MENU</button></a>
                                 </div>
@@ -85,9 +85,9 @@
         <div class="row justify-content-center">
             <div class="col-md-10 text-center">
                 <div>
-                    <h2 class="head_h2 pb-3 mob_head_h2">Best Dessi Deals on Burgur Harbour</h2>
+                    <h2 class="head_h2 pb-3 mob_head_h2">Best Dessi Deals on Burger Harbour</h2>
                 </div>
-                <p class="mpb">Burger Harbour Offering You A Membership Program In Which You Get <b>UPTO 50% DISCOUNT</b> On Complete Menu. We Are Also Tie Up With Sallon Who Also Giving Heavy Discount On Their Product And Services.</p>
+                <p class="mpb">Burger Harbour Offering You A Membership Program In Which You Get <b>UPTO 50% DISCOUNT</b> On Complete Menu. We Are Also Tie Up With Salon Who Also Giving Heavy Discount On Their Product And Services.</p>
                 <div class="my-5 ">
                     <a href="<?php echo base_url()?>plans"><button class="super_btn">View Our Plans</button></a>
                 </div>
@@ -100,9 +100,9 @@
     <div class="row home_memebership">
         <div class="col-md-7 p-0 ">
             <div class="home_membership_content">
-                <h1 class="super_h1">Let's Checkout Our Beggy Menu!</h1>
+                <h1 class="super_h1">Let's Checkout Our Big Family Menu!</h1>
                 <div class="py-4">
-                    <p><i class="super_p">"Just Have Our Fries With Indian Vegge! With Margretta Pizza and Special Indian Coke" </i></p>
+                    <p><i class="super_p">"Just Have Our Fries With Tikka Paneer Makhani Pizza and Cold Drink" </i></p>
                 </div>
                 <div class="home_flex">
                     <div class="left">
@@ -137,7 +137,7 @@
             <div class="col-md-7">
                 <div class="f_image_border text-center">
                     <h2 class="super_h1">We Bring Up New Spice Here</h2>
-                    <p><i class="super_p">"Just Have Our Fries With Indian Vegge! With Margretta Pizza and Special Indian Coke" </i></p>
+                    <p><i class="super_p">"Just Have Our Fries With Tikka Paneer Makhani Pizza and Cold Drink" </i></p>
                     <div class="my-5">
                         <a href="<?php echo base_url()?>membership"><button class="super_btn">Get Membership</button></a>
                     </div>
@@ -158,7 +158,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-11 text-center">
-                    <h2 class="super_h1 bg_quote_title">" WE BRING UP THE NEW DISHES WITH HIGH VARITY OF PRODUCTS AND SERVICES "</h2>
+                    <h2 class="super_h1 bg_quote_title">" WE BRING UP THE NEW DISHES WITH HIGH VARIETY OF PRODUCTS AND SERVICES "</h2>
                 </div>
             </div>
         </div>

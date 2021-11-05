@@ -21,7 +21,7 @@ class Register extends CI_Controller
    */
   public function pay()
   {
-    $api = new Api('rzp_test_If4Pd1l3k6g25g', 'IdgTV3Z597LLTadL1rn2n5n2');
+    $api = new Api('rzp_test_Yw00m4vu4ob3vs', 'L1M3gxCkrDw5egxrwzzR08j3');
     /**
      * You can calculate payment amount as per your logic
      * Always set the amount from backend for security reasons
@@ -56,10 +56,19 @@ class Register extends CI_Controller
    */
   public function verify()
   {
+      if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+                            $url = "https://";   
+                        else  
+                            $url = "http://";   
+                                // Append the host(domain name, ip) to the URL.   
+                            $url.= $_SERVER['HTTP_HOST'];   
+                            // Append the requested resource location to the URL   
+                            $url.= $_SERVER['REQUEST_URI'];    
+                            $_SESSION['url'] =$url;
     $success = true;
     $error = "payment_failed";
     if (empty($_POST['razorpay_payment_id']) === false) {
-      $api = new Api('rzp_test_If4Pd1l3k6g25g', 'IdgTV3Z597LLTadL1rn2n5n2');
+      $api = new Api('rzp_test_Yw00m4vu4ob3vs', 'L1M3gxCkrDw5egxrwzzR08j3');
       try {
         $attributes = array(
           'razorpay_order_id' => $_SESSION['razorpay_order_id'],
@@ -69,9 +78,12 @@ class Register extends CI_Controller
         $api->utility->verifyPaymentSignature($attributes);
       } catch (SignatureVerificationError $e) {
         $success = false;
+        
         $error = 'Razorpay_Error : ' . $e->getMessage();
       }
     }
+    
+    
     if ($success === true) {
       $data = array(
         'order_id' => $_SESSION['razorpay_order_id'],
@@ -86,49 +98,10 @@ class Register extends CI_Controller
         'date' => $_SESSION['date'],
         'acc_type'=>$_SESSION['acc_type'],
         'amount' => $_SESSION['payable_amount'],
+       
       );
       if ($this->Signupmodel->insert_data($data)) {
-        $phone = "918905366876";
-        $user_message = "this is test msg";
-        /*Your authentication key*/
-        $authKey = "359226AbtfGxXjL607f32d5P1";
-        /*Multiple mobiles numbers separated by comma*/
-        $mobileNumber = $phone;
-        /*Sender ID,While using route4 sender id should be 6 characters long.*/
-        $senderId = "Burger";
-        /*Your message to send, Add URL encoding here.*/
-        $message = $user_message;
-        /*Define route */
-        $route = "route=4";
-        /*Prepare you post parameters*/
-        $postData = array(
-          'authkey' => $authKey,
-          'mobiles' => $mobileNumber,
-          'message' => $message,
-          'sender' => $senderId,
-          'route' => $route
-        );
-        /*API URL*/
-        $url = "https://control.msg91.com/api/sendhttp.php";
-        /* init the resource */
-        $ch = curl_init();
-        curl_setopt_array($ch, array(
-          CURLOPT_URL => $url,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_POST => true,
-          CURLOPT_POSTFIELDS => $postData
-          /*,CURLOPT_FOLLOWLOCATION => true*/
-        ));
-        /*Ignore SSL certificate verification*/
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        /*get response*/
-        $output = curl_exec($ch);
-        /*Print error if any*/
-        if (curl_errno($ch)) {
-          echo 'error:' . curl_error($ch);
-        }
-        curl_close($ch);
+          $_SESSION['status'] = 1;
 
 
 
@@ -136,10 +109,34 @@ class Register extends CI_Controller
         $this->session->set_flashdata('success', 'Welcome To Burger Horbour');
         redirect(base_url() . 'frontend/dashboard');
       } else {
+            unset($_SESSION["razorpay_order_id"]);
+            unset($_SESSION["name"]);
+            unset($_SESSION["email"]);
+            unset($_SESSION["mob"]);
+            unset($_SESSION["add"]);
+            unset($_SESSION["card"]);
+            unset($_SESSION["image"]);
+            unset($_SESSION["vali"]);
+            unset($_SESSION["pass"]);
+            unset($_SESSION["date"]);
+            unset($_SESSION["acc_type"]);
+            unset($_SESSION["payable_amount"]);
         $this->session->set_flashdata('error', 'Error In submisstion');
         redirect(base_url() . 'frontend/membership');
       }
     } else {
+        unset($_SESSION["razorpay_order_id"]);
+            unset($_SESSION["name"]);
+            unset($_SESSION["email"]);
+            unset($_SESSION["mob"]);
+            unset($_SESSION["add"]);
+            unset($_SESSION["card"]);
+            unset($_SESSION["image"]);
+            unset($_SESSION["vali"]);
+            unset($_SESSION["pass"]);
+            unset($_SESSION["date"]);
+            unset($_SESSION["acc_type"]);
+            unset($_SESSION["payable_amount"]);
       $this->session->set_flashdata('error', 'Error In payment Method');
       redirect(base_url() . 'frontend/membership');
     }
@@ -147,7 +144,7 @@ class Register extends CI_Controller
   public function prepareData($amount, $razorpayOrderId)
   {
     $data = array(
-      "key" => "rzp_test_If4Pd1l3k6g25g",
+      "key" => "rzp_test_Yw00m4vu4ob3vs",
       "amount" => $amount,
       "name" => "Burgur Harbour",
       "description" => "Buying a Plan",

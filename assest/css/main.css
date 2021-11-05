@@ -74,15 +74,6 @@ main {
   display: none;
 }
 
-.lstn {
-  list-style-type: none;
-  padding: 0 !important;
-}
-
-.tdn {
-  text-decoration: none !important;
-}
-
 .header {
   padding: 2rem;
   background-color: #b42821;
@@ -383,7 +374,7 @@ h3 {
 }
 
 p {
-  font-size: 1.7rem !important;
+  font-size: 1.8rem;
   word-spacing: 0.2rem;
   padding: 0 !important;
   color: #535353;
@@ -429,24 +420,6 @@ p {
   font-size: 2rem;
 }
 
-.sidebarlink {
-  color: brown !important;
-  border-bottom: 1px solid #e7e7e7;
-}
-
-.cattag {
-  font-size: 1rem !important;
-  background-color: brown;
-  color: #fff;
-  width: fit-content;
-  padding: .5rem !important;
-  border-radius: 5px;
-}
-
-.catfont {
-  font-size: 1.5rem !important;
-}
-
 .pattern_bar {
   background-image: linear-gradient(rgba(255, 255, 255, 0.589), rgba(255, 255, 255, 0.603)), url("../img/cp.svg");
   padding: 3rem;
@@ -483,7 +456,7 @@ p {
   padding: 2rem;
   margin: 1rem;
   background-color: rgba(248, 248, 248, 0.842);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/cb2.svg");
+  /*background-image: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.719)), url("../img/cb2.svg");*/
   background-repeat: no-repeat;
   background-position: center;
   border: 1px dashed #b42821;
@@ -678,33 +651,12 @@ p {
   height: auto;
 }
 
-.recipe_menu {
-  background-color: rgba(248, 248, 248, 0.842) !important;
-  background-size: 70%;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/cb2.svg") !important;
-}
 
-.pizz_table {
-  background-color: rgba(248, 248, 248, 0.842) !important;
-  background-size: 70%;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/cook.png") !important;
-}
 
-.barbar_bg {
-  background-color: rgba(248, 248, 248, 0.842) !important;
-  background-size: 70%;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/barbar.png") !important;
-}
 
-.burger_table {
-  background-size: 50% !important;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/burger_bg.png") !important;
-}
 
-.fries_table {
-  background-size: 25% !important;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.818), rgba(248, 248, 248, 0.819)), url("../img/fries2.png") !important;
-}
+
+
 
 .f_image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/4.jpg") !important;
@@ -993,5 +945,68 @@ p {
   .subdes {
     word-break: break-all;
   }
+  .member_flexx .left{
+    width: 40% !important;
+    height: auto;
+  }
+  .member_flexx .right{
+    width: 60% !important;
+    height: auto;
+  }
+  .home_flex .left{
+    width: 50% !important;
+    height: auto;
+  }
+  
+  .home_flex .right button{
+    padding: .7rem .8rem !important;
+  }
+  .moblijf{
+    margin-right: .7rem !important;
+  }
+  
+  
+}
+.super_btn{
+  background-color: #e7be27e1 !important;
+}
+.member_flexx{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.member_flexx .left{
+  width: 20%;
+  height: auto;
+}
+.member_flexx .left label{
+  background-color: whitesmoke !important;
+  border-radius: 7px 0px 0px 7px !important;
+  font-size: 15px !important;
+  padding: 1.2rem 0rem 1.3rem 0rem !important;
+  text-align: center !important;
+}
+.member_flexx .right{
+  width: 80%;
+  height: auto;
+}
+.member_flexx .right .b_input{
+  margin: 0px 0px !important;
+  border-left: 0px !important;
+  border-radius: 0px 7px 7px 0px !important;
+}
+.home_flex{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.home_flex .left{
+  width: 30%;
+  height: auto;
+}
+.home_flex .right{
+  width: 50%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */
+

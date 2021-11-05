@@ -123,6 +123,22 @@ $parts = basename($url);
         </li>
 
         <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#course" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Course</span>
+          </a>
+          <div id="course" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/allpost" style="font-size:1.3rem; ">All Courses</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/newpost" style="font-size:1.3rem; ">Add New Course</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/editblog" style="font-size:1.3rem; ">Edit Course</a>
+
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesss" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
             <span>Add Plans</span>
